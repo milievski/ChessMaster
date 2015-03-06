@@ -1,0 +1,191 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/checkmate/!svn/ver/300/source/Rules
+END
+PawnCapture.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/checkmate/!svn/ver/213/source/Rules/PawnCapture.h
+END
+CastlingMove.cc
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/checkmate/!svn/ver/293/source/Rules/CastlingMove.cc
+END
+PieceInWay.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/checkmate/!svn/ver/298/source/Rules/PieceInWay.cc
+END
+CastlingMove.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/checkmate/!svn/ver/213/source/Rules/CastlingMove.h
+END
+PawnMove.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/checkmate/!svn/ver/236/source/Rules/PawnMove.h
+END
+PieceInWay.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/213/source/Rules/PieceInWay.h
+END
+NotEnoughPieces.cc
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/checkmate/!svn/ver/293/source/Rules/NotEnoughPieces.cc
+END
+RookMove.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/checkmate/!svn/ver/300/source/Rules/RookMove.cc
+END
+NotEnoughPieces.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/checkmate/!svn/ver/213/source/Rules/NotEnoughPieces.h
+END
+RookMove.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/checkmate/!svn/ver/213/source/Rules/RookMove.h
+END
+QueenMove.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/checkmate/!svn/ver/213/source/Rules/QueenMove.h
+END
+KingInCheck.cc
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/checkmate/!svn/ver/298/source/Rules/KingInCheck.cc
+END
+ConsecutiveMove.cc
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/checkmate/!svn/ver/293/source/Rules/ConsecutiveMove.cc
+END
+KingInCheck.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/checkmate/!svn/ver/284/source/Rules/KingInCheck.h
+END
+FriendlyPiece.cc
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/checkmate/!svn/ver/293/source/Rules/FriendlyPiece.cc
+END
+CheckTurn.cc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/293/source/Rules/CheckTurn.cc
+END
+Promotion.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/checkmate/!svn/ver/213/source/Rules/Promotion.h
+END
+PawnMove.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/checkmate/!svn/ver/293/source/Rules/PawnMove.cc
+END
+QueenMove.cc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/298/source/Rules/QueenMove.cc
+END
+Rule.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/checkmate/!svn/ver/284/source/Rules/Rule.h
+END
+BishopMove.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/checkmate/!svn/ver/293/source/Rules/BishopMove.cc
+END
+KnightMove.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/checkmate/!svn/ver/293/source/Rules/KnightMove.cc
+END
+BishopMove.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/213/source/Rules/BishopMove.h
+END
+KnightMove.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/213/source/Rules/KnightMove.h
+END
+KingMove.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/checkmate/!svn/ver/293/source/Rules/KingMove.cc
+END
+ConsecutiveMove.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/checkmate/!svn/ver/274/source/Rules/ConsecutiveMove.h
+END
+KingMove.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/checkmate/!svn/ver/268/source/Rules/KingMove.h
+END
+FriendlyPiece.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/checkmate/!svn/ver/250/source/Rules/FriendlyPiece.h
+END
+Promotion.cc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/298/source/Rules/Promotion.cc
+END
+CheckTurn.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/checkmate/!svn/ver/250/source/Rules/CheckTurn.h
+END
+PawnCapture.cc
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/checkmate/!svn/ver/293/source/Rules/PawnCapture.cc
+END

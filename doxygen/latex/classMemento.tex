@@ -1,0 +1,66 @@
+\hypertarget{classMemento}{
+\section{Memento Class Reference}
+\label{classMemento}\index{Memento@{Memento}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMemento_a00be4fd2d6ba40b9c7e212a64a834f81}{Memento} (int elo=0, int gamesWon=0, int gamesLost=0, int tournamentsWon=0, string name=\char`\"{}Guest\char`\"{})
+\begin{DoxyCompactList}\small\item\em creates a memento object for \hyperlink{classRegisteredPlayer}{RegisteredPlayer} class \item\end{DoxyCompactList}\item 
+void \hyperlink{classMemento_ae1c59cf9a5ed24dfcbe15d57ee24c095}{writeMemento} (\hyperlink{classMemento}{Memento} $\ast$memento, string fileName)
+\begin{DoxyCompactList}\small\item\em writes a memento object to the given osstream \item\end{DoxyCompactList}\item 
+\hyperlink{classMemento}{Memento} $\ast$ \hyperlink{classMemento_ad159304bd2710dc9dc9c2ed523075dd0}{readMemento} (string fileName)
+\begin{DoxyCompactList}\small\item\em returns a memento object from the given file \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMemento_acb406df94b9d48567f42bbe73b2bd234}{
+class \hyperlink{classMemento_acb406df94b9d48567f42bbe73b2bd234}{RegisteredPlayer}}
+\label{classMemento_acb406df94b9d48567f42bbe73b2bd234}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMemento_a00be4fd2d6ba40b9c7e212a64a834f81}{
+\index{Memento@{Memento}!Memento@{Memento}}
+\index{Memento@{Memento}!Memento@{Memento}}
+\subsubsection[{Memento}]{\setlength{\rightskip}{0pt plus 5cm}Memento::Memento (int {\em elo} = {\ttfamily 0}, \/  int {\em gamesWon} = {\ttfamily 0}, \/  int {\em gamesLost} = {\ttfamily 0}, \/  int {\em tournamentsWon} = {\ttfamily 0}, \/  string {\em name} = {\ttfamily \char`\"{}Guest\char`\"{}})}}
+\label{classMemento_a00be4fd2d6ba40b9c7e212a64a834f81}
+
+
+creates a memento object for \hyperlink{classRegisteredPlayer}{RegisteredPlayer} class 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em elo}]The elo int to be stored \item[\mbox{$\leftarrow$} {\em gamesWon}]The gamesWon int to be stored \item[\mbox{$\leftarrow$} {\em gamesLost}]The gamesLost int to be stored \item[\mbox{$\leftarrow$} {\em tournamentsWon}]The tournamentsWon int to be stored \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMemento_ad159304bd2710dc9dc9c2ed523075dd0}{
+\index{Memento@{Memento}!readMemento@{readMemento}}
+\index{readMemento@{readMemento}!Memento@{Memento}}
+\subsubsection[{readMemento}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memento} $\ast$ Memento::readMemento (string {\em fileName})}}
+\label{classMemento_ad159304bd2710dc9dc9c2ed523075dd0}
+
+
+returns a memento object from the given file 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em fileName}]a string for the file the memento object is read from \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the memento object that is read from file 
+\end{DoxyReturn}
+\hypertarget{classMemento_ae1c59cf9a5ed24dfcbe15d57ee24c095}{
+\index{Memento@{Memento}!writeMemento@{writeMemento}}
+\index{writeMemento@{writeMemento}!Memento@{Memento}}
+\subsubsection[{writeMemento}]{\setlength{\rightskip}{0pt plus 5cm}void Memento::writeMemento ({\bf Memento} $\ast$ {\em memento}, \/  string {\em fileName})}}
+\label{classMemento_ae1c59cf9a5ed24dfcbe15d57ee24c095}
+
+
+writes a memento object to the given osstream 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em os}]the output stream to write the memento object to.(probably filestream) \item[\mbox{$\leftarrow$} {\em fileName}]a string for the file the memento object is written to \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Players/Player.h\item 
+source/Players/Player.cc\end{DoxyCompactItemize}

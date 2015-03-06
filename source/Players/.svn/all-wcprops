@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/checkmate/!svn/ver/295/source/Players
+END
+ReplayPlayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/checkmate/!svn/ver/276/source/Players/ReplayPlayer.h
+END
+Player.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/checkmate/!svn/ver/280/source/Players/Player.cc
+END
+RegisteredPlayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/checkmate/!svn/ver/245/source/Players/RegisteredPlayer.h
+END
+Player.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/checkmate/!svn/ver/285/source/Players/Player.h
+END
+AIPlayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/276/source/Players/AIPlayer.h
+END
+RegisteredPlayer.cc
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/checkmate/!svn/ver/295/source/Players/RegisteredPlayer.cc
+END

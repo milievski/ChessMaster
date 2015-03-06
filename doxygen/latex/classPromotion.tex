@@ -1,0 +1,51 @@
+\hypertarget{classPromotion}{
+\section{Promotion Class Reference}
+\label{classPromotion}\index{Promotion@{Promotion}}
+}
+Inheritance diagram for Promotion::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classPromotion}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPromotion_aa10833a0510fd7fdf3a8b7019ae61531}{Promotion} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPromotion}{Promotion} creates a \hyperlink{classPromotion}{Promotion} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classPromotion_abbf445a4b494712e0b8d8b6b3e69e0cf}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove if the location at where the pawn is requesting to move is at the end of the vector$<$ vector $<$ Piece$\ast$ $>$ $>$ return 3(so the pawn moves to that location and gets promoted) if the location at where the pawn requested to be is not at the end of the vector$<$ vector $<$ Piece$\ast$ $>$ $>$ then go to \hyperlink{classPieceInWay}{PieceInWay}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPromotion_aa10833a0510fd7fdf3a8b7019ae61531}{
+\index{Promotion@{Promotion}!Promotion@{Promotion}}
+\index{Promotion@{Promotion}!Promotion@{Promotion}}
+\subsubsection[{Promotion}]{\setlength{\rightskip}{0pt plus 5cm}Promotion::Promotion ()}}
+\label{classPromotion_aa10833a0510fd7fdf3a8b7019ae61531}
+
+
+\hyperlink{classPromotion}{Promotion} creates a \hyperlink{classPromotion}{Promotion} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPromotion_abbf445a4b494712e0b8d8b6b3e69e0cf}{
+\index{Promotion@{Promotion}!validMove@{validMove}}
+\index{validMove@{validMove}!Promotion@{Promotion}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int Promotion::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classPromotion_abbf445a4b494712e0b8d8b6b3e69e0cf}
+
+
+validMove if the location at where the pawn is requesting to move is at the end of the vector$<$ vector $<$ Piece$\ast$ $>$ $>$ return 3(so the pawn moves to that location and gets promoted) if the location at where the pawn requested to be is not at the end of the vector$<$ vector $<$ Piece$\ast$ $>$ $>$ then go to \hyperlink{classPieceInWay}{PieceInWay}. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{Promotion_8h}{Promotion.h}\item 
+source/Rules/Promotion.cc\end{DoxyCompactItemize}

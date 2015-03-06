@@ -1,0 +1,19 @@
+Dispersal of Work
+=================
+
+****Creation:*****
+
+Marko Illievski   - Rules, Board, Pieces
+
+Lukas Grasse      - Database, Chat, Tournament
+
+Brandon Robertson - Gui, Menus
+
+Michael Wilson    - Gui, Menus
+
+Zack Shortt       - Game, Players
+
+****Testing:*****
+
+Testing will be carried out initially by each portions respective coder/s, 
+Afterwards, the code will be handed around to be tested by the other members

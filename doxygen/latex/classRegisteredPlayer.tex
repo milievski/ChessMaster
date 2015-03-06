@@ -1,0 +1,97 @@
+\hypertarget{classRegisteredPlayer}{
+\section{RegisteredPlayer Class Reference}
+\label{classRegisteredPlayer}\index{RegisteredPlayer@{RegisteredPlayer}}
+}
+Inheritance diagram for RegisteredPlayer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classRegisteredPlayer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classRegisteredPlayer_a456be7066169306026a0d7d359d74799}{
+\hyperlink{classRegisteredPlayer_a456be7066169306026a0d7d359d74799}{RegisteredPlayer} (string name=\char`\"{}Guest\char`\"{})}
+\label{classRegisteredPlayer_a456be7066169306026a0d7d359d74799}
+
+\begin{DoxyCompactList}\small\item\em creates a \hyperlink{classRegisteredPlayer}{RegisteredPlayer} from the data base \item\end{DoxyCompactList}\item 
+\hypertarget{classRegisteredPlayer_a9cc8da7f1f03440e38e5bfddd90c448c}{
+\hyperlink{classRegisteredPlayer_a9cc8da7f1f03440e38e5bfddd90c448c}{$\sim$RegisteredPlayer} ()}
+\label{classRegisteredPlayer_a9cc8da7f1f03440e38e5bfddd90c448c}
+
+\begin{DoxyCompactList}\small\item\em destructor for \hyperlink{classRegisteredPlayer}{RegisteredPlayer} \item\end{DoxyCompactList}\item 
+bool \hyperlink{classRegisteredPlayer_aae6a64176b51f7e7b3b1ef745c9f1119}{setElo} ()
+\item 
+\hypertarget{classRegisteredPlayer_ae4c5461f0f7444025402a23a590b491b}{
+int \hyperlink{classRegisteredPlayer_ae4c5461f0f7444025402a23a590b491b}{getElo} ()}
+\label{classRegisteredPlayer_ae4c5461f0f7444025402a23a590b491b}
+
+\begin{DoxyCompactList}\small\item\em returns the ELO \item\end{DoxyCompactList}\item 
+\hypertarget{classRegisteredPlayer_a6f2c3d36cfe1451955a48c10e07f27d6}{
+int \hyperlink{classRegisteredPlayer_a6f2c3d36cfe1451955a48c10e07f27d6}{getGamesWon} ()}
+\label{classRegisteredPlayer_a6f2c3d36cfe1451955a48c10e07f27d6}
+
+\begin{DoxyCompactList}\small\item\em returns the Games won \item\end{DoxyCompactList}\item 
+\hypertarget{classRegisteredPlayer_a7511d11c93e2571b776f332154256e53}{
+bool \hyperlink{classRegisteredPlayer_a7511d11c93e2571b776f332154256e53}{incrementGamesWon} ()}
+\label{classRegisteredPlayer_a7511d11c93e2571b776f332154256e53}
+
+\begin{DoxyCompactList}\small\item\em returns a bool based on whether games won has been sucessfully updated \item\end{DoxyCompactList}\item 
+\hypertarget{classRegisteredPlayer_ad36ab2a8410ab7c1737f4e6a42dd700e}{
+int \hyperlink{classRegisteredPlayer_ad36ab2a8410ab7c1737f4e6a42dd700e}{getGamesLost} ()}
+\label{classRegisteredPlayer_ad36ab2a8410ab7c1737f4e6a42dd700e}
+
+\begin{DoxyCompactList}\small\item\em returns the Games won \item\end{DoxyCompactList}\item 
+\hypertarget{classRegisteredPlayer_a2ee5bcbc942517c3d22475f96c9937c9}{
+bool \hyperlink{classRegisteredPlayer_a2ee5bcbc942517c3d22475f96c9937c9}{incrementGamesLost} ()}
+\label{classRegisteredPlayer_a2ee5bcbc942517c3d22475f96c9937c9}
+
+\begin{DoxyCompactList}\small\item\em returns a bool based on whether games lost has been sucessfully updated \item\end{DoxyCompactList}\item 
+\hypertarget{classRegisteredPlayer_ababd7f33044952a9e16697ec13f74c40}{
+string \hyperlink{classRegisteredPlayer_ababd7f33044952a9e16697ec13f74c40}{getName} ()}
+\label{classRegisteredPlayer_ababd7f33044952a9e16697ec13f74c40}
+
+\begin{DoxyCompactList}\small\item\em returns the name of this player \item\end{DoxyCompactList}\item 
+\hyperlink{classMemento}{Memento} $\ast$ \hyperlink{classRegisteredPlayer_ab9436dac85b13fe2ad6849eb4efb02b8}{generateMemento} ()
+\begin{DoxyCompactList}\small\item\em Generates a \hyperlink{classMemento}{Memento} object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classRegisteredPlayer_a2a588dca8f68c5d72b4f73312f017c4d}{restoreMemento} (\hyperlink{classMemento}{Memento} $\ast$memento)
+\begin{DoxyCompactList}\small\item\em Restores this \hyperlink{classRegisteredPlayer}{RegisteredPlayer} object from the \hyperlink{classMemento}{Memento} object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classRegisteredPlayer_ab9436dac85b13fe2ad6849eb4efb02b8}{
+\index{RegisteredPlayer@{RegisteredPlayer}!generateMemento@{generateMemento}}
+\index{generateMemento@{generateMemento}!RegisteredPlayer@{RegisteredPlayer}}
+\subsubsection[{generateMemento}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memento} $\ast$ RegisteredPlayer::generateMemento ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classRegisteredPlayer_ab9436dac85b13fe2ad6849eb4efb02b8}
+
+
+Generates a \hyperlink{classMemento}{Memento} object. \begin{DoxyReturn}{Returns}
+returns a memento object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPlayer_ae0b947230fe2f09d96f273798f19cf0d}{Player}.\hypertarget{classRegisteredPlayer_a2a588dca8f68c5d72b4f73312f017c4d}{
+\index{RegisteredPlayer@{RegisteredPlayer}!restoreMemento@{restoreMemento}}
+\index{restoreMemento@{restoreMemento}!RegisteredPlayer@{RegisteredPlayer}}
+\subsubsection[{restoreMemento}]{\setlength{\rightskip}{0pt plus 5cm}void RegisteredPlayer::restoreMemento ({\bf Memento} $\ast$ {\em memento})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classRegisteredPlayer_a2a588dca8f68c5d72b4f73312f017c4d}
+
+
+Restores this \hyperlink{classRegisteredPlayer}{RegisteredPlayer} object from the \hyperlink{classMemento}{Memento} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em memento}]the memento object to restore \end{DoxyParams}
+
+
+Implements \hyperlink{classPlayer_a9c4f1a1eef2fbfda4b6e19e97be91877}{Player}.\hypertarget{classRegisteredPlayer_aae6a64176b51f7e7b3b1ef745c9f1119}{
+\index{RegisteredPlayer@{RegisteredPlayer}!setElo@{setElo}}
+\index{setElo@{setElo}!RegisteredPlayer@{RegisteredPlayer}}
+\subsubsection[{setElo}]{\setlength{\rightskip}{0pt plus 5cm}bool RegisteredPlayer::setElo ()}}
+\label{classRegisteredPlayer_aae6a64176b51f7e7b3b1ef745c9f1119}
+returns a bool based on whether ELO has been sucessfully updated The elo has been updated based on the end game score and if the player won 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Players/RegisteredPlayer.h\item 
+source/Players/RegisteredPlayer.cc\end{DoxyCompactItemize}

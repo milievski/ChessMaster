@@ -1,0 +1,89 @@
+\hypertarget{classQueenPiece}{
+\section{QueenPiece Class Reference}
+\label{classQueenPiece}\index{QueenPiece@{QueenPiece}}
+}
+
+
+a class for all Queen Piece`s.  
+
+
+{\ttfamily \#include $<$QueenPiece.h$>$}Inheritance diagram for QueenPiece::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classQueenPiece}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQueenPiece_a0eca088526b0b1a2648575fe867b3a9b}{
+\hyperlink{classQueenPiece_a0eca088526b0b1a2648575fe867b3a9b}{QueenPiece} (int c=0)}
+\label{classQueenPiece_a0eca088526b0b1a2648575fe867b3a9b}
+
+\begin{DoxyCompactList}\small\item\em creates a \hyperlink{classPiece}{Piece} object \item\end{DoxyCompactList}\item 
+int \hyperlink{classQueenPiece_a461d58f951b5e9f4d120cec0c47a1d9c}{getColor} () const 
+\begin{DoxyCompactList}\small\item\em gets the color of the Queen \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+void \hyperlink{classQueenPiece_a691ff6afc7d167dab9cff0c910cae859}{setColor} (int colorOfPiece)
+\begin{DoxyCompactList}\small\item\em sets the Color of the Queen \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+string \hyperlink{classQueenPiece_ae8df61c033b58d7f96e344166a9f2bdb}{getType} () const 
+\begin{DoxyCompactList}\small\item\em Returns Queen to user. \item\end{DoxyCompactList}\item 
+int \hyperlink{classQueenPiece_a5db59b743df799adc37ce6a3c0230458}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ gameBoard, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validates a move based on the Queen rules. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a class for all Queen Piece`s. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classQueenPiece_a461d58f951b5e9f4d120cec0c47a1d9c}{
+\index{QueenPiece@{QueenPiece}!getColor@{getColor}}
+\index{getColor@{getColor}!QueenPiece@{QueenPiece}}
+\subsubsection[{getColor}]{\setlength{\rightskip}{0pt plus 5cm}int QueenPiece::getColor () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classQueenPiece_a461d58f951b5e9f4d120cec0c47a1d9c}
+
+
+gets the color of the Queen \hyperlink{classPiece}{Piece} \begin{DoxyReturn}{Returns}
+int a 0 if white and 1 if black 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPiece_a1376072d4815719e60253ce5688df95c}{Piece}.\hypertarget{classQueenPiece_ae8df61c033b58d7f96e344166a9f2bdb}{
+\index{QueenPiece@{QueenPiece}!getType@{getType}}
+\index{getType@{getType}!QueenPiece@{QueenPiece}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}string QueenPiece::getType () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classQueenPiece_ae8df61c033b58d7f96e344166a9f2bdb}
+
+
+Returns Queen to user. \begin{DoxyReturn}{Returns}
+a string that will return Queen Type. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPiece_a5b88fcd786bb30b345b24fbc3ab24ab9}{Piece}.\hypertarget{classQueenPiece_a691ff6afc7d167dab9cff0c910cae859}{
+\index{QueenPiece@{QueenPiece}!setColor@{setColor}}
+\index{setColor@{setColor}!QueenPiece@{QueenPiece}}
+\subsubsection[{setColor}]{\setlength{\rightskip}{0pt plus 5cm}void QueenPiece::setColor (int {\em colorOfPiece})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classQueenPiece_a691ff6afc7d167dab9cff0c910cae859}
+
+
+sets the Color of the Queen \hyperlink{classPiece}{Piece} 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em colorOfPiece}]sets the Queen Piece`s color \end{DoxyParams}
+
+
+Implements \hyperlink{classPiece_a1387cb503dca308ac1e3bbe38a70a073}{Piece}.\hypertarget{classQueenPiece_a5db59b743df799adc37ce6a3c0230458}{
+\index{QueenPiece@{QueenPiece}!validMove@{validMove}}
+\index{validMove@{validMove}!QueenPiece@{QueenPiece}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int QueenPiece::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ {\em gameBoard}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})}}
+\label{classQueenPiece_a5db59b743df799adc37ce6a3c0230458}
+
+
+validates a move based on the Queen rules. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em board}]A \hyperlink{classBoard}{Board} that will contain the currect board state \item[\mbox{$\leftarrow$} {\em ix}]A int that holds the x coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em iy}]A int that holds the y coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em dx}]A int that holds the x coordinate of where the piece is moving to \item[\mbox{$\leftarrow$} {\em dy}]A int that holds the y coordinate of where the piece is moving to \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Piece/\hyperlink{QueenPiece_8h}{QueenPiece.h}\item 
+source/Piece/QueenPiece.cc\end{DoxyCompactItemize}

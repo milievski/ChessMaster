@@ -1,0 +1,51 @@
+\hypertarget{classPawnCapture}{
+\section{PawnCapture Class Reference}
+\label{classPawnCapture}\index{PawnCapture@{PawnCapture}}
+}
+Inheritance diagram for PawnCapture::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classPawnCapture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPawnCapture_a1d47980f9be9650f3d4201d417aaaec2}{PawnCapture} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPawnCapture}{PawnCapture} creates a \hyperlink{classPawnCapture}{PawnCapture} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classPawnCapture_afa1faa171cb70974f46add5989c3f373}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove if the player is trying to move forward go to promotion class. if that is false, check if there is an valid attack for pawn, return 1 else return 0. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPawnCapture_a1d47980f9be9650f3d4201d417aaaec2}{
+\index{PawnCapture@{PawnCapture}!PawnCapture@{PawnCapture}}
+\index{PawnCapture@{PawnCapture}!PawnCapture@{PawnCapture}}
+\subsubsection[{PawnCapture}]{\setlength{\rightskip}{0pt plus 5cm}PawnCapture::PawnCapture ()}}
+\label{classPawnCapture_a1d47980f9be9650f3d4201d417aaaec2}
+
+
+\hyperlink{classPawnCapture}{PawnCapture} creates a \hyperlink{classPawnCapture}{PawnCapture} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPawnCapture_afa1faa171cb70974f46add5989c3f373}{
+\index{PawnCapture@{PawnCapture}!validMove@{validMove}}
+\index{validMove@{validMove}!PawnCapture@{PawnCapture}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int PawnCapture::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classPawnCapture_afa1faa171cb70974f46add5989c3f373}
+
+
+validMove if the player is trying to move forward go to promotion class. if that is false, check if there is an valid attack for pawn, return 1 else return 0. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{PawnCapture_8h}{PawnCapture.h}\item 
+source/Rules/PawnCapture.cc\end{DoxyCompactItemize}

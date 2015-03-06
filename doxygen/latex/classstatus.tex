@@ -1,0 +1,194 @@
+\hypertarget{classstatus}{
+\section{status Class Reference}
+\label{classstatus}\index{status@{status}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classstatus_a22e483f0410490743e4970e905e5fa19}{
+\hyperlink{classstatus_a22e483f0410490743e4970e905e5fa19}{status} ()}
+\label{classstatus_a22e483f0410490743e4970e905e5fa19}
+
+\begin{DoxyCompactList}\small\item\em constructor that sets up \hyperlink{classstatus}{status}. \item\end{DoxyCompactList}\item 
+\hypertarget{classstatus_aaacad1153f6cd58697d6b3871c7506ef}{
+\hyperlink{classstatus_aaacad1153f6cd58697d6b3871c7506ef}{$\sim$status} ()}
+\label{classstatus_aaacad1153f6cd58697d6b3871c7506ef}
+
+\begin{DoxyCompactList}\small\item\em destructor for \hyperlink{classstatus}{status}. deletes all heap memory. \item\end{DoxyCompactList}\item 
+void \hyperlink{classstatus_a350710a41204ec7fc5691e534145118e}{loadP1} (\hyperlink{classRegisteredPlayer}{RegisteredPlayer} $\ast$player)
+\begin{DoxyCompactList}\small\item\em loadp1 will load a registered player onto the playerOne object \item\end{DoxyCompactList}\item 
+void \hyperlink{classstatus_a09a2400aaa57b5955c3ce2987a49dcbe}{loadP2} (\hyperlink{classRegisteredPlayer}{RegisteredPlayer} $\ast$player)
+\begin{DoxyCompactList}\small\item\em loadp2 will load a registered player onto the playerOne object \item\end{DoxyCompactList}\item 
+\hypertarget{classstatus_a04c1417e93a7a26734da89c51ecc1596}{
+void \hyperlink{classstatus_a04c1417e93a7a26734da89c51ecc1596}{Replay} ()}
+\label{classstatus_a04c1417e93a7a26734da89c51ecc1596}
+
+\begin{DoxyCompactList}\small\item\em Replay will is a switch that turns replay on or off. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classstatus_a7054b21075d50ee360d86b89c8b5d007}{isReplay} ()
+\begin{DoxyCompactList}\small\item\em isReplay will return the \hyperlink{classstatus}{status} of replay. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classstatus_a20a3ca42b44610b5f37f7ca415b3ebd0}{isLoad} ()
+\begin{DoxyCompactList}\small\item\em isLoad will return weather load is true or false \item\end{DoxyCompactList}\item 
+void \hyperlink{classstatus_a5d04df9098e1b998605b42262e3490a8}{setReplayVector} (string fileName)
+\begin{DoxyCompactList}\small\item\em setReplayVector will set the replay vector with the history vector that is being passed in. \item\end{DoxyCompactList}\item 
+void \hyperlink{classstatus_af323bc43c9ac2c262599a7ce605a93d2}{setLoad} (bool set)
+\begin{DoxyCompactList}\small\item\em setLoad will set weather a game is being loaded or not. \item\end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{classstatus_a606237d9c1b4e0ff9f2da4103aebe4de}{getReplayVector} ()
+\begin{DoxyCompactList}\small\item\em setReplayVector will set the replay vector with the history vector that is being passed in. \item\end{DoxyCompactList}\item 
+\hyperlink{classRegisteredPlayer}{RegisteredPlayer} $\ast$ \hyperlink{classstatus_a9f4ec14653e8e058f86e9f666e75d237}{getP1} ()
+\begin{DoxyCompactList}\small\item\em getP1 will return a player pointer to the player that is stored in \hyperlink{classstatus}{status}. \item\end{DoxyCompactList}\item 
+\hyperlink{classRegisteredPlayer}{RegisteredPlayer} $\ast$ \hyperlink{classstatus_a944ffb3c3b34b2def529314610337fdb}{getP2} ()
+\begin{DoxyCompactList}\small\item\em getP2 will return a player pointer to the player that is stored in \hyperlink{classstatus}{status}. \item\end{DoxyCompactList}\item 
+\hyperlink{classChessBoard}{ChessBoard} $\ast$ \hyperlink{classstatus_a9c563bb6d7d1b93a19a46950e0eb0c12}{getGame} ()
+\begin{DoxyCompactList}\small\item\em getGame will return a pointer to the chessboard being stored in \hyperlink{classstatus}{status}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classstatus_a19b60728812778c97551d46403fc24bb}{setBoard} (\hyperlink{classChessBoard}{ChessBoard} $\ast$tempBoard)
+\begin{DoxyCompactList}\small\item\em setBoard will set the chessboard in \hyperlink{classstatus}{status} to the one being passed in. \item\end{DoxyCompactList}\item 
+string \hyperlink{classstatus_a21344f4838dff393b03f3bf6594746d7}{getP1Name} ()
+\begin{DoxyCompactList}\small\item\em getP1Name will return the a string containing player ones name. \item\end{DoxyCompactList}\item 
+string \hyperlink{classstatus_a4b4ad3dc4ac1444ebd6be59f6771ce0d}{getP2Name} ()
+\begin{DoxyCompactList}\small\item\em getP1Name will return the a string containing player ones name. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classstatus_abbe7c4fa038e61cf8949432ece0defcb}{isAI} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstatus_a9c563bb6d7d1b93a19a46950e0eb0c12}{
+\index{status@{status}!getGame@{getGame}}
+\index{getGame@{getGame}!status@{status}}
+\subsubsection[{getGame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ChessBoard} $\ast$ status::getGame ()}}
+\label{classstatus_a9c563bb6d7d1b93a19a46950e0eb0c12}
+
+
+getGame will return a pointer to the chessboard being stored in \hyperlink{classstatus}{status}. \begin{DoxyReturn}{Returns}
+a pointer to the \hyperlink{classChessBoard}{ChessBoard} being stored in \hyperlink{classstatus}{status}. 
+\end{DoxyReturn}
+\hypertarget{classstatus_a9f4ec14653e8e058f86e9f666e75d237}{
+\index{status@{status}!getP1@{getP1}}
+\index{getP1@{getP1}!status@{status}}
+\subsubsection[{getP1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RegisteredPlayer} $\ast$ status::getP1 ()}}
+\label{classstatus_a9f4ec14653e8e058f86e9f666e75d237}
+
+
+getP1 will return a player pointer to the player that is stored in \hyperlink{classstatus}{status}. \begin{DoxyReturn}{Returns}
+a pointer to the player being stored in \hyperlink{classstatus}{status}. 
+\end{DoxyReturn}
+\hypertarget{classstatus_a21344f4838dff393b03f3bf6594746d7}{
+\index{status@{status}!getP1Name@{getP1Name}}
+\index{getP1Name@{getP1Name}!status@{status}}
+\subsubsection[{getP1Name}]{\setlength{\rightskip}{0pt plus 5cm}string status::getP1Name ()}}
+\label{classstatus_a21344f4838dff393b03f3bf6594746d7}
+
+
+getP1Name will return the a string containing player ones name. \begin{DoxyReturn}{Returns}
+a string 
+\end{DoxyReturn}
+\hypertarget{classstatus_a944ffb3c3b34b2def529314610337fdb}{
+\index{status@{status}!getP2@{getP2}}
+\index{getP2@{getP2}!status@{status}}
+\subsubsection[{getP2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RegisteredPlayer} $\ast$ status::getP2 ()}}
+\label{classstatus_a944ffb3c3b34b2def529314610337fdb}
+
+
+getP2 will return a player pointer to the player that is stored in \hyperlink{classstatus}{status}. \begin{DoxyReturn}{Returns}
+a pointer to the player being stored in \hyperlink{classstatus}{status}. 
+\end{DoxyReturn}
+\hypertarget{classstatus_a4b4ad3dc4ac1444ebd6be59f6771ce0d}{
+\index{status@{status}!getP2Name@{getP2Name}}
+\index{getP2Name@{getP2Name}!status@{status}}
+\subsubsection[{getP2Name}]{\setlength{\rightskip}{0pt plus 5cm}string status::getP2Name ()}}
+\label{classstatus_a4b4ad3dc4ac1444ebd6be59f6771ce0d}
+
+
+getP1Name will return the a string containing player ones name. \begin{DoxyReturn}{Returns}
+a string 
+\end{DoxyReturn}
+\hypertarget{classstatus_a606237d9c1b4e0ff9f2da4103aebe4de}{
+\index{status@{status}!getReplayVector@{getReplayVector}}
+\index{getReplayVector@{getReplayVector}!status@{status}}
+\subsubsection[{getReplayVector}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ string $>$ status::getReplayVector ()}}
+\label{classstatus_a606237d9c1b4e0ff9f2da4103aebe4de}
+
+
+setReplayVector will set the replay vector with the history vector that is being passed in. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em filename}]is the string of the location of the vector of strings in database. \end{DoxyParams}
+\hypertarget{classstatus_abbe7c4fa038e61cf8949432ece0defcb}{
+\index{status@{status}!isAI@{isAI}}
+\index{isAI@{isAI}!status@{status}}
+\subsubsection[{isAI}]{\setlength{\rightskip}{0pt plus 5cm}bool status::isAI ()}}
+\label{classstatus_abbe7c4fa038e61cf8949432ece0defcb}
+this function will return a boolean on if the player 2 is a AI player or not for the multiplayer functionality \hypertarget{classstatus_a20a3ca42b44610b5f37f7ca415b3ebd0}{
+\index{status@{status}!isLoad@{isLoad}}
+\index{isLoad@{isLoad}!status@{status}}
+\subsubsection[{isLoad}]{\setlength{\rightskip}{0pt plus 5cm}bool status::isLoad ()}}
+\label{classstatus_a20a3ca42b44610b5f37f7ca415b3ebd0}
+
+
+isLoad will return weather load is true or false \begin{DoxyReturn}{Returns}
+return weather load is true or false. 
+\end{DoxyReturn}
+\hypertarget{classstatus_a7054b21075d50ee360d86b89c8b5d007}{
+\index{status@{status}!isReplay@{isReplay}}
+\index{isReplay@{isReplay}!status@{status}}
+\subsubsection[{isReplay}]{\setlength{\rightskip}{0pt plus 5cm}bool status::isReplay ()}}
+\label{classstatus_a7054b21075d50ee360d86b89c8b5d007}
+
+
+isReplay will return the \hyperlink{classstatus}{status} of replay. \begin{DoxyReturn}{Returns}
+returns weather \hyperlink{classstatus}{status} is true or false. 
+\end{DoxyReturn}
+\hypertarget{classstatus_a350710a41204ec7fc5691e534145118e}{
+\index{status@{status}!loadP1@{loadP1}}
+\index{loadP1@{loadP1}!status@{status}}
+\subsubsection[{loadP1}]{\setlength{\rightskip}{0pt plus 5cm}void status::loadP1 ({\bf RegisteredPlayer} $\ast$ {\em player})}}
+\label{classstatus_a350710a41204ec7fc5691e534145118e}
+
+
+loadp1 will load a registered player onto the playerOne object 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em player}]is a pointer to the registered player that is going to be copied. \end{DoxyParams}
+\hypertarget{classstatus_a09a2400aaa57b5955c3ce2987a49dcbe}{
+\index{status@{status}!loadP2@{loadP2}}
+\index{loadP2@{loadP2}!status@{status}}
+\subsubsection[{loadP2}]{\setlength{\rightskip}{0pt plus 5cm}void status::loadP2 ({\bf RegisteredPlayer} $\ast$ {\em player})}}
+\label{classstatus_a09a2400aaa57b5955c3ce2987a49dcbe}
+
+
+loadp2 will load a registered player onto the playerOne object 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em player}]is a pointer to the registered player that is going to be copied. \end{DoxyParams}
+\hypertarget{classstatus_a19b60728812778c97551d46403fc24bb}{
+\index{status@{status}!setBoard@{setBoard}}
+\index{setBoard@{setBoard}!status@{status}}
+\subsubsection[{setBoard}]{\setlength{\rightskip}{0pt plus 5cm}void status::setBoard ({\bf ChessBoard} $\ast$ {\em tempBoard})}}
+\label{classstatus_a19b60728812778c97551d46403fc24bb}
+
+
+setBoard will set the chessboard in \hyperlink{classstatus}{status} to the one being passed in. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em tempBoard}]is the pointer to the chessboard that is being stored in \hyperlink{classstatus}{status}. \end{DoxyParams}
+\hypertarget{classstatus_af323bc43c9ac2c262599a7ce605a93d2}{
+\index{status@{status}!setLoad@{setLoad}}
+\index{setLoad@{setLoad}!status@{status}}
+\subsubsection[{setLoad}]{\setlength{\rightskip}{0pt plus 5cm}void status::setLoad (bool {\em set})}}
+\label{classstatus_af323bc43c9ac2c262599a7ce605a93d2}
+
+
+setLoad will set weather a game is being loaded or not. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em set}]is a bool value that will be coppied onto load. \end{DoxyParams}
+\hypertarget{classstatus_a5d04df9098e1b998605b42262e3490a8}{
+\index{status@{status}!setReplayVector@{setReplayVector}}
+\index{setReplayVector@{setReplayVector}!status@{status}}
+\subsubsection[{setReplayVector}]{\setlength{\rightskip}{0pt plus 5cm}void status::setReplayVector (string {\em fileName})}}
+\label{classstatus_a5d04df9098e1b998605b42262e3490a8}
+
+
+setReplayVector will set the replay vector with the history vector that is being passed in. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em filename}]is the string of the location of the vector of strings in database. \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/status.h\item 
+source/status.cc\end{DoxyCompactItemize}

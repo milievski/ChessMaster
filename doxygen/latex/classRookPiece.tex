@@ -1,0 +1,89 @@
+\hypertarget{classRookPiece}{
+\section{RookPiece Class Reference}
+\label{classRookPiece}\index{RookPiece@{RookPiece}}
+}
+
+
+a class for all Rook Piece`s.  
+
+
+{\ttfamily \#include $<$RookPiece.h$>$}Inheritance diagram for RookPiece::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classRookPiece}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classRookPiece_a4f3df41645f99a11dcbf3045195a9a6a}{
+\hyperlink{classRookPiece_a4f3df41645f99a11dcbf3045195a9a6a}{RookPiece} (int c=0)}
+\label{classRookPiece_a4f3df41645f99a11dcbf3045195a9a6a}
+
+\begin{DoxyCompactList}\small\item\em creates a \hyperlink{classPiece}{Piece} object \item\end{DoxyCompactList}\item 
+int \hyperlink{classRookPiece_a15b00afd7fe0fe1035c64b884870c6e1}{getColor} () const 
+\begin{DoxyCompactList}\small\item\em gets the color of the Rook \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+void \hyperlink{classRookPiece_ad10584bf27bf3f6f109074b878ef840d}{setColor} (int colorOfPiece)
+\begin{DoxyCompactList}\small\item\em sets the Color of the Rook \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+string \hyperlink{classRookPiece_a45d8858e75e550b72d27d49da0230c0a}{getType} () const 
+\begin{DoxyCompactList}\small\item\em Returns Rook to user. \item\end{DoxyCompactList}\item 
+int \hyperlink{classRookPiece_a451d36ccd1ccba8001acd3fff364904e}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ gameBoard, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validates a move based on the Rook rules. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a class for all Rook Piece`s. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classRookPiece_a15b00afd7fe0fe1035c64b884870c6e1}{
+\index{RookPiece@{RookPiece}!getColor@{getColor}}
+\index{getColor@{getColor}!RookPiece@{RookPiece}}
+\subsubsection[{getColor}]{\setlength{\rightskip}{0pt plus 5cm}int RookPiece::getColor () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classRookPiece_a15b00afd7fe0fe1035c64b884870c6e1}
+
+
+gets the color of the Rook \hyperlink{classPiece}{Piece} \begin{DoxyReturn}{Returns}
+int a 0 if white and 1 if black 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPiece_a1376072d4815719e60253ce5688df95c}{Piece}.\hypertarget{classRookPiece_a45d8858e75e550b72d27d49da0230c0a}{
+\index{RookPiece@{RookPiece}!getType@{getType}}
+\index{getType@{getType}!RookPiece@{RookPiece}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}string RookPiece::getType () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classRookPiece_a45d8858e75e550b72d27d49da0230c0a}
+
+
+Returns Rook to user. \begin{DoxyReturn}{Returns}
+a string that will return Rook Type. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPiece_a5b88fcd786bb30b345b24fbc3ab24ab9}{Piece}.\hypertarget{classRookPiece_ad10584bf27bf3f6f109074b878ef840d}{
+\index{RookPiece@{RookPiece}!setColor@{setColor}}
+\index{setColor@{setColor}!RookPiece@{RookPiece}}
+\subsubsection[{setColor}]{\setlength{\rightskip}{0pt plus 5cm}void RookPiece::setColor (int {\em colorOfPiece})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classRookPiece_ad10584bf27bf3f6f109074b878ef840d}
+
+
+sets the Color of the Rook \hyperlink{classPiece}{Piece} 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em colorOfPiece}]sets the Pawn Piece`s color \end{DoxyParams}
+
+
+Implements \hyperlink{classPiece_a1387cb503dca308ac1e3bbe38a70a073}{Piece}.\hypertarget{classRookPiece_a451d36ccd1ccba8001acd3fff364904e}{
+\index{RookPiece@{RookPiece}!validMove@{validMove}}
+\index{validMove@{validMove}!RookPiece@{RookPiece}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int RookPiece::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ {\em gameBoard}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})}}
+\label{classRookPiece_a451d36ccd1ccba8001acd3fff364904e}
+
+
+validates a move based on the Rook rules. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em board}]A \hyperlink{classBoard}{Board} that will contain the currect board state \item[\mbox{$\leftarrow$} {\em ix}]A int that holds the x coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em iy}]A int that holds the y coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em dx}]A int that holds the x coordinate of where the piece is moving to \item[\mbox{$\leftarrow$} {\em dy}]A int that holds the y coordinate of where the piece is moving to \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Piece/\hyperlink{RookPiece_8h}{RookPiece.h}\item 
+source/Piece/RookPiece.cc\end{DoxyCompactItemize}

@@ -1,0 +1,36 @@
+********************************************************************************
+*******************************Manual Tests*************************************
+************************CPSC 2720 - Checkmate***********************************
+********************************************************************************
+Manual Testing Procedure
+
+This document is to keep track of what functionality has been implemented yet,
+and any bugs that are found during program operation.
+
+This document will be updated on a biweekly basis at minimum.
+
+11/14/2014
+Program Compiles sucessfully
+
+Functionality Status:
+-One Player: Works. Game doesnt open.
+-Two Player: Does not Work - Seg Fault.
+-Leaderboard: Works. 
+-Tournament. Works. - Seg Fault when pressing ESC to go back.
+-Load Game. Does not Work. - Seg Fault.
+-Replay. Does not Work. - Seg Fault.
+-Login. Works. - No option to return.
+-Exit program. Works.
+
+11/26/2014
+Program Compiles sucessfully
+
+Functionality Status:
+-One Player: Some Rules do not work
+-Two Player: Some Rules do not work
+-Leaderboard: Works.
+-Tournament. Works. - Seg Fault when pressing ESC to go back.
+-Load Game. Does not Work. - Seg Fault.
+-Replay. Does not Work. - Seg Fault.
+-Login. Aborted.
+-Exit program. Works.

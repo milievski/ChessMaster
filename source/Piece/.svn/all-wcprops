@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/checkmate/!svn/ver/224/source/Piece
+END
+KnightPiece.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/checkmate/!svn/ver/213/source/Piece/KnightPiece.h
+END
+BishopPiece.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/checkmate/!svn/ver/213/source/Piece/BishopPiece.h
+END
+KingPiece.cc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/224/source/Piece/KingPiece.cc
+END
+KingPiece.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/checkmate/!svn/ver/213/source/Piece/KingPiece.h
+END
+EmptyPiece.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/checkmate/!svn/ver/216/source/Piece/EmptyPiece.cc
+END
+EmptyPiece.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/201/source/Piece/EmptyPiece.h
+END
+PawnPiece.cc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/224/source/Piece/PawnPiece.cc
+END
+PawnPiece.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/checkmate/!svn/ver/213/source/Piece/PawnPiece.h
+END
+RookPiece.cc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/216/source/Piece/RookPiece.cc
+END
+RookPiece.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/checkmate/!svn/ver/213/source/Piece/RookPiece.h
+END
+QueenPiece.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/checkmate/!svn/ver/216/source/Piece/QueenPiece.cc
+END
+QueenPiece.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/213/source/Piece/QueenPiece.h
+END
+Piece.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/checkmate/!svn/ver/201/source/Piece/Piece.h
+END
+KnightPiece.cc
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/checkmate/!svn/ver/216/source/Piece/KnightPiece.cc
+END
+BishopPiece.cc
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/checkmate/!svn/ver/215/source/Piece/BishopPiece.cc
+END

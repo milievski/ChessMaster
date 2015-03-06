@@ -1,0 +1,89 @@
+\hypertarget{classKingPiece}{
+\section{KingPiece Class Reference}
+\label{classKingPiece}\index{KingPiece@{KingPiece}}
+}
+
+
+a class for all King Piece`s.  
+
+
+{\ttfamily \#include $<$KingPiece.h$>$}Inheritance diagram for KingPiece::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classKingPiece}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classKingPiece_a9851298aebec5797b2497c9c3a8397f9}{
+\hyperlink{classKingPiece_a9851298aebec5797b2497c9c3a8397f9}{KingPiece} (int c=0)}
+\label{classKingPiece_a9851298aebec5797b2497c9c3a8397f9}
+
+\begin{DoxyCompactList}\small\item\em creates a \hyperlink{classPiece}{Piece} object \item\end{DoxyCompactList}\item 
+int \hyperlink{classKingPiece_ac15e38c6ceaccae6879ec70211c2ab28}{getColor} () const 
+\begin{DoxyCompactList}\small\item\em gets the color of the King \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+void \hyperlink{classKingPiece_ab7a9023dda46c21a566675623f1b4a32}{setColor} (int colorOfPiece)
+\begin{DoxyCompactList}\small\item\em sets the Color of the King \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+string \hyperlink{classKingPiece_ac93de53a7adee6e5ad33284f0fd6aa2e}{getType} () const 
+\begin{DoxyCompactList}\small\item\em Returns King to user. \item\end{DoxyCompactList}\item 
+int \hyperlink{classKingPiece_ae2ae8557d6d6e5fd1dcacdf7839de49f}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ gameBoard, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validates a move based on the King rules. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a class for all King Piece`s. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classKingPiece_ac15e38c6ceaccae6879ec70211c2ab28}{
+\index{KingPiece@{KingPiece}!getColor@{getColor}}
+\index{getColor@{getColor}!KingPiece@{KingPiece}}
+\subsubsection[{getColor}]{\setlength{\rightskip}{0pt plus 5cm}int KingPiece::getColor () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKingPiece_ac15e38c6ceaccae6879ec70211c2ab28}
+
+
+gets the color of the King \hyperlink{classPiece}{Piece} \begin{DoxyReturn}{Returns}
+int a 0 if white and 1 if black 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPiece_a1376072d4815719e60253ce5688df95c}{Piece}.\hypertarget{classKingPiece_ac93de53a7adee6e5ad33284f0fd6aa2e}{
+\index{KingPiece@{KingPiece}!getType@{getType}}
+\index{getType@{getType}!KingPiece@{KingPiece}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}string KingPiece::getType () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKingPiece_ac93de53a7adee6e5ad33284f0fd6aa2e}
+
+
+Returns King to user. \begin{DoxyReturn}{Returns}
+a string that will return King. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPiece_a5b88fcd786bb30b345b24fbc3ab24ab9}{Piece}.\hypertarget{classKingPiece_ab7a9023dda46c21a566675623f1b4a32}{
+\index{KingPiece@{KingPiece}!setColor@{setColor}}
+\index{setColor@{setColor}!KingPiece@{KingPiece}}
+\subsubsection[{setColor}]{\setlength{\rightskip}{0pt plus 5cm}void KingPiece::setColor (int {\em colorOfPiece})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKingPiece_ab7a9023dda46c21a566675623f1b4a32}
+
+
+sets the Color of the King \hyperlink{classPiece}{Piece} 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em colorOfPiece}]sets the King Piece`s color \end{DoxyParams}
+
+
+Implements \hyperlink{classPiece_a1387cb503dca308ac1e3bbe38a70a073}{Piece}.\hypertarget{classKingPiece_ae2ae8557d6d6e5fd1dcacdf7839de49f}{
+\index{KingPiece@{KingPiece}!validMove@{validMove}}
+\index{validMove@{validMove}!KingPiece@{KingPiece}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int KingPiece::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ {\em gameBoard}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})}}
+\label{classKingPiece_ae2ae8557d6d6e5fd1dcacdf7839de49f}
+
+
+validates a move based on the King rules. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em board}]A \hyperlink{classBoard}{Board} that will contain the currect board state \item[\mbox{$\leftarrow$} {\em ix}]A int that holds the x coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em iy}]A int that holds the y coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em dx}]A int that holds the x coordinate of where the piece is moving to \item[\mbox{$\leftarrow$} {\em dy}]A int that holds the y coordinate of where the piece is moving to \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Piece/\hyperlink{KingPiece_8h}{KingPiece.h}\item 
+source/Piece/KingPiece.cc\end{DoxyCompactItemize}

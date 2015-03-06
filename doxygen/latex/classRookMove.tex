@@ -1,0 +1,51 @@
+\hypertarget{classRookMove}{
+\section{RookMove Class Reference}
+\label{classRookMove}\index{RookMove@{RookMove}}
+}
+Inheritance diagram for RookMove::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classRookMove}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRookMove_a74a07da059bd2a7dd2a8a644500efe8c}{RookMove} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classRookMove}{RookMove} creates a \hyperlink{classRookMove}{RookMove} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classRookMove_a3b985caef5be53996c71ff3427816b68}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove if the rook requested location is either going strictly on the x axis or strictly on the y axis then go to \hyperlink{classPieceInWay}{PieceInWay} else return 0. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classRookMove_a74a07da059bd2a7dd2a8a644500efe8c}{
+\index{RookMove@{RookMove}!RookMove@{RookMove}}
+\index{RookMove@{RookMove}!RookMove@{RookMove}}
+\subsubsection[{RookMove}]{\setlength{\rightskip}{0pt plus 5cm}RookMove::RookMove ()}}
+\label{classRookMove_a74a07da059bd2a7dd2a8a644500efe8c}
+
+
+\hyperlink{classRookMove}{RookMove} creates a \hyperlink{classRookMove}{RookMove} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classRookMove_a3b985caef5be53996c71ff3427816b68}{
+\index{RookMove@{RookMove}!validMove@{validMove}}
+\index{validMove@{validMove}!RookMove@{RookMove}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int RookMove::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classRookMove_a3b985caef5be53996c71ff3427816b68}
+
+
+validMove if the rook requested location is either going strictly on the x axis or strictly on the y axis then go to \hyperlink{classPieceInWay}{PieceInWay} else return 0. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{RookMove_8h}{RookMove.h}\item 
+source/Rules/RookMove.cc\end{DoxyCompactItemize}

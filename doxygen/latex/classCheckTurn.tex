@@ -1,0 +1,51 @@
+\hypertarget{classCheckTurn}{
+\section{CheckTurn Class Reference}
+\label{classCheckTurn}\index{CheckTurn@{CheckTurn}}
+}
+Inheritance diagram for CheckTurn::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classCheckTurn}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCheckTurn_aedd0e9efd064863ae813f80e5847b197}{CheckTurn} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCheckTurn}{CheckTurn} creates a \hyperlink{classCheckTurn}{CheckTurn} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classCheckTurn_acb5d45e0ee242eb4af3dc6a7437b39e5}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove checks if the pieces left alive are the bishop and king or the knight and king it will return 2 else return 1. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCheckTurn_aedd0e9efd064863ae813f80e5847b197}{
+\index{CheckTurn@{CheckTurn}!CheckTurn@{CheckTurn}}
+\index{CheckTurn@{CheckTurn}!CheckTurn@{CheckTurn}}
+\subsubsection[{CheckTurn}]{\setlength{\rightskip}{0pt plus 5cm}CheckTurn::CheckTurn ()}}
+\label{classCheckTurn_aedd0e9efd064863ae813f80e5847b197}
+
+
+\hyperlink{classCheckTurn}{CheckTurn} creates a \hyperlink{classCheckTurn}{CheckTurn} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCheckTurn_acb5d45e0ee242eb4af3dc6a7437b39e5}{
+\index{CheckTurn@{CheckTurn}!validMove@{validMove}}
+\index{validMove@{validMove}!CheckTurn@{CheckTurn}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int CheckTurn::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classCheckTurn_acb5d45e0ee242eb4af3dc6a7437b39e5}
+
+
+validMove checks if the pieces left alive are the bishop and king or the knight and king it will return 2 else return 1. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{CheckTurn_8h}{CheckTurn.h}\item 
+source/Rules/CheckTurn.cc\end{DoxyCompactItemize}

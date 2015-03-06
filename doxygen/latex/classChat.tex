@@ -1,0 +1,111 @@
+\hypertarget{classChat}{
+\section{Chat Class Reference}
+\label{classChat}\index{Chat@{Chat}}
+}
+
+
+a concrete class for chat functionality between players.  
+
+
+{\ttfamily \#include $<$Chat.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classChat_abc23d9c9b254089b8f486bd0ef6bc225}{Chat} (string playerOneId=\char`\"{}guest\char`\"{}, string playerTwoId=\char`\"{}guest\char`\"{})
+\begin{DoxyCompactList}\small\item\em creates a \hyperlink{classChat}{Chat} object \item\end{DoxyCompactList}\item 
+string \hyperlink{classChat_add2a099a2c259d0a4a7e88061a3ac7df}{getPlayerOneId} () const 
+\begin{DoxyCompactList}\small\item\em gets player 1's id \item\end{DoxyCompactList}\item 
+string \hyperlink{classChat_a017261b95b8794213381c1534881968b}{getPlayerTwoId} () const 
+\begin{DoxyCompactList}\small\item\em gets player 2's id \item\end{DoxyCompactList}\item 
+void \hyperlink{classChat_adbe497560146ca9d5a940792b407f9fc}{setPlayerOneId} (string playerOneId)
+\begin{DoxyCompactList}\small\item\em sets \hyperlink{classPlayer}{Player} 1's Id \item\end{DoxyCompactList}\item 
+void \hyperlink{classChat_ae81fb0422bd13afef5a18836d6c24a78}{setPlayerTwoId} (string playerTwoId)
+\begin{DoxyCompactList}\small\item\em sets \hyperlink{classPlayer}{Player} 2's Id \item\end{DoxyCompactList}\item 
+void \hyperlink{classChat_a02ce14db9d4c1c1aa7f5cb40df16eb60}{postMessage} (string name, string message)
+\begin{DoxyCompactList}\small\item\em adds a new message \item\end{DoxyCompactList}\item 
+vector$<$ pair$<$ string, string $>$ $>$ \& \hyperlink{classChat_a238969ca251c9fdd893b4466e6dea8ba}{getMessages} ()
+\begin{DoxyCompactList}\small\item\em gets a reference to vector of messages \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a concrete class for chat functionality between players. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classChat_abc23d9c9b254089b8f486bd0ef6bc225}{
+\index{Chat@{Chat}!Chat@{Chat}}
+\index{Chat@{Chat}!Chat@{Chat}}
+\subsubsection[{Chat}]{\setlength{\rightskip}{0pt plus 5cm}Chat::Chat (string {\em playerOneId} = {\ttfamily \char`\"{}guest\char`\"{}}, \/  string {\em playerTwoId} = {\ttfamily \char`\"{}guest\char`\"{}})}}
+\label{classChat_abc23d9c9b254089b8f486bd0ef6bc225}
+
+
+creates a \hyperlink{classChat}{Chat} object 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em playerOneId}]A string that is the id of player 1 \item[\mbox{$\leftarrow$} {\em playerTwoId}]A string that is the id of player 2 \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classChat_a238969ca251c9fdd893b4466e6dea8ba}{
+\index{Chat@{Chat}!getMessages@{getMessages}}
+\index{getMessages@{getMessages}!Chat@{Chat}}
+\subsubsection[{getMessages}]{\setlength{\rightskip}{0pt plus 5cm}string \& Chat::getMessages ()}}
+\label{classChat_a238969ca251c9fdd893b4466e6dea8ba}
+
+
+gets a reference to vector of messages \begin{DoxyReturn}{Returns}
+A reference to a vector of pairs that stores the messages 
+\end{DoxyReturn}
+\hypertarget{classChat_add2a099a2c259d0a4a7e88061a3ac7df}{
+\index{Chat@{Chat}!getPlayerOneId@{getPlayerOneId}}
+\index{getPlayerOneId@{getPlayerOneId}!Chat@{Chat}}
+\subsubsection[{getPlayerOneId}]{\setlength{\rightskip}{0pt plus 5cm}string Chat::getPlayerOneId () const}}
+\label{classChat_add2a099a2c259d0a4a7e88061a3ac7df}
+
+
+gets player 1's id \begin{DoxyReturn}{Returns}
+player 1's id as a string 
+\end{DoxyReturn}
+\hypertarget{classChat_a017261b95b8794213381c1534881968b}{
+\index{Chat@{Chat}!getPlayerTwoId@{getPlayerTwoId}}
+\index{getPlayerTwoId@{getPlayerTwoId}!Chat@{Chat}}
+\subsubsection[{getPlayerTwoId}]{\setlength{\rightskip}{0pt plus 5cm}string Chat::getPlayerTwoId () const}}
+\label{classChat_a017261b95b8794213381c1534881968b}
+
+
+gets player 2's id \begin{DoxyReturn}{Returns}
+player 2's id as a string 
+\end{DoxyReturn}
+\hypertarget{classChat_a02ce14db9d4c1c1aa7f5cb40df16eb60}{
+\index{Chat@{Chat}!postMessage@{postMessage}}
+\index{postMessage@{postMessage}!Chat@{Chat}}
+\subsubsection[{postMessage}]{\setlength{\rightskip}{0pt plus 5cm}void Chat::postMessage (string {\em name}, \/  string {\em message})}}
+\label{classChat_a02ce14db9d4c1c1aa7f5cb40df16eb60}
+
+
+adds a new message 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em a}]pair of strings that is the player id and the message to be posted \end{DoxyParams}
+\hypertarget{classChat_adbe497560146ca9d5a940792b407f9fc}{
+\index{Chat@{Chat}!setPlayerOneId@{setPlayerOneId}}
+\index{setPlayerOneId@{setPlayerOneId}!Chat@{Chat}}
+\subsubsection[{setPlayerOneId}]{\setlength{\rightskip}{0pt plus 5cm}void Chat::setPlayerOneId (string {\em playerOneId})}}
+\label{classChat_adbe497560146ca9d5a940792b407f9fc}
+
+
+sets \hyperlink{classPlayer}{Player} 1's Id 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em playerOneId}]A string that the id of player 1 is set to \end{DoxyParams}
+\hypertarget{classChat_ae81fb0422bd13afef5a18836d6c24a78}{
+\index{Chat@{Chat}!setPlayerTwoId@{setPlayerTwoId}}
+\index{setPlayerTwoId@{setPlayerTwoId}!Chat@{Chat}}
+\subsubsection[{setPlayerTwoId}]{\setlength{\rightskip}{0pt plus 5cm}void Chat::setPlayerTwoId (string {\em playerTwoId})}}
+\label{classChat_ae81fb0422bd13afef5a18836d6c24a78}
+
+
+sets \hyperlink{classPlayer}{Player} 2's Id 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em playerTwoId}]A string that the id of player 2 is set to \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/\hyperlink{Chat_8h}{Chat.h}\item 
+source/Chat.cc\end{DoxyCompactItemize}

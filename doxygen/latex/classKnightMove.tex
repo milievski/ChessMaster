@@ -1,0 +1,51 @@
+\hypertarget{classKnightMove}{
+\section{KnightMove Class Reference}
+\label{classKnightMove}\index{KnightMove@{KnightMove}}
+}
+Inheritance diagram for KnightMove::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classKnightMove}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classKnightMove_af312e58dbda8f4c6e241d70cf24f6b1a}{KnightMove} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classKnightMove}{KnightMove} creates a \hyperlink{classKnightMove}{KnightMove} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classKnightMove_a0bf2d52e9202f4662d7920321bd0c81a}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove if the knights requested location id ((y+2 or y -\/ 2) and (x+1 or x -\/1)) or (( y+1 or y -\/1) and (x + 2 or x -\/2)) then go to \hyperlink{classFriendlyPiece}{FriendlyPiece} rule else return 0. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classKnightMove_af312e58dbda8f4c6e241d70cf24f6b1a}{
+\index{KnightMove@{KnightMove}!KnightMove@{KnightMove}}
+\index{KnightMove@{KnightMove}!KnightMove@{KnightMove}}
+\subsubsection[{KnightMove}]{\setlength{\rightskip}{0pt plus 5cm}KnightMove::KnightMove ()}}
+\label{classKnightMove_af312e58dbda8f4c6e241d70cf24f6b1a}
+
+
+\hyperlink{classKnightMove}{KnightMove} creates a \hyperlink{classKnightMove}{KnightMove} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classKnightMove_a0bf2d52e9202f4662d7920321bd0c81a}{
+\index{KnightMove@{KnightMove}!validMove@{validMove}}
+\index{validMove@{validMove}!KnightMove@{KnightMove}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int KnightMove::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKnightMove_a0bf2d52e9202f4662d7920321bd0c81a}
+
+
+validMove if the knights requested location id ((y+2 or y -\/ 2) and (x+1 or x -\/1)) or (( y+1 or y -\/1) and (x + 2 or x -\/2)) then go to \hyperlink{classFriendlyPiece}{FriendlyPiece} rule else return 0. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{KnightMove_8h}{KnightMove.h}\item 
+source/Rules/KnightMove.cc\end{DoxyCompactItemize}

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/checkmate/!svn/ver/254/tests
+END
+TournamentTester.cc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/checkmate/!svn/ver/240/tests/TournamentTester.cc
+END
+autotester.sh
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/checkmate/!svn/ver/254/tests/autotester.sh
+END
+testMain.cc
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/checkmate/!svn/ver/220/tests/testMain.cc
+END
+TournamentTester.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/checkmate/!svn/ver/238/tests/TournamentTester.h
+END
+.prereq
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/checkmate/!svn/ver/113/tests/.prereq
+END
+makefile
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/checkmate/!svn/ver/223/tests/makefile
+END
+manual_tests.txt
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/checkmate/!svn/ver/243/tests/manual_tests.txt
+END

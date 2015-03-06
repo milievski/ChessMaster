@@ -1,0 +1,58 @@
+\hypertarget{classKingInCheck}{
+\section{KingInCheck Class Reference}
+\label{classKingInCheck}\index{KingInCheck@{KingInCheck}}
+}
+Inheritance diagram for KingInCheck::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classKingInCheck}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classKingInCheck_ac3c04d5e0646f84c185e61ef739262ee}{KingInCheck} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classKingInCheck}{KingInCheck} creates a \hyperlink{classKingInCheck}{KingInCheck} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classKingInCheck_a5c9860dc659beddf2c8e7e471778c60c}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove checks if the king is in check. if valid call CheckTure. if invalid return 0. \item\end{DoxyCompactList}\item 
+\hypertarget{classKingInCheck_a487117dfeb79f8d4f9c62ce02f9251ce}{
+bool {\bfseries CheckMate} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int x, int y)}
+\label{classKingInCheck_a487117dfeb79f8d4f9c62ce02f9251ce}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classKingInCheck_ac3c04d5e0646f84c185e61ef739262ee}{
+\index{KingInCheck@{KingInCheck}!KingInCheck@{KingInCheck}}
+\index{KingInCheck@{KingInCheck}!KingInCheck@{KingInCheck}}
+\subsubsection[{KingInCheck}]{\setlength{\rightskip}{0pt plus 5cm}KingInCheck::KingInCheck ()}}
+\label{classKingInCheck_ac3c04d5e0646f84c185e61ef739262ee}
+
+
+\hyperlink{classKingInCheck}{KingInCheck} creates a \hyperlink{classKingInCheck}{KingInCheck} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classKingInCheck_a5c9860dc659beddf2c8e7e471778c60c}{
+\index{KingInCheck@{KingInCheck}!validMove@{validMove}}
+\index{validMove@{validMove}!KingInCheck@{KingInCheck}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int KingInCheck::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKingInCheck_a5c9860dc659beddf2c8e7e471778c60c}
+
+
+validMove checks if the king is in check. if valid call CheckTure. if invalid return 0. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Checks if the king is still on the board if it is not this will result in an end of game 
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{KingInCheck_8h}{KingInCheck.h}\item 
+source/Rules/KingInCheck.cc\end{DoxyCompactItemize}

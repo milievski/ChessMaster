@@ -1,0 +1,51 @@
+\hypertarget{classKingMove}{
+\section{KingMove Class Reference}
+\label{classKingMove}\index{KingMove@{KingMove}}
+}
+Inheritance diagram for KingMove::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classKingMove}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classKingMove_a6ab2c891e1498dead1e1d7df7e4a9924}{KingMove} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classKingMove}{KingMove} creates a \hyperlink{classKingMove}{KingMove} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classKingMove_a2c3086623fc47b43cef95ba6ee95915b}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove checks if the pieces left alive are the bishop and king or the knight and king it will return 2 else return 1. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classKingMove_a6ab2c891e1498dead1e1d7df7e4a9924}{
+\index{KingMove@{KingMove}!KingMove@{KingMove}}
+\index{KingMove@{KingMove}!KingMove@{KingMove}}
+\subsubsection[{KingMove}]{\setlength{\rightskip}{0pt plus 5cm}KingMove::KingMove ()}}
+\label{classKingMove_a6ab2c891e1498dead1e1d7df7e4a9924}
+
+
+\hyperlink{classKingMove}{KingMove} creates a \hyperlink{classKingMove}{KingMove} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classKingMove_a2c3086623fc47b43cef95ba6ee95915b}{
+\index{KingMove@{KingMove}!validMove@{validMove}}
+\index{validMove@{validMove}!KingMove@{KingMove}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int KingMove::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKingMove_a2c3086623fc47b43cef95ba6ee95915b}
+
+
+validMove checks if the pieces left alive are the bishop and king or the knight and king it will return 2 else return 1. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{KingMove_8h}{KingMove.h}\item 
+source/Rules/KingMove.cc\end{DoxyCompactItemize}

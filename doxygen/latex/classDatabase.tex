@@ -1,0 +1,150 @@
+\hypertarget{classDatabase}{
+\section{Database Class Reference}
+\label{classDatabase}\index{Database@{Database}}
+}
+
+
+a concrete class for database functionality for game programs.  
+
+
+{\ttfamily \#include $<$Database.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabase_af6c74356771bb4fab7f650c538b69082}{Database} (string directoryLocation=DATABASE\_\-LOCATION)
+\begin{DoxyCompactList}\small\item\em creates a \hyperlink{classDatabase}{Database} object \item\end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{classDatabase_aefebb94db8894a40bd3fbd691c1d034c}{loadGame} (string gameName)
+\begin{DoxyCompactList}\small\item\em loads a move by move play onto the gameHistory vector, then returns it. \item\end{DoxyCompactList}\item 
+void \hyperlink{classDatabase_ab7769733153f13a11257401ed7b2bf23}{saveGame} (vector$<$ string $>$ gameHistory, string gameName)
+\begin{DoxyCompactList}\small\item\em saves a vector of gameHistory to the gameName \item\end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{classDatabase_af77269e1ad834ae1d9d2e694cc5f6b7b}{getSaveList} ()
+\begin{DoxyCompactList}\small\item\em returns the list of saved games found in the save game folder \item\end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classMemento}{Memento} $\ast$ $>$ \hyperlink{classDatabase_ae91622236a16acaf9d27ff73940f84f3}{getTopPlayers} (int playerNum=10)
+\item 
+void \hyperlink{classDatabase_a656673898e8f702a1b009c9c74d13b3e}{savePlayer} (\hyperlink{classMemento}{Memento} $\ast$playerMemento, string playerName)
+\begin{DoxyCompactList}\small\item\em saves a memento object to given filename \item\end{DoxyCompactList}\item 
+\hyperlink{classMemento}{Memento} $\ast$ \hyperlink{classDatabase_a635262537d097df45f6371966d9caefe}{loadPlayer} (string playerName)
+\begin{DoxyCompactList}\small\item\em returns memento object of player \item\end{DoxyCompactList}\item 
+void \hyperlink{classDatabase_aba5f0b5de3883729e5b0be7cf5b17b8c}{saveTournament} (\hyperlink{classTournament}{Tournament} tournament, string fileName)
+\begin{DoxyCompactList}\small\item\em saves a \hyperlink{classTournament}{Tournament} to file \item\end{DoxyCompactList}\item 
+map$<$ int, string $>$ \hyperlink{classDatabase_a1b403d4b38ea6c9d2e5d4d4b80f845db}{loadTournament} (string tournamentName)
+\begin{DoxyCompactList}\small\item\em loads tournament from file \item\end{DoxyCompactList}\item 
+\hypertarget{classDatabase_a96cc3743e82a8906424a74c366240277}{
+bool {\bfseries doesPlayerExist} (string name)}
+\label{classDatabase_a96cc3743e82a8906424a74c366240277}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a concrete class for database functionality for game programs. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDatabase_af6c74356771bb4fab7f650c538b69082}{
+\index{Database@{Database}!Database@{Database}}
+\index{Database@{Database}!Database@{Database}}
+\subsubsection[{Database}]{\setlength{\rightskip}{0pt plus 5cm}Database::Database (string {\em directoryLocation} = {\ttfamily DATABASE\_\-LOCATION})}}
+\label{classDatabase_af6c74356771bb4fab7f650c538b69082}
+
+
+creates a \hyperlink{classDatabase}{Database} object 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em directoryLocation}]the location of the directory that the files are stored in \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDatabase_af77269e1ad834ae1d9d2e694cc5f6b7b}{
+\index{Database@{Database}!getSaveList@{getSaveList}}
+\index{getSaveList@{getSaveList}!Database@{Database}}
+\subsubsection[{getSaveList}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Database::getSaveList ()}}
+\label{classDatabase_af77269e1ad834ae1d9d2e694cc5f6b7b}
+
+
+returns the list of saved games found in the save game folder \begin{DoxyReturn}{Returns}
+a vector of strings containing the names of saved game files 
+\end{DoxyReturn}
+\hypertarget{classDatabase_ae91622236a16acaf9d27ff73940f84f3}{
+\index{Database@{Database}!getTopPlayers@{getTopPlayers}}
+\index{getTopPlayers@{getTopPlayers}!Database@{Database}}
+\subsubsection[{getTopPlayers}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Memento}$\ast$$>$ Database::getTopPlayers (int {\em playerNum} = {\ttfamily 10})}}
+\label{classDatabase_ae91622236a16acaf9d27ff73940f84f3}
+returns a vector of player Mementos containing the top “int” number of players 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em playerNum}]an int containing the number of top players to return \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of player Memento's containing the top players in decreasing order 
+\end{DoxyReturn}
+\hypertarget{classDatabase_aefebb94db8894a40bd3fbd691c1d034c}{
+\index{Database@{Database}!loadGame@{loadGame}}
+\index{loadGame@{loadGame}!Database@{Database}}
+\subsubsection[{loadGame}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Database::loadGame (string {\em gameName})}}
+\label{classDatabase_aefebb94db8894a40bd3fbd691c1d034c}
+
+
+loads a move by move play onto the gameHistory vector, then returns it. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em gameName}]the name of the game file to be loaded in \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of strings containing the moves to be performed to restore game to previous state. (may also be used to replay game for replayPlayer) 
+\end{DoxyReturn}
+\hypertarget{classDatabase_a635262537d097df45f6371966d9caefe}{
+\index{Database@{Database}!loadPlayer@{loadPlayer}}
+\index{loadPlayer@{loadPlayer}!Database@{Database}}
+\subsubsection[{loadPlayer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memento}$\ast$ Database::loadPlayer (string {\em playerName})}}
+\label{classDatabase_a635262537d097df45f6371966d9caefe}
+
+
+returns memento object of player 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em playerName}]a string of the player \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a player memento object 
+\end{DoxyReturn}
+\hypertarget{classDatabase_a1b403d4b38ea6c9d2e5d4d4b80f845db}{
+\index{Database@{Database}!loadTournament@{loadTournament}}
+\index{loadTournament@{loadTournament}!Database@{Database}}
+\subsubsection[{loadTournament}]{\setlength{\rightskip}{0pt plus 5cm}string Database::loadTournament (string {\em tournamentName})}}
+\label{classDatabase_a1b403d4b38ea6c9d2e5d4d4b80f845db}
+
+
+loads tournament from file 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em tournamentName}]the filename to load \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a map containing the rank of everyone in the tournament 
+\end{DoxyReturn}
+\hypertarget{classDatabase_ab7769733153f13a11257401ed7b2bf23}{
+\index{Database@{Database}!saveGame@{saveGame}}
+\index{saveGame@{saveGame}!Database@{Database}}
+\subsubsection[{saveGame}]{\setlength{\rightskip}{0pt plus 5cm}void Database::saveGame (vector$<$ string $>$ {\em gameHistory}, \/  string {\em gameName})}}
+\label{classDatabase_ab7769733153f13a11257401ed7b2bf23}
+
+
+saves a vector of gameHistory to the gameName 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em gameHistory}]a vector of strings containing the history of moves \item[\mbox{$\leftarrow$} {\em gameName}]a string containing the file name to save the game to \end{DoxyParams}
+\hypertarget{classDatabase_a656673898e8f702a1b009c9c74d13b3e}{
+\index{Database@{Database}!savePlayer@{savePlayer}}
+\index{savePlayer@{savePlayer}!Database@{Database}}
+\subsubsection[{savePlayer}]{\setlength{\rightskip}{0pt plus 5cm}void Database::savePlayer ({\bf Memento} $\ast$ {\em playerMemento}, \/  string {\em playerName})}}
+\label{classDatabase_a656673898e8f702a1b009c9c74d13b3e}
+
+
+saves a memento object to given filename 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em a}]memento object of a player to save to file. \end{DoxyParams}
+\hypertarget{classDatabase_aba5f0b5de3883729e5b0be7cf5b17b8c}{
+\index{Database@{Database}!saveTournament@{saveTournament}}
+\index{saveTournament@{saveTournament}!Database@{Database}}
+\subsubsection[{saveTournament}]{\setlength{\rightskip}{0pt plus 5cm}void Database::saveTournament ({\bf Tournament} {\em tournament}, \/  string {\em fileName})}}
+\label{classDatabase_aba5f0b5de3883729e5b0be7cf5b17b8c}
+
+
+saves a \hyperlink{classTournament}{Tournament} to file 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em tournament}]a tournament that is saved to file \item[\mbox{$\leftarrow$} {\em fileName}]the fileName to save the tournament to \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/\hyperlink{Database_8h}{Database.h}\item 
+source/Database.cc\end{DoxyCompactItemize}

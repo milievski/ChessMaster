@@ -1,0 +1,62 @@
+\hypertarget{classFriendlyPiece}{
+\section{FriendlyPiece Class Reference}
+\label{classFriendlyPiece}\index{FriendlyPiece@{FriendlyPiece}}
+}
+
+
+{\ttfamily \#include $<$FriendlyPiece.h$>$}Inheritance diagram for FriendlyPiece::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFriendlyPiece}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFriendlyPiece_ac366bba74bf5c47475beb9da05875407}{FriendlyPiece} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classFriendlyPiece}{FriendlyPiece} creates a \hyperlink{classFriendlyPiece}{FriendlyPiece} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classFriendlyPiece_aafce56ffcfb8c78a41529d482a89737d}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove checks if the there is a friendly piece in the place where your current piece wants to move. if valid calls \hyperlink{classKingInCheck}{KingInCheck}. if invalid return 0. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Michael Wilson. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 27,2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classFriendlyPiece_ac366bba74bf5c47475beb9da05875407}{
+\index{FriendlyPiece@{FriendlyPiece}!FriendlyPiece@{FriendlyPiece}}
+\index{FriendlyPiece@{FriendlyPiece}!FriendlyPiece@{FriendlyPiece}}
+\subsubsection[{FriendlyPiece}]{\setlength{\rightskip}{0pt plus 5cm}FriendlyPiece::FriendlyPiece ()}}
+\label{classFriendlyPiece_ac366bba74bf5c47475beb9da05875407}
+
+
+\hyperlink{classFriendlyPiece}{FriendlyPiece} creates a \hyperlink{classFriendlyPiece}{FriendlyPiece} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFriendlyPiece_aafce56ffcfb8c78a41529d482a89737d}{
+\index{FriendlyPiece@{FriendlyPiece}!validMove@{validMove}}
+\index{validMove@{validMove}!FriendlyPiece@{FriendlyPiece}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int FriendlyPiece::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classFriendlyPiece_aafce56ffcfb8c78a41529d482a89737d}
+
+
+validMove checks if the there is a friendly piece in the place where your current piece wants to move. if valid calls \hyperlink{classKingInCheck}{KingInCheck}. if invalid return 0. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{FriendlyPiece_8h}{FriendlyPiece.h}\item 
+source/Rules/FriendlyPiece.cc\end{DoxyCompactItemize}

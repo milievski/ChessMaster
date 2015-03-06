@@ -1,0 +1,21 @@
+OBJS = databaseTest.o Database.o Tournament.o RegisteredPlayer.o Player.o
+SRCS = databaseTest.cc Database.cc Tournament.cc RegisteredPlayer.cc Player.cc
+CC = g++11
+CFLAGS = -Wall -g -std=c++11
+
+
+
+databaseTest: $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $@
+
+Player.o: Players/Player.cc
+	$(CC) $(CFLAGS) -c $<
+
+RegisteredPlayer.o: Players/RegisteredPlayer.cc
+	$(CC) $(CFLAGS) -c $<	
+
+%.o: %.cc
+	$(CC) $(CFLAGS) -c $<
+
+clean:
+	rm -f *.o *~ *% *# .#*

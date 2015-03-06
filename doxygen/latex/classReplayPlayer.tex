@@ -1,0 +1,73 @@
+\hypertarget{classReplayPlayer}{
+\section{ReplayPlayer Class Reference}
+\label{classReplayPlayer}\index{ReplayPlayer@{ReplayPlayer}}
+}
+
+
+a class for ReplayPlayers  
+
+
+{\ttfamily \#include $<$ReplayPlayer.h$>$}Inheritance diagram for ReplayPlayer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classReplayPlayer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classReplayPlayer_a39c2542b03506ff19487dc8675741298}{nextMove} (\hyperlink{classPiece}{Piece} p)
+\begin{DoxyCompactList}\small\item\em creates a \hyperlink{classPlayer}{Player} \item\end{DoxyCompactList}\item 
+\hyperlink{classMemento}{Memento} \hyperlink{classReplayPlayer_a9301be927a78f52b14602f6660ce35c4}{generateMemento} ()
+\begin{DoxyCompactList}\small\item\em Generates a \hyperlink{classMemento}{Memento} object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classReplayPlayer_af45543802dc6f5ac1f7d8f2582c7a04e}{restoreMemento} (\hyperlink{classMemento}{Memento} memento)
+\begin{DoxyCompactList}\small\item\em Restores this \hyperlink{classRegisteredPlayer}{RegisteredPlayer} object from the \hyperlink{classMemento}{Memento} object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a class for ReplayPlayers .h \begin{DoxyAuthor}{Author}
+Zackery Shortt 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 27, 2014 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classReplayPlayer_a9301be927a78f52b14602f6660ce35c4}{
+\index{ReplayPlayer@{ReplayPlayer}!generateMemento@{generateMemento}}
+\index{generateMemento@{generateMemento}!ReplayPlayer@{ReplayPlayer}}
+\subsubsection[{generateMemento}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memento} ReplayPlayer::generateMemento ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classReplayPlayer_a9301be927a78f52b14602f6660ce35c4}
+
+
+Generates a \hyperlink{classMemento}{Memento} object. \begin{DoxyReturn}{Returns}
+returns a memento object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPlayer_ae0b947230fe2f09d96f273798f19cf0d}{Player}.\hypertarget{classReplayPlayer_a39c2542b03506ff19487dc8675741298}{
+\index{ReplayPlayer@{ReplayPlayer}!nextMove@{nextMove}}
+\index{nextMove@{nextMove}!ReplayPlayer@{ReplayPlayer}}
+\subsubsection[{nextMove}]{\setlength{\rightskip}{0pt plus 5cm}ReplayPlayer::nextMove ({\bf Piece} {\em p})}}
+\label{classReplayPlayer_a39c2542b03506ff19487dc8675741298}
+
+
+creates a \hyperlink{classPlayer}{Player} 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em This}]is the \hyperlink{classPiece}{Piece} that will be moved \end{DoxyParams}
+\hypertarget{classReplayPlayer_af45543802dc6f5ac1f7d8f2582c7a04e}{
+\index{ReplayPlayer@{ReplayPlayer}!restoreMemento@{restoreMemento}}
+\index{restoreMemento@{restoreMemento}!ReplayPlayer@{ReplayPlayer}}
+\subsubsection[{restoreMemento}]{\setlength{\rightskip}{0pt plus 5cm}void ReplayPlayer::restoreMemento ({\bf Memento} {\em memento})}}
+\label{classReplayPlayer_af45543802dc6f5ac1f7d8f2582c7a04e}
+
+
+Restores this \hyperlink{classRegisteredPlayer}{RegisteredPlayer} object from the \hyperlink{classMemento}{Memento} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em memento}]the memento object to restore \end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+source/Players/ReplayPlayer.h\end{DoxyCompactItemize}

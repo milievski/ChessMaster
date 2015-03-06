@@ -1,0 +1,51 @@
+\hypertarget{classBishopMove}{
+\section{BishopMove Class Reference}
+\label{classBishopMove}\index{BishopMove@{BishopMove}}
+}
+Inheritance diagram for BishopMove::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classBishopMove}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBishopMove_aa066339d2be626d650a7edde5d5ecfc1}{BishopMove} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classBishopMove}{BishopMove} creates a \hyperlink{classBishopMove}{BishopMove} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classBishopMove_a30929c42136a677d9531d21696fd2c82}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove checks if the move made by the user is a valid move for bishop to make a perfect angle(ex. x+1,y+1). if valid calls pieceinway. if invalid return 0. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBishopMove_aa066339d2be626d650a7edde5d5ecfc1}{
+\index{BishopMove@{BishopMove}!BishopMove@{BishopMove}}
+\index{BishopMove@{BishopMove}!BishopMove@{BishopMove}}
+\subsubsection[{BishopMove}]{\setlength{\rightskip}{0pt plus 5cm}BishopMove::BishopMove ()}}
+\label{classBishopMove_aa066339d2be626d650a7edde5d5ecfc1}
+
+
+\hyperlink{classBishopMove}{BishopMove} creates a \hyperlink{classBishopMove}{BishopMove} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBishopMove_a30929c42136a677d9531d21696fd2c82}{
+\index{BishopMove@{BishopMove}!validMove@{validMove}}
+\index{validMove@{validMove}!BishopMove@{BishopMove}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int BishopMove::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classBishopMove_a30929c42136a677d9531d21696fd2c82}
+
+
+validMove checks if the move made by the user is a valid move for bishop to make a perfect angle(ex. x+1,y+1). if valid calls pieceinway. if invalid return 0. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{BishopMove_8h}{BishopMove.h}\item 
+source/Rules/BishopMove.cc\end{DoxyCompactItemize}

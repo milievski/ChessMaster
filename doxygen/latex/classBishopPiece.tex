@@ -1,0 +1,89 @@
+\hypertarget{classBishopPiece}{
+\section{BishopPiece Class Reference}
+\label{classBishopPiece}\index{BishopPiece@{BishopPiece}}
+}
+
+
+a class for all Bishop Piece`s.  
+
+
+{\ttfamily \#include $<$BishopPiece.h$>$}Inheritance diagram for BishopPiece::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classBishopPiece}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBishopPiece_ae5bd27defc378a878b99d95d2d11d035}{
+\hyperlink{classBishopPiece_ae5bd27defc378a878b99d95d2d11d035}{BishopPiece} (int c=0)}
+\label{classBishopPiece_ae5bd27defc378a878b99d95d2d11d035}
+
+\begin{DoxyCompactList}\small\item\em creates a \hyperlink{classPiece}{Piece} object \item\end{DoxyCompactList}\item 
+int \hyperlink{classBishopPiece_ae40042d8edb9172b97955a1a3d651434}{getColor} () const 
+\begin{DoxyCompactList}\small\item\em gets the color of the Bishop \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+void \hyperlink{classBishopPiece_ae75166e3d3bc71f3030268158cba4054}{setColor} (int colorOfPiece)
+\begin{DoxyCompactList}\small\item\em sets the Color of the Bishop \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+string \hyperlink{classBishopPiece_af651439e984e4d28955db75da601b35b}{getType} () const 
+\begin{DoxyCompactList}\small\item\em Returns Bishop to user. \item\end{DoxyCompactList}\item 
+int \hyperlink{classBishopPiece_a0f0ed53268ba4b42c9e95a92a183d19d}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ gameBoard, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validates a move based on the Bishop rules. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a class for all Bishop Piece`s. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBishopPiece_ae40042d8edb9172b97955a1a3d651434}{
+\index{BishopPiece@{BishopPiece}!getColor@{getColor}}
+\index{getColor@{getColor}!BishopPiece@{BishopPiece}}
+\subsubsection[{getColor}]{\setlength{\rightskip}{0pt plus 5cm}int BishopPiece::getColor () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classBishopPiece_ae40042d8edb9172b97955a1a3d651434}
+
+
+gets the color of the Bishop \hyperlink{classPiece}{Piece} \begin{DoxyReturn}{Returns}
+int a 0 if white and 1 if black 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPiece_a1376072d4815719e60253ce5688df95c}{Piece}.\hypertarget{classBishopPiece_af651439e984e4d28955db75da601b35b}{
+\index{BishopPiece@{BishopPiece}!getType@{getType}}
+\index{getType@{getType}!BishopPiece@{BishopPiece}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}string BishopPiece::getType () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classBishopPiece_af651439e984e4d28955db75da601b35b}
+
+
+Returns Bishop to user. \begin{DoxyReturn}{Returns}
+a string that will return Bishop Type. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPiece_a5b88fcd786bb30b345b24fbc3ab24ab9}{Piece}.\hypertarget{classBishopPiece_ae75166e3d3bc71f3030268158cba4054}{
+\index{BishopPiece@{BishopPiece}!setColor@{setColor}}
+\index{setColor@{setColor}!BishopPiece@{BishopPiece}}
+\subsubsection[{setColor}]{\setlength{\rightskip}{0pt plus 5cm}void BishopPiece::setColor (int {\em colorOfPiece})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classBishopPiece_ae75166e3d3bc71f3030268158cba4054}
+
+
+sets the Color of the Bishop \hyperlink{classPiece}{Piece} 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em colorOfPiece}]sets the Pawn Piece`s color \end{DoxyParams}
+
+
+Implements \hyperlink{classPiece_a1387cb503dca308ac1e3bbe38a70a073}{Piece}.\hypertarget{classBishopPiece_a0f0ed53268ba4b42c9e95a92a183d19d}{
+\index{BishopPiece@{BishopPiece}!validMove@{validMove}}
+\index{validMove@{validMove}!BishopPiece@{BishopPiece}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int BishopPiece::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ {\em gameBoard}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})}}
+\label{classBishopPiece_a0f0ed53268ba4b42c9e95a92a183d19d}
+
+
+validates a move based on the Bishop rules. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em board}]A \hyperlink{classBoard}{Board} that will contain the currect board state \item[\mbox{$\leftarrow$} {\em ix}]A int that holds the x coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em iy}]A int that holds the y coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em dx}]A int that holds the x coordinate of where the piece is moving to \item[\mbox{$\leftarrow$} {\em dy}]A int that holds the y coordinate of where the piece is moving to \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Piece/\hyperlink{BishopPiece_8h}{BishopPiece.h}\item 
+source/Piece/BishopPiece.cc\end{DoxyCompactItemize}

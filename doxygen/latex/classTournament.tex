@@ -1,0 +1,141 @@
+\hypertarget{classTournament}{
+\section{Tournament Class Reference}
+\label{classTournament}\index{Tournament@{Tournament}}
+}
+
+
+A concrete class representing a tournament for games.  
+
+
+{\ttfamily \#include $<$Tournament.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTournament_af86539aa2c25a2404b7e724158371071}{Tournament} (vector$<$ string $>$ names, string tType=\char`\"{}NORMAL\char`\"{})
+\begin{DoxyCompactList}\small\item\em creates a \hyperlink{classTournament}{Tournament} \item\end{DoxyCompactList}\item 
+\hyperlink{classTournament_a31d8b14b4863ce1d2ece89a2f48b8b44}{Tournament} (map$<$ int, string $>$ tempRank, string tType=\char`\"{}NORMAL\char`\"{})
+\item 
+const vector$<$ string $>$ $\ast$ \hyperlink{classTournament_a7afa6db20cf8ae5c4b5991f2fb29e04e}{getNames} () const 
+\begin{DoxyCompactList}\small\item\em gets a pointer to the vector of names in the tournament \item\end{DoxyCompactList}\item 
+\hypertarget{classTournament_a9154c5a5b93249e656e7c83757085ec6}{
+void \hyperlink{classTournament_a9154c5a5b93249e656e7c83757085ec6}{generateOrder} ()}
+\label{classTournament_a9154c5a5b93249e656e7c83757085ec6}
+
+\begin{DoxyCompactList}\small\item\em intialize tournament \item\end{DoxyCompactList}\item 
+int \hyperlink{classTournament_ac33ed6461f737d97b0f00eb4f8ee5e10}{getCurrentMatch} () const 
+\begin{DoxyCompactList}\small\item\em returns the match currently being played \item\end{DoxyCompactList}\item 
+int \hyperlink{classTournament_a89b96072f94fb1393f91b026e5c42665}{getTournamentSize} () const 
+\begin{DoxyCompactList}\small\item\em gets the size of the tournament \item\end{DoxyCompactList}\item 
+int \hyperlink{classTournament_a3297fe5ad9a08392d8122bacb5bcf840}{getNextMatch} () const 
+\begin{DoxyCompactList}\small\item\em gets the next tournament spot to be competed for \item\end{DoxyCompactList}\item 
+int \hyperlink{classTournament_aedbd40e56f31c1b82e6220a0ee167ea7}{getNumPlayers} () const 
+\begin{DoxyCompactList}\small\item\em gets the number of players \item\end{DoxyCompactList}\item 
+void \hyperlink{classTournament_afe626f769c595b0ea1004fbc2220194d}{setMatchWinner} (string player)
+\begin{DoxyCompactList}\small\item\em sets the winner of a match \item\end{DoxyCompactList}\item 
+string \& \hyperlink{classTournament_a901b93c3122918e646a3c8f5625b4681}{getMatchWinner} (int spot)
+\begin{DoxyCompactList}\small\item\em gets the winner of a match \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A concrete class representing a tournament for games. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTournament_af86539aa2c25a2404b7e724158371071}{
+\index{Tournament@{Tournament}!Tournament@{Tournament}}
+\index{Tournament@{Tournament}!Tournament@{Tournament}}
+\subsubsection[{Tournament}]{\setlength{\rightskip}{0pt plus 5cm}Tournament::Tournament (vector$<$ string $>$ {\em names}, \/  string {\em tType} = {\ttfamily \char`\"{}NORMAL\char`\"{}})}}
+\label{classTournament_af86539aa2c25a2404b7e724158371071}
+
+
+creates a \hyperlink{classTournament}{Tournament} 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em names}]A vector of strings containing the names of players \item[\mbox{$\leftarrow$} {\em tType}]tournamentType string \end{DoxyParams}
+\hypertarget{classTournament_a31d8b14b4863ce1d2ece89a2f48b8b44}{
+\index{Tournament@{Tournament}!Tournament@{Tournament}}
+\index{Tournament@{Tournament}!Tournament@{Tournament}}
+\subsubsection[{Tournament}]{\setlength{\rightskip}{0pt plus 5cm}Tournament::Tournament (map$<$ int, string $>$ {\em tempRank}, \/  string {\em tType} = {\ttfamily \char`\"{}NORMAL\char`\"{}})}}
+\label{classTournament_a31d8b14b4863ce1d2ece89a2f48b8b44}
+creates a \hyperlink{classTournament}{Tournament} with rank map as parameter. Useful for creating using the database loadTournament function 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em rank}]A map containing the name and rank of players \item[\mbox{$\leftarrow$} {\em tType}]tournamentType string \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classTournament_ac33ed6461f737d97b0f00eb4f8ee5e10}{
+\index{Tournament@{Tournament}!getCurrentMatch@{getCurrentMatch}}
+\index{getCurrentMatch@{getCurrentMatch}!Tournament@{Tournament}}
+\subsubsection[{getCurrentMatch}]{\setlength{\rightskip}{0pt plus 5cm}int Tournament::getCurrentMatch () const}}
+\label{classTournament_ac33ed6461f737d97b0f00eb4f8ee5e10}
+
+
+returns the match currently being played \begin{DoxyReturn}{Returns}
+returns the rank int of the current spot being competed for 
+\end{DoxyReturn}
+\hypertarget{classTournament_a901b93c3122918e646a3c8f5625b4681}{
+\index{Tournament@{Tournament}!getMatchWinner@{getMatchWinner}}
+\index{getMatchWinner@{getMatchWinner}!Tournament@{Tournament}}
+\subsubsection[{getMatchWinner}]{\setlength{\rightskip}{0pt plus 5cm}string\& Tournament::getMatchWinner (int {\em spot})}}
+\label{classTournament_a901b93c3122918e646a3c8f5625b4681}
+
+
+gets the winner of a match 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em spot}]An int representing the spot in the rank map \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string representing player that won the spot 
+\end{DoxyReturn}
+\hypertarget{classTournament_a7afa6db20cf8ae5c4b5991f2fb29e04e}{
+\index{Tournament@{Tournament}!getNames@{getNames}}
+\index{getNames@{getNames}!Tournament@{Tournament}}
+\subsubsection[{getNames}]{\setlength{\rightskip}{0pt plus 5cm}const vector$<$string$>$$\ast$ Tournament::getNames () const}}
+\label{classTournament_a7afa6db20cf8ae5c4b5991f2fb29e04e}
+
+
+gets a pointer to the vector of names in the tournament \begin{DoxyReturn}{Returns}
+returns a pointer to the vector of names in the tournament 
+\end{DoxyReturn}
+\hypertarget{classTournament_a3297fe5ad9a08392d8122bacb5bcf840}{
+\index{Tournament@{Tournament}!getNextMatch@{getNextMatch}}
+\index{getNextMatch@{getNextMatch}!Tournament@{Tournament}}
+\subsubsection[{getNextMatch}]{\setlength{\rightskip}{0pt plus 5cm}int Tournament::getNextMatch () const}}
+\label{classTournament_a3297fe5ad9a08392d8122bacb5bcf840}
+
+
+gets the next tournament spot to be competed for \begin{DoxyReturn}{Returns}
+returns the rank int of the next spot to be competed for 
+\end{DoxyReturn}
+\hypertarget{classTournament_aedbd40e56f31c1b82e6220a0ee167ea7}{
+\index{Tournament@{Tournament}!getNumPlayers@{getNumPlayers}}
+\index{getNumPlayers@{getNumPlayers}!Tournament@{Tournament}}
+\subsubsection[{getNumPlayers}]{\setlength{\rightskip}{0pt plus 5cm}int Tournament::getNumPlayers () const}}
+\label{classTournament_aedbd40e56f31c1b82e6220a0ee167ea7}
+
+
+gets the number of players \begin{DoxyReturn}{Returns}
+returns the number of players 
+\end{DoxyReturn}
+\hypertarget{classTournament_a89b96072f94fb1393f91b026e5c42665}{
+\index{Tournament@{Tournament}!getTournamentSize@{getTournamentSize}}
+\index{getTournamentSize@{getTournamentSize}!Tournament@{Tournament}}
+\subsubsection[{getTournamentSize}]{\setlength{\rightskip}{0pt plus 5cm}int Tournament::getTournamentSize () const}}
+\label{classTournament_a89b96072f94fb1393f91b026e5c42665}
+
+
+gets the size of the tournament \begin{DoxyReturn}{Returns}
+returns the an int of the size of the tournament 
+\end{DoxyReturn}
+\hypertarget{classTournament_afe626f769c595b0ea1004fbc2220194d}{
+\index{Tournament@{Tournament}!setMatchWinner@{setMatchWinner}}
+\index{setMatchWinner@{setMatchWinner}!Tournament@{Tournament}}
+\subsubsection[{setMatchWinner}]{\setlength{\rightskip}{0pt plus 5cm}void Tournament::setMatchWinner (string {\em player})}}
+\label{classTournament_afe626f769c595b0ea1004fbc2220194d}
+
+
+sets the winner of a match 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em spot}]An int representing the spot won in the rank map \item[\mbox{$\leftarrow$} {\em player}]A string representing player that won the spot \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/\hyperlink{Tournament_8h}{Tournament.h}\item 
+source/Tournament.cc\end{DoxyCompactItemize}

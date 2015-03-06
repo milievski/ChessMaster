@@ -1,0 +1,89 @@
+\hypertarget{classEmptyPiece}{
+\section{EmptyPiece Class Reference}
+\label{classEmptyPiece}\index{EmptyPiece@{EmptyPiece}}
+}
+
+
+a class for all Pawn Piece`s.  
+
+
+{\ttfamily \#include $<$EmptyPiece.h$>$}Inheritance diagram for EmptyPiece::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classEmptyPiece}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classEmptyPiece_add461e061d61e0b8129fb2d079b1b599}{
+\hyperlink{classEmptyPiece_add461e061d61e0b8129fb2d079b1b599}{EmptyPiece} (int c=3)}
+\label{classEmptyPiece_add461e061d61e0b8129fb2d079b1b599}
+
+\begin{DoxyCompactList}\small\item\em creates a \hyperlink{classPiece}{Piece} object \item\end{DoxyCompactList}\item 
+int \hyperlink{classEmptyPiece_aa0ae8e05e0471cf05e17bc9f56e30188}{getColor} () const 
+\begin{DoxyCompactList}\small\item\em gets the color of the Pawn \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+void \hyperlink{classEmptyPiece_ae46e7ddf6275c1508528e06929cf2660}{setColor} (int colorOfPiece)
+\begin{DoxyCompactList}\small\item\em sets the Color of the Pawn \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+string \hyperlink{classEmptyPiece_ad71f9165591337d5df65c4f2500e2d36}{getType} () const 
+\begin{DoxyCompactList}\small\item\em Returns Pawn to user. \item\end{DoxyCompactList}\item 
+virtual int \hyperlink{classEmptyPiece_a198d7e2fd83b5564a569f580b6ccd69f}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ gameBoard, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validates a move based on the Pawn rules. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a class for all Pawn Piece`s. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classEmptyPiece_aa0ae8e05e0471cf05e17bc9f56e30188}{
+\index{EmptyPiece@{EmptyPiece}!getColor@{getColor}}
+\index{getColor@{getColor}!EmptyPiece@{EmptyPiece}}
+\subsubsection[{getColor}]{\setlength{\rightskip}{0pt plus 5cm}int EmptyPiece::getColor () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classEmptyPiece_aa0ae8e05e0471cf05e17bc9f56e30188}
+
+
+gets the color of the Pawn \hyperlink{classPiece}{Piece} \begin{DoxyReturn}{Returns}
+int a 0 if white and 1 if black 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPiece_a1376072d4815719e60253ce5688df95c}{Piece}.\hypertarget{classEmptyPiece_ad71f9165591337d5df65c4f2500e2d36}{
+\index{EmptyPiece@{EmptyPiece}!getType@{getType}}
+\index{getType@{getType}!EmptyPiece@{EmptyPiece}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}string EmptyPiece::getType () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classEmptyPiece_ad71f9165591337d5df65c4f2500e2d36}
+
+
+Returns Pawn to user. \begin{DoxyReturn}{Returns}
+a string that will return Pawn Type. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPiece_a5b88fcd786bb30b345b24fbc3ab24ab9}{Piece}.\hypertarget{classEmptyPiece_ae46e7ddf6275c1508528e06929cf2660}{
+\index{EmptyPiece@{EmptyPiece}!setColor@{setColor}}
+\index{setColor@{setColor}!EmptyPiece@{EmptyPiece}}
+\subsubsection[{setColor}]{\setlength{\rightskip}{0pt plus 5cm}void EmptyPiece::setColor (int {\em colorOfPiece})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classEmptyPiece_ae46e7ddf6275c1508528e06929cf2660}
+
+
+sets the Color of the Pawn \hyperlink{classPiece}{Piece} 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em colorOfPiece}]sets the Pawn Piece`s color \end{DoxyParams}
+
+
+Implements \hyperlink{classPiece_a1387cb503dca308ac1e3bbe38a70a073}{Piece}.\hypertarget{classEmptyPiece_a198d7e2fd83b5564a569f580b6ccd69f}{
+\index{EmptyPiece@{EmptyPiece}!validMove@{validMove}}
+\index{validMove@{validMove}!EmptyPiece@{EmptyPiece}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}virtual int EmptyPiece::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ {\em gameBoard}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classEmptyPiece_a198d7e2fd83b5564a569f580b6ccd69f}
+
+
+validates a move based on the Pawn rules. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em board}]A \hyperlink{classBoard}{Board} that will contain the currect board state \item[\mbox{$\leftarrow$} {\em ix}]A int that holds the x coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em iy}]A int that holds the y coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em dx}]A int that holds the x coordinate of where the piece is moving to \item[\mbox{$\leftarrow$} {\em dy}]A int that holds the y coordinate of where the piece is moving to \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Piece/\hyperlink{EmptyPiece_8h}{EmptyPiece.h}\item 
+source/Piece/EmptyPiece.cc\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+\hypertarget{classPawnMove}{
+\section{PawnMove Class Reference}
+\label{classPawnMove}\index{PawnMove@{PawnMove}}
+}
+Inheritance diagram for PawnMove::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classPawnMove}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPawnMove_ab0b45a34a1c124f8f852ad6ce512bdcc}{PawnMove} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPawnMove}{PawnMove} creates a \hyperlink{classPawnMove}{PawnMove} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classPawnMove_a9280b4befe12bc9439d60ad7765187af}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove checks if the move made by the user is a valid move or Pawns to make. if invalid calls \hyperlink{classPawnCapture}{PawnCapture}. if invalid return 0. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPawnMove_ab0b45a34a1c124f8f852ad6ce512bdcc}{
+\index{PawnMove@{PawnMove}!PawnMove@{PawnMove}}
+\index{PawnMove@{PawnMove}!PawnMove@{PawnMove}}
+\subsubsection[{PawnMove}]{\setlength{\rightskip}{0pt plus 5cm}PawnMove::PawnMove ()}}
+\label{classPawnMove_ab0b45a34a1c124f8f852ad6ce512bdcc}
+
+
+\hyperlink{classPawnMove}{PawnMove} creates a \hyperlink{classPawnMove}{PawnMove} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPawnMove_a9280b4befe12bc9439d60ad7765187af}{
+\index{PawnMove@{PawnMove}!validMove@{validMove}}
+\index{validMove@{validMove}!PawnMove@{PawnMove}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int PawnMove::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classPawnMove_a9280b4befe12bc9439d60ad7765187af}
+
+
+validMove checks if the move made by the user is a valid move or Pawns to make. if invalid calls \hyperlink{classPawnCapture}{PawnCapture}. if invalid return 0. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{PawnMove_8h}{PawnMove.h}\item 
+source/Rules/PawnMove.cc\end{DoxyCompactItemize}

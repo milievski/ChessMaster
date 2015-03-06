@@ -1,0 +1,97 @@
+\hypertarget{classChessBoard}{
+\section{ChessBoard Class Reference}
+\label{classChessBoard}\index{ChessBoard@{ChessBoard}}
+}
+
+
+a concrete class for creating a chess board which games will be played on.  
+
+
+{\ttfamily \#include $<$ChessBoard.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classChessBoard_a6585395bb4f064b4f4566df1c7fa4276}{
+\hyperlink{classChessBoard_a6585395bb4f064b4f4566df1c7fa4276}{ChessBoard} ()}
+\label{classChessBoard_a6585395bb4f064b4f4566df1c7fa4276}
+
+\begin{DoxyCompactList}\small\item\em Creates a chess \hyperlink{classBoard}{Board} object. \item\end{DoxyCompactList}\item 
+\hypertarget{classChessBoard_a76c7d0672aac47763c93414169170393}{
+void {\bfseries setUpChessBoard} ()}
+\label{classChessBoard_a76c7d0672aac47763c93414169170393}
+
+\item 
+bool \hyperlink{classChessBoard_a88cc4b18d8ff152040bbf19f3938f263}{undo} (string str=\char`\"{}delete later\char`\"{})
+\begin{DoxyCompactList}\small\item\em undo`s to the previouse move on the board \item\end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ \hyperlink{classChessBoard_a213f4676d46d0c938cdf4cbdf9e89fc6}{getDeadBoard} ()
+\begin{DoxyCompactList}\small\item\em returns the dead \hyperlink{classBoard}{Board} \item\end{DoxyCompactList}\item 
+void \hyperlink{classChessBoard_a3d378451fd54b5f335d32143a413afaf}{setDeadBoard} (\hyperlink{classPiece}{Piece} $\ast$p)
+\begin{DoxyCompactList}\small\item\em sets the DeadBoard \item\end{DoxyCompactList}\item 
+\hypertarget{classChessBoard_ace11797096bfed610192baf5a26631ab}{
+\hyperlink{classPiece}{Piece} $\ast$ {\bfseries getPiece} (int row, int col)}
+\label{classChessBoard_ace11797096bfed610192baf5a26631ab}
+
+\item 
+\hypertarget{classChessBoard_a2cb0e5de6cef36be60fe00bd27aed712}{
+\hyperlink{classPiece}{Piece} $\ast$ {\bfseries popDeadBoard} ()}
+\label{classChessBoard_a2cb0e5de6cef36be60fe00bd27aed712}
+
+\item 
+int \hyperlink{classChessBoard_a1764e3d94bee2cc7a1ce6b03ae818b61}{movePiece} (int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validates a move based on the Pieces Move attribute. \item\end{DoxyCompactList}\item 
+\hypertarget{classChessBoard_aa36755cd28d9426554ab80d0f3a337a5}{
+vector$<$ string $>$ {\bfseries getGameHistory} ()}
+\label{classChessBoard_aa36755cd28d9426554ab80d0f3a337a5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a concrete class for creating a chess board which games will be played on. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classChessBoard_a213f4676d46d0c938cdf4cbdf9e89fc6}{
+\index{ChessBoard@{ChessBoard}!getDeadBoard@{getDeadBoard}}
+\index{getDeadBoard@{getDeadBoard}!ChessBoard@{ChessBoard}}
+\subsubsection[{getDeadBoard}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Piece} $\ast$ $>$ ChessBoard::getDeadBoard ()}}
+\label{classChessBoard_a213f4676d46d0c938cdf4cbdf9e89fc6}
+
+
+returns the dead \hyperlink{classBoard}{Board} \begin{DoxyReturn}{Returns}
+the dead \hyperlink{classBoard}{Board} 
+\end{DoxyReturn}
+\hypertarget{classChessBoard_a1764e3d94bee2cc7a1ce6b03ae818b61}{
+\index{ChessBoard@{ChessBoard}!movePiece@{movePiece}}
+\index{movePiece@{movePiece}!ChessBoard@{ChessBoard}}
+\subsubsection[{movePiece}]{\setlength{\rightskip}{0pt plus 5cm}int ChessBoard::movePiece (int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})}}
+\label{classChessBoard_a1764e3d94bee2cc7a1ce6b03ae818b61}
+
+
+validates a move based on the Pieces Move attribute. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em board}]A \hyperlink{classBoard}{Board} that will contain the currect board state \item[\mbox{$\leftarrow$} {\em ix}]A int that holds the x coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em iy}]A int that holds the y coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em dx}]A int that holds the x coordinate of where the piece is moving to \item[\mbox{$\leftarrow$} {\em dy}]A int that holds the y coordinate of where the piece is moving to \end{DoxyParams}
+\hypertarget{classChessBoard_a3d378451fd54b5f335d32143a413afaf}{
+\index{ChessBoard@{ChessBoard}!setDeadBoard@{setDeadBoard}}
+\index{setDeadBoard@{setDeadBoard}!ChessBoard@{ChessBoard}}
+\subsubsection[{setDeadBoard}]{\setlength{\rightskip}{0pt plus 5cm}void ChessBoard::setDeadBoard ({\bf Piece} $\ast$ {\em p})}}
+\label{classChessBoard_a3d378451fd54b5f335d32143a413afaf}
+
+
+sets the DeadBoard 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]sets a new dead \hyperlink{classBoard}{Board} \end{DoxyParams}
+\hypertarget{classChessBoard_a88cc4b18d8ff152040bbf19f3938f263}{
+\index{ChessBoard@{ChessBoard}!undo@{undo}}
+\index{undo@{undo}!ChessBoard@{ChessBoard}}
+\subsubsection[{undo}]{\setlength{\rightskip}{0pt plus 5cm}bool ChessBoard::undo (string {\em str} = {\ttfamily \char`\"{}delete~later\char`\"{}})}}
+\label{classChessBoard_a88cc4b18d8ff152040bbf19f3938f263}
+
+
+undo`s to the previouse move on the board \begin{DoxyReturn}{Returns}
+the previose board state 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/\hyperlink{ChessBoard_8h}{ChessBoard.h}\item 
+source/ChessBoard.cc\end{DoxyCompactItemize}

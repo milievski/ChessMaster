@@ -1,0 +1,139 @@
+\hypertarget{classBoard}{
+\section{Board Class Reference}
+\label{classBoard}\index{Board@{Board}}
+}
+
+
+a concrete class for creating a board which games will be played on.  
+
+
+{\ttfamily \#include $<$Board.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBoard_a8bbcd997b4099120e7427e06fd6a103f}{
+\hyperlink{classBoard_a8bbcd997b4099120e7427e06fd6a103f}{Board} (int h=8, int w=8)}
+\label{classBoard_a8bbcd997b4099120e7427e06fd6a103f}
+
+\begin{DoxyCompactList}\small\item\em Creates a \hyperlink{classBoard}{Board} object. As well as declaires vector of Piece`s that will be on the board. \item\end{DoxyCompactList}\item 
+\hypertarget{classBoard_af73f45730119a1fd8f6670f53f959e68}{
+\hyperlink{classBoard_af73f45730119a1fd8f6670f53f959e68}{$\sim$Board} ()}
+\label{classBoard_af73f45730119a1fd8f6670f53f959e68}
+
+\begin{DoxyCompactList}\small\item\em Removes all the Piece`s that where on the board. \item\end{DoxyCompactList}\item 
+\hyperlink{classPiece}{Piece} $\ast$ \hyperlink{classBoard_a80649196225f3e7da030b56a9bf19f64}{getPiece} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Given a x and y coordinate and return the piece that is on that square. \item\end{DoxyCompactList}\item 
+void \hyperlink{classBoard_a4eca4cabd2a51a2095917b203fecbe0c}{setPiece} (int x, int y, \hyperlink{classPiece}{Piece} $\ast$p)
+\begin{DoxyCompactList}\small\item\em gets player 2's id \item\end{DoxyCompactList}\item 
+\hypertarget{classBoard_a888c8ce1bb6a4cede9fc54070de91fe5}{
+void {\bfseries setNull} (int x, int y)}
+\label{classBoard_a888c8ce1bb6a4cede9fc54070de91fe5}
+
+\item 
+void \hyperlink{classBoard_a7f35e7488ab3d4a72ebb34c56e3b3ec2}{setHeight} (int newHeight)
+\begin{DoxyCompactList}\small\item\em sets the height of the \hyperlink{classBoard}{Board} to one provided by the user \item\end{DoxyCompactList}\item 
+int \hyperlink{classBoard_a14466e56568d523e5f4d0d695ccbcce1}{getHeight} ()
+\begin{DoxyCompactList}\small\item\em gets the height of the \hyperlink{classBoard}{Board} to one provided by the user \item\end{DoxyCompactList}\item 
+int \hyperlink{classBoard_a67905f3b441a8605aeb50d8978415aa0}{getWidth} ()
+\begin{DoxyCompactList}\small\item\em returns the width of the \hyperlink{classBoard}{Board} \item\end{DoxyCompactList}\item 
+void \hyperlink{classBoard_ac1aed85ab99701f68b89d91c225a5ba7}{setWidth} (int newWidth)
+\begin{DoxyCompactList}\small\item\em tsets the width of the \hyperlink{classBoard}{Board} to one provided by the user \item\end{DoxyCompactList}\item 
+int \hyperlink{classBoard_a0f7aae004483872ecf3c1056ca961fef}{movePiece} (int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validates a move based on the Pieces Move attribute. This will be overwritten \item\end{DoxyCompactList}\item 
+\hypertarget{classBoard_afafbabafdea2ea02d8d6bc57deb68ef9}{
+void {\bfseries MoveHistory} (int cur1=0, int cur2=0, int des1=0, int des2=0, bool onOrOff=false)}
+\label{classBoard_afafbabafdea2ea02d8d6bc57deb68ef9}
+
+\item 
+\hypertarget{classBoard_a74077081ee6423bf1022ffa68bddb9b5}{
+vector$<$ string $>$ {\bfseries getBoardHistory} ()}
+\label{classBoard_a74077081ee6423bf1022ffa68bddb9b5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a concrete class for creating a board which games will be played on. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBoard_a14466e56568d523e5f4d0d695ccbcce1}{
+\index{Board@{Board}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Board@{Board}}
+\subsubsection[{getHeight}]{\setlength{\rightskip}{0pt plus 5cm}int Board::getHeight ()}}
+\label{classBoard_a14466e56568d523e5f4d0d695ccbcce1}
+
+
+gets the height of the \hyperlink{classBoard}{Board} to one provided by the user 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em newHeight}]a new height which the board will be set to \end{DoxyParams}
+\hypertarget{classBoard_a80649196225f3e7da030b56a9bf19f64}{
+\index{Board@{Board}!getPiece@{getPiece}}
+\index{getPiece@{getPiece}!Board@{Board}}
+\subsubsection[{getPiece}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piece}$\ast$ Board::getPiece (int {\em x}, \/  int {\em y})}}
+\label{classBoard_a80649196225f3e7da030b56a9bf19f64}
+
+
+Given a x and y coordinate and return the piece that is on that square. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em x}]A int that contains the x coordinate \item[\mbox{$\leftarrow$} {\em y}]A int that contains the y coordinate \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{classPiece}{Piece} that is currently on the x and y square 
+\end{DoxyReturn}
+\hypertarget{classBoard_a67905f3b441a8605aeb50d8978415aa0}{
+\index{Board@{Board}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Board@{Board}}
+\subsubsection[{getWidth}]{\setlength{\rightskip}{0pt plus 5cm}int Board::getWidth ()}}
+\label{classBoard_a67905f3b441a8605aeb50d8978415aa0}
+
+
+returns the width of the \hyperlink{classBoard}{Board} \begin{DoxyReturn}{Returns}
+the width of the \hyperlink{classBoard}{Board} 
+\end{DoxyReturn}
+\hypertarget{classBoard_a0f7aae004483872ecf3c1056ca961fef}{
+\index{Board@{Board}!movePiece@{movePiece}}
+\index{movePiece@{movePiece}!Board@{Board}}
+\subsubsection[{movePiece}]{\setlength{\rightskip}{0pt plus 5cm}int Board::movePiece (int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})}}
+\label{classBoard_a0f7aae004483872ecf3c1056ca961fef}
+
+
+validates a move based on the Pieces Move attribute. This will be overwritten 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em board}]A \hyperlink{classBoard}{Board} that will contain the currect board state \item[\mbox{$\leftarrow$} {\em ix}]A int that holds the x coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em iy}]A int that holds the y coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em dx}]A int that holds the x coordinate of where the piece is moving to \item[\mbox{$\leftarrow$} {\em dy}]A int that holds the y coordinate of where the piece is moving to \end{DoxyParams}
+\hypertarget{classBoard_a7f35e7488ab3d4a72ebb34c56e3b3ec2}{
+\index{Board@{Board}!setHeight@{setHeight}}
+\index{setHeight@{setHeight}!Board@{Board}}
+\subsubsection[{setHeight}]{\setlength{\rightskip}{0pt plus 5cm}void Board::setHeight (int {\em newHeight})}}
+\label{classBoard_a7f35e7488ab3d4a72ebb34c56e3b3ec2}
+
+
+sets the height of the \hyperlink{classBoard}{Board} to one provided by the user 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em newHeight}]a new height which the board will be set to \end{DoxyParams}
+\hypertarget{classBoard_a4eca4cabd2a51a2095917b203fecbe0c}{
+\index{Board@{Board}!setPiece@{setPiece}}
+\index{setPiece@{setPiece}!Board@{Board}}
+\subsubsection[{setPiece}]{\setlength{\rightskip}{0pt plus 5cm}void Board::setPiece (int {\em x}, \/  int {\em y}, \/  {\bf Piece} $\ast$ {\em p})}}
+\label{classBoard_a4eca4cabd2a51a2095917b203fecbe0c}
+
+
+gets player 2's id 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em x}]A int that contains the x coordinate \item[\mbox{$\leftarrow$} {\em y}]A int that contains the y coordinate \item[\mbox{$\leftarrow$} {\em p}]A \hyperlink{classPiece}{Piece} that will be inserted \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the insert was successful 
+\end{DoxyReturn}
+\hypertarget{classBoard_ac1aed85ab99701f68b89d91c225a5ba7}{
+\index{Board@{Board}!setWidth@{setWidth}}
+\index{setWidth@{setWidth}!Board@{Board}}
+\subsubsection[{setWidth}]{\setlength{\rightskip}{0pt plus 5cm}void Board::setWidth (int {\em newWidth})}}
+\label{classBoard_ac1aed85ab99701f68b89d91c225a5ba7}
+
+
+tsets the width of the \hyperlink{classBoard}{Board} to one provided by the user 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em newWidth}]a new width which the board will be set to \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/\hyperlink{Board_8h}{Board.h}\item 
+source/Board.cc\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+\hypertarget{classCastlingMove}{
+\section{CastlingMove Class Reference}
+\label{classCastlingMove}\index{CastlingMove@{CastlingMove}}
+}
+Inheritance diagram for CastlingMove::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classCastlingMove}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCastlingMove_ac2b171638597ff26944c2426c35768de}{CastlingMove} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCastlingMove}{CastlingMove} creates a \hyperlink{classCastlingMove}{CastlingMove} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classCastlingMove_ad716f6021188a950d53b824bcdfdcb0d}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove checks if the king is moved two squares towards a rock. if its not F the move made by the user is a valid move that sacrifices the Castling rule. if valid calls \hyperlink{classPieceInWay}{PieceInWay}. if invalid return 0. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCastlingMove_ac2b171638597ff26944c2426c35768de}{
+\index{CastlingMove@{CastlingMove}!CastlingMove@{CastlingMove}}
+\index{CastlingMove@{CastlingMove}!CastlingMove@{CastlingMove}}
+\subsubsection[{CastlingMove}]{\setlength{\rightskip}{0pt plus 5cm}CastlingMove::CastlingMove ()}}
+\label{classCastlingMove_ac2b171638597ff26944c2426c35768de}
+
+
+\hyperlink{classCastlingMove}{CastlingMove} creates a \hyperlink{classCastlingMove}{CastlingMove} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCastlingMove_ad716f6021188a950d53b824bcdfdcb0d}{
+\index{CastlingMove@{CastlingMove}!validMove@{validMove}}
+\index{validMove@{validMove}!CastlingMove@{CastlingMove}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int CastlingMove::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classCastlingMove_ad716f6021188a950d53b824bcdfdcb0d}
+
+
+validMove checks if the king is moved two squares towards a rock. if its not F the move made by the user is a valid move that sacrifices the Castling rule. if valid calls \hyperlink{classPieceInWay}{PieceInWay}. if invalid return 0. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{CastlingMove_8h}{CastlingMove.h}\item 
+source/Rules/CastlingMove.cc\end{DoxyCompactItemize}

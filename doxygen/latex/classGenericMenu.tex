@@ -1,0 +1,48 @@
+\hypertarget{classGenericMenu}{
+\section{GenericMenu Class Reference}
+\label{classGenericMenu}\index{GenericMenu@{GenericMenu}}
+}
+
+
+\hyperlink{classGenericMenu}{GenericMenu} super class of all menus.  
+
+
+{\ttfamily \#include $<$GenericMenu.h$>$}Inheritance diagram for GenericMenu::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.35593cm]{classGenericMenu}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGenericMenu_ab0abde37b50eb17890bd223cc4807638}{
+virtual \hyperlink{classGenericMenu_ab0abde37b50eb17890bd223cc4807638}{$\sim$GenericMenu} ()}
+\label{classGenericMenu_ab0abde37b50eb17890bd223cc4807638}
+
+\begin{DoxyCompactList}\small\item\em destructor put in place for the sake of posible further suclasses needing adestructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classGenericMenu}{GenericMenu} $\ast$ \hyperlink{classGenericMenu_a290ad7ec3331edc968190b1d7b48a397}{menufunc} (string \&opt, \hyperlink{classstatus}{status} $\ast$\&info)=0
+\begin{DoxyCompactList}\small\item\em menufunc is the general handler for implementing the functionality of this menu class \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classGenericMenu}{GenericMenu} super class of all menus. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classGenericMenu_a290ad7ec3331edc968190b1d7b48a397}{
+\index{GenericMenu@{GenericMenu}!menufunc@{menufunc}}
+\index{menufunc@{menufunc}!GenericMenu@{GenericMenu}}
+\subsubsection[{menufunc}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf GenericMenu}$\ast$ GenericMenu::menufunc (string \& {\em opt}, \/  {\bf status} $\ast$\& {\em info})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classGenericMenu_a290ad7ec3331edc968190b1d7b48a397}
+
+
+menufunc is the general handler for implementing the functionality of this menu class 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em opt}]a reference for the program to decide where it must go in the main param\mbox{[}in\mbox{]} \hyperlink{classstatus}{status} is a class to enable manipulation of the current game and players between classes \end{DoxyParams}
+
+
+Implemented in \hyperlink{classchessGameGUI_afcafe4d3b432bae7cd8439b689886a8d}{chessGameGUI}, \hyperlink{classEndMenu_a8fc10a35897496066f1db862bad44028}{EndMenu}, \hyperlink{classLeaderBoard_a848e37073627647d9ace936690d6e3bb}{LeaderBoard}, \hyperlink{classLoginMenu_a2f391af29531a557e0547294e97132fe}{LoginMenu}, \hyperlink{classMainMenu_aed53ec0c027843a2a1204235fe2924ea}{MainMenu}, \hyperlink{classPauseMenu_a7926ffe9dd0aa74281d8cb8126cd9c10}{PauseMenu}, and \hyperlink{classTournamentMenu_a86ce030ba6728404ddc49aaacb45dd34}{TournamentMenu}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+source/Menu/\hyperlink{GenericMenu_8h}{GenericMenu.h}\end{DoxyCompactItemize}

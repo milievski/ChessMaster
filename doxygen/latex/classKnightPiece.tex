@@ -1,0 +1,89 @@
+\hypertarget{classKnightPiece}{
+\section{KnightPiece Class Reference}
+\label{classKnightPiece}\index{KnightPiece@{KnightPiece}}
+}
+
+
+a class for all Knight Piece`s.  
+
+
+{\ttfamily \#include $<$KnightPiece.h$>$}Inheritance diagram for KnightPiece::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classKnightPiece}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classKnightPiece_a3575ffe197fb0b40c6c7791d36fd2418}{
+\hyperlink{classKnightPiece_a3575ffe197fb0b40c6c7791d36fd2418}{KnightPiece} (int c=0)}
+\label{classKnightPiece_a3575ffe197fb0b40c6c7791d36fd2418}
+
+\begin{DoxyCompactList}\small\item\em creates a \hyperlink{classPiece}{Piece} object \item\end{DoxyCompactList}\item 
+int \hyperlink{classKnightPiece_ab8ef95a1a625e461ada96e4692599770}{getColor} () const 
+\begin{DoxyCompactList}\small\item\em gets the color of the Knight \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+void \hyperlink{classKnightPiece_a928091c9100f4e3bc2bb2d10535ccc49}{setColor} (int colorOfPiece)
+\begin{DoxyCompactList}\small\item\em sets the Color of the Knight \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+string \hyperlink{classKnightPiece_a3b141e4014d09bba70625ccb2129efcc}{getType} () const 
+\begin{DoxyCompactList}\small\item\em Returns Knight to user. \item\end{DoxyCompactList}\item 
+int \hyperlink{classKnightPiece_a9c8f78a9ef9a5e26c8011cb37a16e702}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ gameBoard, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validates a move based on the Knight rules. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a class for all Knight Piece`s. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classKnightPiece_ab8ef95a1a625e461ada96e4692599770}{
+\index{KnightPiece@{KnightPiece}!getColor@{getColor}}
+\index{getColor@{getColor}!KnightPiece@{KnightPiece}}
+\subsubsection[{getColor}]{\setlength{\rightskip}{0pt plus 5cm}int KnightPiece::getColor () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKnightPiece_ab8ef95a1a625e461ada96e4692599770}
+
+
+gets the color of the Knight \hyperlink{classPiece}{Piece} \begin{DoxyReturn}{Returns}
+int a 0 if white and 1 if black 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPiece_a1376072d4815719e60253ce5688df95c}{Piece}.\hypertarget{classKnightPiece_a3b141e4014d09bba70625ccb2129efcc}{
+\index{KnightPiece@{KnightPiece}!getType@{getType}}
+\index{getType@{getType}!KnightPiece@{KnightPiece}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}string KnightPiece::getType () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKnightPiece_a3b141e4014d09bba70625ccb2129efcc}
+
+
+Returns Knight to user. \begin{DoxyReturn}{Returns}
+a string that will return Knight Type. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPiece_a5b88fcd786bb30b345b24fbc3ab24ab9}{Piece}.\hypertarget{classKnightPiece_a928091c9100f4e3bc2bb2d10535ccc49}{
+\index{KnightPiece@{KnightPiece}!setColor@{setColor}}
+\index{setColor@{setColor}!KnightPiece@{KnightPiece}}
+\subsubsection[{setColor}]{\setlength{\rightskip}{0pt plus 5cm}void KnightPiece::setColor (int {\em colorOfPiece})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKnightPiece_a928091c9100f4e3bc2bb2d10535ccc49}
+
+
+sets the Color of the Knight \hyperlink{classPiece}{Piece} 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em colorOfPiece}]sets the Pawn Piece`s color \end{DoxyParams}
+
+
+Implements \hyperlink{classPiece_a1387cb503dca308ac1e3bbe38a70a073}{Piece}.\hypertarget{classKnightPiece_a9c8f78a9ef9a5e26c8011cb37a16e702}{
+\index{KnightPiece@{KnightPiece}!validMove@{validMove}}
+\index{validMove@{validMove}!KnightPiece@{KnightPiece}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int KnightPiece::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ {\em gameBoard}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})}}
+\label{classKnightPiece_a9c8f78a9ef9a5e26c8011cb37a16e702}
+
+
+validates a move based on the Knight rules. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em board}]A \hyperlink{classBoard}{Board} that will contain the currect board state \item[\mbox{$\leftarrow$} {\em ix}]A int that holds the x coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em iy}]A int that holds the y coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em dx}]A int that holds the x coordinate of where the piece is moving to \item[\mbox{$\leftarrow$} {\em dy}]A int that holds the y coordinate of where the piece is moving to \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Piece/\hyperlink{KnightPiece_8h}{KnightPiece.h}\item 
+source/Piece/KnightPiece.cc\end{DoxyCompactItemize}

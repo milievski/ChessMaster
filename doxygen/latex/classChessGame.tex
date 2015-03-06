@@ -1,0 +1,136 @@
+\hypertarget{classChessGame}{
+\section{ChessGame Class Reference}
+\label{classChessGame}\index{ChessGame@{ChessGame}}
+}
+
+
+a class for \hyperlink{classGame}{Game}  
+
+
+{\ttfamily \#include $<$ChessGame.h$>$}Inheritance diagram for ChessGame::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classChessGame}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classChessGame_a7c9d1caa97c7ca5737f187a6066662b2}{ChessGame} ()
+\begin{DoxyCompactList}\small\item\em Creates a \hyperlink{classChessGame}{ChessGame}. \item\end{DoxyCompactList}\item 
+\hypertarget{classChessGame_a9c7f4475dcd31ab4e1f98f033fb0c60f}{
+\hyperlink{classChessGame_a9c7f4475dcd31ab4e1f98f033fb0c60f}{$\sim$ChessGame} ()}
+\label{classChessGame_a9c7f4475dcd31ab4e1f98f033fb0c60f}
+
+\begin{DoxyCompactList}\small\item\em destructor for \hyperlink{classChessGame}{ChessGame}. \item\end{DoxyCompactList}\item 
+\hyperlink{classBoard}{Board} $\ast$ \hyperlink{classChessGame_aae64a8ad5e54881d22d17a63cbc3159d}{getDeadBoard} ()
+\begin{DoxyCompactList}\small\item\em This function returns a pointer to board. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classChessGame_af39a867cb667ca6befdab8cddb48ea3e}{setDeadBoard} (\hyperlink{classBoard}{Board} b)
+\begin{DoxyCompactList}\small\item\em sets board \item\end{DoxyCompactList}\item 
+bool \hyperlink{classChessGame_a19ce1ce19741d65888e60d741f658394}{undo} ()
+\begin{DoxyCompactList}\small\item\em undo a move \item\end{DoxyCompactList}\item 
+const vector$<$ string $>$ $\ast$ \hyperlink{classChessGame_a4a6bd9631a46b9f59b6d1b619e743a1a}{getGameHistory} ()
+\begin{DoxyCompactList}\small\item\em gets a pointer to game history \item\end{DoxyCompactList}\item 
+void \hyperlink{classChessGame_ae91e34d3cff8c49c243d2a5f6164b4b6}{addMove} (string move)
+\begin{DoxyCompactList}\small\item\em adds a move to game history \item\end{DoxyCompactList}\item 
+deadHistory $\ast$ \hyperlink{classChessGame_a60066cc951dc9fa90e850dc8b57ab210}{getDeadHistory} ()
+\begin{DoxyCompactList}\small\item\em gets a pointer to deadHistory \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a class for \hyperlink{classGame}{Game} .h \begin{DoxyAuthor}{Author}
+Zackery Shortt 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 28, 2014 a class for \hyperlink{classChessGame}{ChessGame} based on the \hyperlink{classGame}{Game} class. 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classChessGame_a7c9d1caa97c7ca5737f187a6066662b2}{
+\index{ChessGame@{ChessGame}!ChessGame@{ChessGame}}
+\index{ChessGame@{ChessGame}!ChessGame@{ChessGame}}
+\subsubsection[{ChessGame}]{\setlength{\rightskip}{0pt plus 5cm}ChessGame::ChessGame ()}}
+\label{classChessGame_a7c9d1caa97c7ca5737f187a6066662b2}
+
+
+Creates a \hyperlink{classChessGame}{ChessGame}. a class for \hyperlink{classChessGame}{ChessGame}, inherits from \hyperlink{classGame}{Game}
+
+.cc \begin{DoxyAuthor}{Author}
+Zackery Shortt 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 14, 2014 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classChessGame_ae91e34d3cff8c49c243d2a5f6164b4b6}{
+\index{ChessGame@{ChessGame}!addMove@{addMove}}
+\index{addMove@{addMove}!ChessGame@{ChessGame}}
+\subsubsection[{addMove}]{\setlength{\rightskip}{0pt plus 5cm}void ChessGame::addMove (string {\em move})}}
+\label{classChessGame_ae91e34d3cff8c49c243d2a5f6164b4b6}
+
+
+adds a move to game history 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em move}]The move to add \end{DoxyParams}
+\hypertarget{classChessGame_aae64a8ad5e54881d22d17a63cbc3159d}{
+\index{ChessGame@{ChessGame}!getDeadBoard@{getDeadBoard}}
+\index{getDeadBoard@{getDeadBoard}!ChessGame@{ChessGame}}
+\subsubsection[{getDeadBoard}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Board} $\ast$ ChessGame::getDeadBoard ()}}
+\label{classChessGame_aae64a8ad5e54881d22d17a63cbc3159d}
+
+
+This function returns a pointer to board. \begin{DoxyReturn}{Returns}
+returns a pointer to deadBoard 
+\end{DoxyReturn}
+\hypertarget{classChessGame_a60066cc951dc9fa90e850dc8b57ab210}{
+\index{ChessGame@{ChessGame}!getDeadHistory@{getDeadHistory}}
+\index{getDeadHistory@{getDeadHistory}!ChessGame@{ChessGame}}
+\subsubsection[{getDeadHistory}]{\setlength{\rightskip}{0pt plus 5cm}deadHistory$\ast$ ChessGame::getDeadHistory ()}}
+\label{classChessGame_a60066cc951dc9fa90e850dc8b57ab210}
+
+
+gets a pointer to deadHistory \begin{DoxyReturn}{Returns}
+returns a pointer to deadHistory 
+\end{DoxyReturn}
+\hypertarget{classChessGame_a4a6bd9631a46b9f59b6d1b619e743a1a}{
+\index{ChessGame@{ChessGame}!getGameHistory@{getGameHistory}}
+\index{getGameHistory@{getGameHistory}!ChessGame@{ChessGame}}
+\subsubsection[{getGameHistory}]{\setlength{\rightskip}{0pt plus 5cm}const vector$<$ string $>$ $\ast$ ChessGame::getGameHistory ()}}
+\label{classChessGame_a4a6bd9631a46b9f59b6d1b619e743a1a}
+
+
+gets a pointer to game history \begin{DoxyReturn}{Returns}
+returns a pointer to gameHistory 
+\end{DoxyReturn}
+\hypertarget{classChessGame_af39a867cb667ca6befdab8cddb48ea3e}{
+\index{ChessGame@{ChessGame}!setDeadBoard@{setDeadBoard}}
+\index{setDeadBoard@{setDeadBoard}!ChessGame@{ChessGame}}
+\subsubsection[{setDeadBoard}]{\setlength{\rightskip}{0pt plus 5cm}bool ChessGame::setDeadBoard ({\bf Board} {\em b})}}
+\label{classChessGame_af39a867cb667ca6befdab8cddb48ea3e}
+
+
+sets board 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em This}]is the \hyperlink{classBoard}{Board} that deadBoard will be set to \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns a bool whether it was successful 
+\end{DoxyReturn}
+\hypertarget{classChessGame_a19ce1ce19741d65888e60d741f658394}{
+\index{ChessGame@{ChessGame}!undo@{undo}}
+\index{undo@{undo}!ChessGame@{ChessGame}}
+\subsubsection[{undo}]{\setlength{\rightskip}{0pt plus 5cm}bool ChessGame::undo ()}}
+\label{classChessGame_a19ce1ce19741d65888e60d741f658394}
+
+
+undo a move \begin{DoxyReturn}{Returns}
+returns a bool whether it was successful 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/ChessGame.h\item 
+source/ChessGame.cc\end{DoxyCompactItemize}

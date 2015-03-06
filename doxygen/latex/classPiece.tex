@@ -1,0 +1,83 @@
+\hypertarget{classPiece}{
+\section{Piece Class Reference}
+\label{classPiece}\index{Piece@{Piece}}
+}
+
+
+a a base class that will be inherited by all other Piece`s.  
+
+
+{\ttfamily \#include $<$Piece.h$>$}Inheritance diagram for Piece::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.77778cm]{classPiece}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{classPiece_a1376072d4815719e60253ce5688df95c}{getColor} () const =0
+\begin{DoxyCompactList}\small\item\em gets the color of the \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classPiece_a1387cb503dca308ac1e3bbe38a70a073}{setColor} (int colorOfPiece)=0
+\begin{DoxyCompactList}\small\item\em sets the Color of the \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+virtual string \hyperlink{classPiece_a5b88fcd786bb30b345b24fbc3ab24ab9}{getType} () const =0
+\begin{DoxyCompactList}\small\item\em gets the type of \hyperlink{classPiece}{Piece} \item\end{DoxyCompactList}\item 
+virtual int \hyperlink{classPiece_a6bc81a2d7211e5a7972cec0a34ebb473}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ gameBoard, int ix, int iy, int dx, int dy)=0
+\begin{DoxyCompactList}\small\item\em validates a move based on the Pieces Move attribute. This will be overwritten \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a a base class that will be inherited by all other Piece`s. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classPiece_a1376072d4815719e60253ce5688df95c}{
+\index{Piece@{Piece}!getColor@{getColor}}
+\index{getColor@{getColor}!Piece@{Piece}}
+\subsubsection[{getColor}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Piece::getColor () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classPiece_a1376072d4815719e60253ce5688df95c}
+
+
+gets the color of the \hyperlink{classPiece}{Piece} \begin{DoxyReturn}{Returns}
+int a 0 if white and 1 if black 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBishopPiece_ae40042d8edb9172b97955a1a3d651434}{BishopPiece}, \hyperlink{classEmptyPiece_aa0ae8e05e0471cf05e17bc9f56e30188}{EmptyPiece}, \hyperlink{classKingPiece_ac15e38c6ceaccae6879ec70211c2ab28}{KingPiece}, \hyperlink{classKnightPiece_ab8ef95a1a625e461ada96e4692599770}{KnightPiece}, \hyperlink{classPawnPiece_abe56912427ff110820b34223e5f60cda}{PawnPiece}, \hyperlink{classQueenPiece_a461d58f951b5e9f4d120cec0c47a1d9c}{QueenPiece}, and \hyperlink{classRookPiece_a15b00afd7fe0fe1035c64b884870c6e1}{RookPiece}.\hypertarget{classPiece_a5b88fcd786bb30b345b24fbc3ab24ab9}{
+\index{Piece@{Piece}!getType@{getType}}
+\index{getType@{getType}!Piece@{Piece}}
+\subsubsection[{getType}]{\setlength{\rightskip}{0pt plus 5cm}virtual string Piece::getType () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classPiece_a5b88fcd786bb30b345b24fbc3ab24ab9}
+
+
+gets the type of \hyperlink{classPiece}{Piece} \begin{DoxyReturn}{Returns}
+a string that will be the \hyperlink{classPiece}{Piece} Type. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBishopPiece_af651439e984e4d28955db75da601b35b}{BishopPiece}, \hyperlink{classEmptyPiece_ad71f9165591337d5df65c4f2500e2d36}{EmptyPiece}, \hyperlink{classKingPiece_ac93de53a7adee6e5ad33284f0fd6aa2e}{KingPiece}, \hyperlink{classKnightPiece_a3b141e4014d09bba70625ccb2129efcc}{KnightPiece}, \hyperlink{classPawnPiece_a0a612a59fd7bb512805329902e829ce6}{PawnPiece}, \hyperlink{classQueenPiece_ae8df61c033b58d7f96e344166a9f2bdb}{QueenPiece}, and \hyperlink{classRookPiece_a45d8858e75e550b72d27d49da0230c0a}{RookPiece}.\hypertarget{classPiece_a1387cb503dca308ac1e3bbe38a70a073}{
+\index{Piece@{Piece}!setColor@{setColor}}
+\index{setColor@{setColor}!Piece@{Piece}}
+\subsubsection[{setColor}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Piece::setColor (int {\em colorOfPiece})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classPiece_a1387cb503dca308ac1e3bbe38a70a073}
+
+
+sets the Color of the \hyperlink{classPiece}{Piece} 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em colorOfPiece}]sets the \hyperlink{classPiece}{Piece} color \end{DoxyParams}
+
+
+Implemented in \hyperlink{classBishopPiece_ae75166e3d3bc71f3030268158cba4054}{BishopPiece}, \hyperlink{classEmptyPiece_ae46e7ddf6275c1508528e06929cf2660}{EmptyPiece}, \hyperlink{classKingPiece_ab7a9023dda46c21a566675623f1b4a32}{KingPiece}, \hyperlink{classKnightPiece_a928091c9100f4e3bc2bb2d10535ccc49}{KnightPiece}, \hyperlink{classPawnPiece_a5cfd7bce3cea8ad32c1b8dc8f5c7b253}{PawnPiece}, \hyperlink{classQueenPiece_a691ff6afc7d167dab9cff0c910cae859}{QueenPiece}, and \hyperlink{classRookPiece_ad10584bf27bf3f6f109074b878ef840d}{RookPiece}.\hypertarget{classPiece_a6bc81a2d7211e5a7972cec0a34ebb473}{
+\index{Piece@{Piece}!validMove@{validMove}}
+\index{validMove@{validMove}!Piece@{Piece}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Piece::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ {\em gameBoard}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classPiece_a6bc81a2d7211e5a7972cec0a34ebb473}
+
+
+validates a move based on the Pieces Move attribute. This will be overwritten 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em board}]A \hyperlink{classBoard}{Board} that will contain the currect board state \item[\mbox{$\leftarrow$} {\em ix}]A int that holds the x coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em iy}]A int that holds the y coordinate of where the piece is moving from \item[\mbox{$\leftarrow$} {\em dx}]A int that holds the x coordinate of where the piece is moving to \item[\mbox{$\leftarrow$} {\em dy}]A int that holds the y coordinate of where the piece is moving to \end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+source/Piece/\hyperlink{Piece_8h}{Piece.h}\end{DoxyCompactItemize}

@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/checkmate/!svn/ver/303/source
+END
+Tournament.cc
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/checkmate/!svn/ver/275/source/Tournament.cc
+END
+tournamentTest.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/checkmate/!svn/ver/245/source/tournamentTest.cc
+END
+Tournament.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/checkmate/!svn/ver/275/source/Tournament.h
+END
+ChessGame.cc
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/checkmate/!svn/ver/197/source/ChessGame.cc
+END
+ChessGame.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/checkmate/!svn/ver/177/source/ChessGame.h
+END
+Database.cc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/checkmate/!svn/ver/285/source/Database.cc
+END
+chessGameGUI.cc
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/checkmate/!svn/ver/295/source/chessGameGUI.cc
+END
+Database.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/checkmate/!svn/ver/275/source/Database.h
+END
+chessGameGUI.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/checkmate/!svn/ver/278/source/chessGameGUI.h
+END
+Game.cc
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/checkmate/!svn/ver/192/source/Game.cc
+END
+Game.h
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/checkmate/!svn/ver/193/source/Game.h
+END
+Definitions.cc
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/checkmate/!svn/ver/248/source/Definitions.cc
+END
+makefile2
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/checkmate/!svn/ver/209/source/makefile2
+END
+makefile3
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/checkmate/!svn/ver/217/source/makefile3
+END
+Definitions.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/checkmate/!svn/ver/243/source/Definitions.h
+END
+ChessBoard.cc
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/checkmate/!svn/ver/269/source/ChessBoard.cc
+END
+Errors.h
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/checkmate/!svn/ver/257/source/Errors.h
+END
+Chat.cc
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/checkmate/!svn/ver/83/source/Chat.cc
+END
+ChessBoard.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/checkmate/!svn/ver/268/source/ChessBoard.h
+END
+chatTest.cc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/checkmate/!svn/ver/112/source/chatTest.cc
+END
+Chat.h
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/checkmate/!svn/ver/257/source/Chat.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/checkmate/!svn/ver/263/source/main.cpp
+END
+status.cc
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/checkmate/!svn/ver/295/source/status.cc
+END
+status.h
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/checkmate/!svn/ver/295/source/status.h
+END
+Board.cc
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/checkmate/!svn/ver/299/source/Board.cc
+END
+Board.h
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/checkmate/!svn/ver/281/source/Board.h
+END
+makefile
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/checkmate/!svn/ver/257/source/makefile
+END

@@ -1,0 +1,100 @@
+\hypertarget{classAIPlayer}{
+\section{AIPlayer Class Reference}
+\label{classAIPlayer}\index{AIPlayer@{AIPlayer}}
+}
+
+
+a class for \hyperlink{classAIPlayer}{AIPlayer}  
+
+
+{\ttfamily \#include $<$AIPlayer.h$>$}Inheritance diagram for AIPlayer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classAIPlayer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAIPlayer_ae791562645a443fead734b4bdcb1509e}{AIPlayer} ()
+\begin{DoxyCompactList}\small\item\em creates a \hyperlink{classAIPlayer}{AIPlayer} object for \hyperlink{classAIPlayer}{AIPlayer} class \item\end{DoxyCompactList}\item 
+string \hyperlink{classAIPlayer_aaa733d49ac2e937a25d53a3b238fb3a8}{getName} ()
+\item 
+void \hyperlink{classAIPlayer_adb32c66ce4ba140188676aeea0317d36}{nextMove} (\hyperlink{classBoard}{Board} b)
+\begin{DoxyCompactList}\small\item\em creates a move for \hyperlink{classBoard}{Board} \item\end{DoxyCompactList}\item 
+\hyperlink{classMemento}{Memento} \hyperlink{classAIPlayer_a83d0865c5869bbf02a66207976842de6}{generateMemento} ()
+\begin{DoxyCompactList}\small\item\em Generates a \hyperlink{classMemento}{Memento} object. \item\end{DoxyCompactList}\item 
+void \hyperlink{classAIPlayer_a41aa8bd7a1d09ba00f1e6fa65083a248}{restoreMemento} (\hyperlink{classMemento}{Memento} memento)
+\begin{DoxyCompactList}\small\item\em Restores this \hyperlink{classRegisteredPlayer}{RegisteredPlayer} object from the \hyperlink{classMemento}{Memento} object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a class for \hyperlink{classAIPlayer}{AIPlayer} .h \begin{DoxyAuthor}{Author}
+Zackery Shortt 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 27, 2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAIPlayer_ae791562645a443fead734b4bdcb1509e}{
+\index{AIPlayer@{AIPlayer}!AIPlayer@{AIPlayer}}
+\index{AIPlayer@{AIPlayer}!AIPlayer@{AIPlayer}}
+\subsubsection[{AIPlayer}]{\setlength{\rightskip}{0pt plus 5cm}AIPlayer::AIPlayer ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classAIPlayer_ae791562645a443fead734b4bdcb1509e}
+
+
+creates a \hyperlink{classAIPlayer}{AIPlayer} object for \hyperlink{classAIPlayer}{AIPlayer} class 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em name}]The name of the AI \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAIPlayer_a83d0865c5869bbf02a66207976842de6}{
+\index{AIPlayer@{AIPlayer}!generateMemento@{generateMemento}}
+\index{generateMemento@{generateMemento}!AIPlayer@{AIPlayer}}
+\subsubsection[{generateMemento}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memento} AIPlayer::generateMemento ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAIPlayer_a83d0865c5869bbf02a66207976842de6}
+
+
+Generates a \hyperlink{classMemento}{Memento} object. \begin{DoxyReturn}{Returns}
+returns a memento object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPlayer_ae0b947230fe2f09d96f273798f19cf0d}{Player}.\hypertarget{classAIPlayer_aaa733d49ac2e937a25d53a3b238fb3a8}{
+\index{AIPlayer@{AIPlayer}!getName@{getName}}
+\index{getName@{getName}!AIPlayer@{AIPlayer}}
+\subsubsection[{getName}]{\setlength{\rightskip}{0pt plus 5cm}string AIPlayer::getName ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAIPlayer_aaa733d49ac2e937a25d53a3b238fb3a8}
+\begin{DoxyReturn}{Returns}
+returns the name of the AI 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPlayer}{Player}.\hypertarget{classAIPlayer_adb32c66ce4ba140188676aeea0317d36}{
+\index{AIPlayer@{AIPlayer}!nextMove@{nextMove}}
+\index{nextMove@{nextMove}!AIPlayer@{AIPlayer}}
+\subsubsection[{nextMove}]{\setlength{\rightskip}{0pt plus 5cm}void AIPlayer::nextMove ({\bf Board} {\em b})}}
+\label{classAIPlayer_adb32c66ce4ba140188676aeea0317d36}
+
+
+creates a move for \hyperlink{classBoard}{Board} 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em This}]is the board that has a move \end{DoxyParams}
+\hypertarget{classAIPlayer_a41aa8bd7a1d09ba00f1e6fa65083a248}{
+\index{AIPlayer@{AIPlayer}!restoreMemento@{restoreMemento}}
+\index{restoreMemento@{restoreMemento}!AIPlayer@{AIPlayer}}
+\subsubsection[{restoreMemento}]{\setlength{\rightskip}{0pt plus 5cm}void AIPlayer::restoreMemento ({\bf Memento} {\em memento})}}
+\label{classAIPlayer_a41aa8bd7a1d09ba00f1e6fa65083a248}
+
+
+Restores this \hyperlink{classRegisteredPlayer}{RegisteredPlayer} object from the \hyperlink{classMemento}{Memento} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em memento}]the memento object to restore \end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+source/Players/AIPlayer.h\end{DoxyCompactItemize}

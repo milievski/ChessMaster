@@ -1,0 +1,34 @@
+Coding Conventions for Checkmate Project
+
+User defined names
+
+     -Constants and enumerated type members are all upper case with the words separated by
+      underscores.
+
+     -Exceptions have descriptive names all lower case words separated by underscores.
+
+     -Class names are lower case except for the first letter of the class name and the first letter of
+      each interior word in the name with are upper case.
+
+     -All other names are lower case with interior words that begin with an upper case letter.
+
+     -All pointer variable names end Ptr.
+
+     -Function names:
+
+          -mutator and modifier functions will be named using verbs
+           (except for previous and next functions which are actually adjectives)
+
+          -accessor functions will be named using nouns
+
+     -Private member names are descriptive and where an accessor function is desirable the
+      private member’s name will begin with either the class name or an abbreviation of the class
+      name.
+
+     -Subclasses names will end with the name of the class from which they are derived.
+
+Open curly braces for functions, loops etc begin on first line after the end of the name/control line,
+and have the line to themselves.
+
+All loops and branching statements use {} even if they are not necessary
+

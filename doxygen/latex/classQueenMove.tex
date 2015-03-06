@@ -1,0 +1,51 @@
+\hypertarget{classQueenMove}{
+\section{QueenMove Class Reference}
+\label{classQueenMove}\index{QueenMove@{QueenMove}}
+}
+Inheritance diagram for QueenMove::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classQueenMove}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQueenMove_a62bbd2eb2e49ba93b7144403cfc8eb46}{QueenMove} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classQueenMove}{QueenMove} creates a \hyperlink{classQueenMove}{QueenMove} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classQueenMove_a20dad2546b24626a9c00e5c3b3369065}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove if the queens requested location is either on the x axis or on the y axis, or if it is a on a perfect angle(ex. x+1, y+1) if any are true go to \hyperlink{classPieceInWay}{PieceInWay}, else return 0. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classQueenMove_a62bbd2eb2e49ba93b7144403cfc8eb46}{
+\index{QueenMove@{QueenMove}!QueenMove@{QueenMove}}
+\index{QueenMove@{QueenMove}!QueenMove@{QueenMove}}
+\subsubsection[{QueenMove}]{\setlength{\rightskip}{0pt plus 5cm}QueenMove::QueenMove ()}}
+\label{classQueenMove_a62bbd2eb2e49ba93b7144403cfc8eb46}
+
+
+\hyperlink{classQueenMove}{QueenMove} creates a \hyperlink{classQueenMove}{QueenMove} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classQueenMove_a20dad2546b24626a9c00e5c3b3369065}{
+\index{QueenMove@{QueenMove}!validMove@{validMove}}
+\index{validMove@{validMove}!QueenMove@{QueenMove}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int QueenMove::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classQueenMove_a20dad2546b24626a9c00e5c3b3369065}
+
+
+validMove if the queens requested location is either on the x axis or on the y axis, or if it is a on a perfect angle(ex. x+1, y+1) if any are true go to \hyperlink{classPieceInWay}{PieceInWay}, else return 0. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{QueenMove_8h}{QueenMove.h}\item 
+source/Rules/QueenMove.cc\end{DoxyCompactItemize}

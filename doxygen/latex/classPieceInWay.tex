@@ -1,0 +1,51 @@
+\hypertarget{classPieceInWay}{
+\section{PieceInWay Class Reference}
+\label{classPieceInWay}\index{PieceInWay@{PieceInWay}}
+}
+Inheritance diagram for PieceInWay::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classPieceInWay}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPieceInWay_a9e3ba0268de2c0dde0d4ca047050020f}{PieceInWay} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPieceInWay}{PieceInWay} creates a \hyperlink{classPieceInWay}{PieceInWay} object. \item\end{DoxyCompactList}\item 
+int \hyperlink{classPieceInWay_a9b34a28e7b7b7ff310f5998ff5f49fb6}{validMove} (vector$<$ vector$<$ \hyperlink{classPiece}{Piece} $\ast$ $>$ $>$ \&b, int ix, int iy, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em validMove checks if there is any piece in between where the piece currently is and where it wants to move. if valid calls \hyperlink{classFriendlyPiece}{FriendlyPiece}. if invalid return 0. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPieceInWay_a9e3ba0268de2c0dde0d4ca047050020f}{
+\index{PieceInWay@{PieceInWay}!PieceInWay@{PieceInWay}}
+\index{PieceInWay@{PieceInWay}!PieceInWay@{PieceInWay}}
+\subsubsection[{PieceInWay}]{\setlength{\rightskip}{0pt plus 5cm}PieceInWay::PieceInWay ()}}
+\label{classPieceInWay_a9e3ba0268de2c0dde0d4ca047050020f}
+
+
+\hyperlink{classPieceInWay}{PieceInWay} creates a \hyperlink{classPieceInWay}{PieceInWay} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em b}]is a vector$<$ vector $<$ Piece$\ast$ $>$ $>$ object \item[\mbox{$\leftarrow$} {\em ix}]is the x for the initial location \item[\mbox{$\leftarrow$} {\em iy}]is the y for the initial location \item[\mbox{$\leftarrow$} {\em dx}]is the x for the destination location \item[\mbox{$\leftarrow$} {\em dy}]is the y for the destination location \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPieceInWay_a9b34a28e7b7b7ff310f5998ff5f49fb6}{
+\index{PieceInWay@{PieceInWay}!validMove@{validMove}}
+\index{validMove@{validMove}!PieceInWay@{PieceInWay}}
+\subsubsection[{validMove}]{\setlength{\rightskip}{0pt plus 5cm}int PieceInWay::validMove (vector$<$ vector$<$ {\bf Piece} $\ast$ $>$ $>$ \& {\em b}, \/  int {\em ix}, \/  int {\em iy}, \/  int {\em dx}, \/  int {\em dy})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classPieceInWay_a9b34a28e7b7b7ff310f5998ff5f49fb6}
+
+
+validMove checks if there is any piece in between where the piece currently is and where it wants to move. if valid calls \hyperlink{classFriendlyPiece}{FriendlyPiece}. if invalid return 0. \begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRule}{Rule}.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+source/Rules/\hyperlink{PieceInWay_8h}{PieceInWay.h}\item 
+source/Rules/PieceInWay.cc\end{DoxyCompactItemize}

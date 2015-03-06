@@ -1,0 +1,54 @@
+\hypertarget{classPlayer}{
+\section{Player Class Reference}
+\label{classPlayer}\index{Player@{Player}}
+}
+Inheritance diagram for Player::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classPlayer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPlayer_a9ca1e3c3a8ad5d89268551b93a19fcc0}{
+virtual string {\bfseries getName} ()=0}
+\label{classPlayer_a9ca1e3c3a8ad5d89268551b93a19fcc0}
+
+\item 
+virtual \hyperlink{classMemento}{Memento} $\ast$ \hyperlink{classPlayer_ae0b947230fe2f09d96f273798f19cf0d}{generateMemento} ()=0
+\begin{DoxyCompactList}\small\item\em Generates a \hyperlink{classMemento}{Memento} object. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classPlayer_a9c4f1a1eef2fbfda4b6e19e97be91877}{restoreMemento} (\hyperlink{classMemento}{Memento} $\ast$memento)=0
+\begin{DoxyCompactList}\small\item\em Restores this \hyperlink{classRegisteredPlayer}{RegisteredPlayer} object from the \hyperlink{classMemento}{Memento} object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPlayer_ae0b947230fe2f09d96f273798f19cf0d}{
+\index{Player@{Player}!generateMemento@{generateMemento}}
+\index{generateMemento@{generateMemento}!Player@{Player}}
+\subsubsection[{generateMemento}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Memento}$\ast$ Player::generateMemento ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classPlayer_ae0b947230fe2f09d96f273798f19cf0d}
+
+
+Generates a \hyperlink{classMemento}{Memento} object. \begin{DoxyReturn}{Returns}
+returns a memento object 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classAIPlayer_a83d0865c5869bbf02a66207976842de6}{AIPlayer}, \hyperlink{classRegisteredPlayer_ab9436dac85b13fe2ad6849eb4efb02b8}{RegisteredPlayer}, and \hyperlink{classReplayPlayer_a9301be927a78f52b14602f6660ce35c4}{ReplayPlayer}.\hypertarget{classPlayer_a9c4f1a1eef2fbfda4b6e19e97be91877}{
+\index{Player@{Player}!restoreMemento@{restoreMemento}}
+\index{restoreMemento@{restoreMemento}!Player@{Player}}
+\subsubsection[{restoreMemento}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Player::restoreMemento ({\bf Memento} $\ast$ {\em memento})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classPlayer_a9c4f1a1eef2fbfda4b6e19e97be91877}
+
+
+Restores this \hyperlink{classRegisteredPlayer}{RegisteredPlayer} object from the \hyperlink{classMemento}{Memento} object. 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em memento}]the memento object to restore \end{DoxyParams}
+
+
+Implemented in \hyperlink{classRegisteredPlayer_a2a588dca8f68c5d72b4f73312f017c4d}{RegisteredPlayer}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+source/Players/Player.h\end{DoxyCompactItemize}
