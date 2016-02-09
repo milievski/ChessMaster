@@ -1,6 +1,6 @@
-#include "PauseMenu"
+#include "PauseMenuQT"
 
-PauseMenu::PauseMenu(QWidget *parent)
+PauseMenuQT::PauseMenuQT(QWidget *parent)
 {
 
 	exitt = new QPushButton("exit");
