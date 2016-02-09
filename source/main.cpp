@@ -34,25 +34,25 @@ int colorMine = 0;
 int main(int argc, char *argv[])
 {
        
-    struct termios term;
-    tcgetattr(STDIN_FILENO, &term);
-    term.c_lflag &= ~ICANON;
-    tcsetattr(STDIN_FILENO, TCSANOW, &term);
-    status* info = new status();
-    GenericMenu* menupointer = new MainMenu;
-    GenericMenu* temp = NULL;
-    string menu = "Main";
-    printf("\033[00;32m");
+    // struct termios term;
+    // tcgetattr(STDIN_FILENO, &term);
+    // term.c_lflag &= ~ICANON;
+    // tcsetattr(STDIN_FILENO, TCSANOW, &term);
+    // status* info = new status();
+    // GenericMenu* menupointer = new MainMenu;
+    // GenericMenu* temp = NULL;
+    // string menu = "Main";
+    // printf("\033[00;32m");
 
 
-    while (menu != "exit")
-    {
-      temp = menupointer->menufunc(menu, info);
-      delete menupointer;
-      menupointer = temp;
-      temp = NULL; 
-    }
-    delete info;  
+    // while (menu != "exit")
+    // {
+    //   temp = menupointer->menufunc(menu, info);
+    //   delete menupointer;
+    //   menupointer = temp;
+    //   temp = NULL; 
+    // }
+    // delete info;  
     delete menupointer;
 
     QApplication app(argc,argv);
