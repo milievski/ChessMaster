@@ -23,3 +23,12 @@ MainMenuQT::MainMenuQT()
 
 
 }
+void MainMenuQT::keyPressEvent(QKeyEvent *e) {
+    if(e->key() == Qt::Key_Escape){
+    	pMenu = new PauseMenuQT(this);
+    	
+    	pMenu->show();
+    	//this->hide();
+    	std::cerr << "Here" << std::endl;
+    }
+}

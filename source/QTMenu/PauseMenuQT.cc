@@ -1,16 +1,17 @@
-#include "PauseMenuQT"
-
-PauseMenuQT::PauseMenuQT(QWidget *parent)
+#include "PauseMenuQT.h"
+#include <QtGui>
+#include <QDialog>
+PauseMenuQT::PauseMenuQT(QWidget *parent) : QDialog(parent)
 {
 
 	exitt = new QPushButton("exit");
 	save  = new QPushButton("save");
-	main = new QPushButton("Main Menu");
+	Main = new QPushButton("Main Menu");
 
 	QGridLayout *layout = new QGridLayout;
    layout -> addWidget(exitt,0,0,1,1);
    layout -> addWidget(save,0,1,1,1);
-   layout -> addWidget(main,0,2,1,1);
+   layout -> addWidget(Main,0,2,1,1);
    setLayout(layout);
 
    connect(exitt, SIGNAL(clicked()), this, SLOT(close()));

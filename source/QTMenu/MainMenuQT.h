@@ -4,8 +4,9 @@
 #include <QMainWindow>
 #include <QtGui>
 #include <vector>
+#include "PauseMenuQT.h"
 
-
+class KeyEvent;
 class QLabel;
 class QComboBox;
 class QPushButton;
@@ -22,12 +23,12 @@ class MainMenuQT: public QMainWindow
 
     MainMenuQT();
     
-  private slots:
+ // private slots:
 
-
+    void keyPressEvent(QKeyEvent *e);
 
   private:
-
+  	PauseMenuQT *pMenu;
     
 
 
