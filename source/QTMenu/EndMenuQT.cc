@@ -1,6 +1,6 @@
 #include "EndMenuQT.h"
 
-EndMenuQTQT::EndMenuQTQT(QWidget *parent) : QDialog(parent)
+EndMenuQT::EndMenuQT(QWidget *parent) : QDialog(parent)
 {
 
 	

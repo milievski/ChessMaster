@@ -1,6 +1,6 @@
 #include "LeaderBoardQT.h"
 
-LeaderBoardQTQT::LeaderBoardQTQT(QWidget *parent) : QDialog(parent)
+LeaderBoardQT::LeaderBoardQT(QWidget *parent) : QDialog(parent)
 {
 
 	

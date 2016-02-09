@@ -11,11 +11,11 @@
   class QPushButton;
 class QTableWidget;
 
-class loginMenuQT : public QDialog
+class LoginMenuQT : public QDialog
 {
 	Q_OBJECT
 public:
-	loginMenuQT(QWidget *parent = 0);
+	LoginMenuQT(QWidget *parent = 0);
 signals:
 
 

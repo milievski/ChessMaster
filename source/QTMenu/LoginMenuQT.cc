@@ -1,6 +1,6 @@
-#include "LoginQT.h"
+#include "LoginMenuQT.h"
 
-LoginMenuQT::LoginMenuQT(QWidget *parent = 0)
+LoginMenuQT::LoginMenuQT(QWidget *parent)
 {
 
 }

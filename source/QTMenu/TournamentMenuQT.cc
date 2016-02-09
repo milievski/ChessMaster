@@ -1,6 +1,6 @@
-#include "TournamentMenuQT."
+#include "TournamentMenuQT.h"
 
-TournamentMenuQT::TournamentMenuQT(QWidget *parent = 0)
+TournamentMenuQT::TournamentMenuQT(QWidget *parent )
 {
 
 }

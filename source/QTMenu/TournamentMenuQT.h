@@ -17,7 +17,7 @@ class TournamentMenuQT : public QDialog
 public:
 	TournamentMenuQT(QWidget *parent = 0);
 signals:
-	void closeWin();
+	
 
 //public slot:
 
@@ -26,7 +26,7 @@ private:
 	QPushButton *exitt, *save, *Main;
 
 private slots:
-	void closeWinSlot();
+	
 
 
 };
