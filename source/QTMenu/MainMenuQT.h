@@ -5,16 +5,15 @@
 #include <QtGui>
 #include <vector>
 #include "PauseMenuQT.h"
+#include "TournamentMenuQT.h"
+#include "LoginMenuQT.h"
+#include "LeaderBoardQT.h"
+#include "EndMenuQT.h"
 
 class KeyEvent;
-class QLabel;
-class QComboBox;
 class QPushButton;
-class QTableWidget;
-class QStringList;
-class QTimer;
-class QTime;
-class QDate;
+
+
 
 class MainMenuQT: public QMainWindow
 {
@@ -28,6 +27,8 @@ class MainMenuQT: public QMainWindow
     
 
   private:
+
+  	QPushButton *onePlayer, *twoPlayer, *load, *replay, *options, *eexit;
   	PauseMenuQT *pauseMenu;
     EndMenuQT *endMenu;
     LeaderBoardQT *leaderBoardMenu;
