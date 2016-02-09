@@ -22,10 +22,10 @@ class MainMenuQT: public QMainWindow
   public:
 
     MainMenuQT();
-    
- // private slots:
-
     void keyPressEvent(QKeyEvent *e);
+  private slots:
+
+    
 
   private:
   	PauseMenuQT *pMenu;

@@ -26,9 +26,8 @@ MainMenuQT::MainMenuQT()
 void MainMenuQT::keyPressEvent(QKeyEvent *e) {
     if(e->key() == Qt::Key_Escape){
     	pMenu = new PauseMenuQT(this);
-    	
+    	connect(pMenu, SIGNAL(closeWin()), this, SLOT(close()));
     	pMenu->show();
-    	//this->hide();
     	std::cerr << "Here" << std::endl;
     }
 }

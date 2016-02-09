@@ -14,7 +14,11 @@ PauseMenuQT::PauseMenuQT(QWidget *parent) : QDialog(parent)
    layout -> addWidget(Main,0,2,1,1);
    setLayout(layout);
 
-   connect(exitt, SIGNAL(clicked()), this, SLOT(close()));
+   connect(exitt, SIGNAL(clicked()), this, SLOT(closeWinSlot()));
 
+}
 
+void PauseMenuQT::closeWinSlot()
+{
+	emit closeWin();
 }
