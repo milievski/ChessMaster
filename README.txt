@@ -1,5 +1,3 @@
-Marko is the best
-
 ********************************************************************************
 *******************************READ ME******************************************
 ************************CPSC 2720 - Checkmate***********************************
@@ -22,7 +20,10 @@ source/players/
  - contains source and headers for players class 
 
 source/menus
- - conmtains source and headers for menu class
+ - contains source and headers for consal based menu class 
+
+source/QTMenu
+ - contains all source and headers for all QTMenus
 
 doxygen/
  - directory for generating doxygen documentation
