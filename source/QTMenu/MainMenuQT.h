@@ -28,9 +28,11 @@ class MainMenuQT: public QMainWindow
     
 
   private:
-  	PauseMenuQT *pMenu;
-    
-
+  	PauseMenuQT *pauseMenu;
+    EndMenuQT *endMenu;
+    LeaderBoardQT *leaderBoardMenu;
+    LoginMenuQT *loginMenu;
+    TournamentMenuQT *tournamentMenu;
 
 
      
