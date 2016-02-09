@@ -8,7 +8,7 @@
 #include "Board.h"
 #include "ChessBoard.h"
 #include "Players/Player.h"
-#include "Game.h"
+
 #include "Chat.h"
 #include <string>
 using std::string;
