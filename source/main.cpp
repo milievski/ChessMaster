@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     //   temp = NULL; 
     // }
     // delete info;  
-    delete menupointer;
+    //elete menupointer;
 
     QApplication app(argc,argv);
 
