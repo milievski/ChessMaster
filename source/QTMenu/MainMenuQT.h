@@ -9,7 +9,7 @@
 #include "LoginMenuQT.h"
 #include "LeaderBoardQT.h"
 #include "EndMenuQT.h"
-
+#include "ChessBoardQT.h"
 class KeyEvent;
 class QPushButton;
 
@@ -23,7 +23,7 @@ class MainMenuQT: public QMainWindow
     MainMenuQT();
     void keyPressEvent(QKeyEvent *e);
   private slots:
-
+    void OpenChessBoard();
     
 
   private:
@@ -34,7 +34,7 @@ class MainMenuQT: public QMainWindow
     LeaderBoardQT *leaderBoardMenu;
     LoginMenuQT *loginMenu;
     TournamentMenuQT *tournamentMenu;
-
+    ChessBoardQT *chessBoard;
 
      
 };

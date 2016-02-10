@@ -12,7 +12,7 @@ MainMenuQT::MainMenuQT()
   leaderBoardMenu = new LeaderBoardQT(this);
   loginMenu = new LoginMenuQT(this);
   tournamentMenu = new TournamentMenuQT(this);
-   
+  chessBoard = new ChessBoardQT(this); 
 
   //Creating all the buttons that will be created on this screen
   onePlayer = new QPushButton("One Player");
@@ -27,16 +27,27 @@ MainMenuQT::MainMenuQT()
    setCentralWidget(centralWidget);
 
 
+   //Creating the connections for the buttons
+    connect(onePlayer, SIGNAL(clicked()), this, SLOT(OpenChessBoard())); 
+    connect(twoPlayer, SIGNAL(clicked()), this, SLOT(OpenChessBoard())); 
+    //connect(load, SIGNAL(clicked()), this, SLOT(OpenWindow(endMenu))); 
+    //connect(leaderBoardMenu, SIGNAL(clicked()), this, SLOT(OpenWindow(leaderBoardMenu))); 
+    //connect(loginMenu, SIGNAL(clicked()), this, SLOT(OpenWindow(loginMenu))); 
+    connect(eexit, SIGNAL(clicked()), this, SLOT(close())); 
+
     
+  //setLayout(layout);
    QGridLayout *gridLayout = new QGridLayout;
-   gridLayout -> addWidget(onePlayer,0,0,1,1);
-   gridLayout -> addWidget(twoPlayer,1,0,1,1);
-   gridLayout -> addWidget(load,2,0,1,1);
-   gridLayout -> addWidget(replay,3,0,1,1);
-   gridLayout -> addWidget(options,4,0,1,1);
-   gridLayout -> addWidget(eexit,5,0,1,1);
-   //setLayout(layout);
-  
+    gridLayout-> setRowMinimumHeight(0,300);
+   gridLayout-> setColumnMinimumWidth(0,500);
+   gridLayout -> addWidget(onePlayer,1,1,1,1);
+   gridLayout -> addWidget(twoPlayer,2,1,1,1);
+   gridLayout -> addWidget(load,3,1,1,1);
+   gridLayout -> addWidget(replay,4,1,1,1);
+   gridLayout -> addWidget(options,5,1,1,1);
+   gridLayout -> addWidget(eexit,6,1,1,1);  
+   gridLayout-> setColumnMinimumWidth(2,500);
+    gridLayout-> setRowMinimumHeight(7,100);
 
    centralWidget->setLayout(gridLayout);
    
@@ -44,6 +55,12 @@ MainMenuQT::MainMenuQT()
 
 
 }
+//TODO Making this open all ex (widget * target) 
+void MainMenuQT::OpenChessBoard(){
+  chessBoard->show();
+
+}
+
 //TODO what buttons should be handled at the main Menu
 void MainMenuQT::keyPressEvent(QKeyEvent *e) {
     if(e->key() == Qt::Key_Escape){
