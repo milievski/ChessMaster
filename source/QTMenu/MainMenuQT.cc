@@ -23,16 +23,12 @@ MainMenuQT::MainMenuQT()
   eexit = new QPushButton("Exit"); 
 
   //backround setting
-  // backroundButton = new QPixmap ("Art/woodbutton.png");
-  // backroundButton = *backroundButton->scaled(onePlayer->size(), Qt::IgnoreAspectRatio);
-  // pallet = new QPalette();
-  // pallet->setBrush(QPalette::Backround, backroundButton);
-  // onePlayer->setPalette(pallet);
+  //TODO clean this up
   QPixmap bkgnd("QTMenu/Art/woodbackground.png");
-    //bkgnd = bkgnd.fillRect(this->size(), Qt::IgnoreAspectRatio);
     QPalette palette;
     palette.setBrush(QPalette::Background, bkgnd);
     this->setPalette(palette);
+    
    //TODO - I Dont know what the hell this does
    QWidget *centralWidget = new QWidget;
    setCentralWidget(centralWidget);
