@@ -60,7 +60,9 @@ int main(int argc, char *argv[])
   MainMenuQT window;
  window.setWindowTitle("Clock Window");
   //window.resize(800,600);
- window.showFullScreen();
+ window.showNormal();
+window.setWindowFlags(Qt::WindowStaysOnTopHint);
+  window.showFullScreen();
   window.show();
 
   return app.exec();

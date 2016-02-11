@@ -22,19 +22,27 @@ MainMenuQT::MainMenuQT()
   options = new QPushButton("Options");
   eexit = new QPushButton("Exit"); 
 
-  //backround setting
-  //TODO clean this up
-  QPixmap bkgnd("QTMenu/Art/woodbackground.png");
-    QPalette palette;
-    palette.setBrush(QPalette::Background, bkgnd);
-    QIcon ButtonIcon(bkgnd);
-   
-    onePlayer->setAutoFillBackground(true);
-    //onePlayer->setIcon(ButtonIcon);
-    onePlayer->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
-    //onePlayer->setIconSize(bkgnd.rect().size());
-    //onePlayer->setPalette(palette);
 
+  //button set up
+    onePlayer->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+    twoPlayer->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+    load->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+    replay->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+    options->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+    eexit->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+    eexit->setMaximumHeight(60);
+    options->setMaximumHeight(60);
+    replay->setMaximumHeight(60);
+    load->setMaximumHeight(60);
+    twoPlayer->setMaximumHeight(60);
+    onePlayer->setMaximumHeight(60);
+    // onePlayer 
+    // twoPlayer
+    // load
+    // options
+    // eexit
+
+    
    //TODO - I Dont know what the hell this does
    QWidget *centralWidget = new QWidget;
    setCentralWidget(centralWidget);
@@ -53,12 +61,24 @@ MainMenuQT::MainMenuQT()
    QGridLayout *gridLayout = new QGridLayout;
     gridLayout-> setRowMinimumHeight(0,300);
    gridLayout-> setColumnMinimumWidth(0,500);
+
    gridLayout -> addWidget(onePlayer,1,1,1,1);
+   
+
    gridLayout -> addWidget(twoPlayer,2,1,1,1);
+   
+
    gridLayout -> addWidget(load,3,1,1,1);
+   
    gridLayout -> addWidget(replay,4,1,1,1);
+   
+
    gridLayout -> addWidget(options,5,1,1,1);
+   
+
    gridLayout -> addWidget(eexit,6,1,1,1);  
+   
+
    gridLayout-> setColumnMinimumWidth(2,500);
     gridLayout-> setRowMinimumHeight(7,100);
 
