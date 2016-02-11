@@ -22,11 +22,22 @@ MainMenuQT::MainMenuQT()
   options = new QPushButton("Options");
   eexit = new QPushButton("Exit"); 
 
+  //backround setting
+  // backroundButton = new QPixmap ("Art/woodbutton.png");
+  // backroundButton = *backroundButton->scaled(onePlayer->size(), Qt::IgnoreAspectRatio);
+  // pallet = new QPalette();
+  // pallet->setBrush(QPalette::Backround, backroundButton);
+  // onePlayer->setPalette(pallet);
+  QPixmap bkgnd("QTMenu/Art/woodbackground.png");
+    //bkgnd = bkgnd.fillRect(this->size(), Qt::IgnoreAspectRatio);
+    QPalette palette;
+    palette.setBrush(QPalette::Background, bkgnd);
+    this->setPalette(palette);
    //TODO - I Dont know what the hell this does
    QWidget *centralWidget = new QWidget;
    setCentralWidget(centralWidget);
 
-
+   //TODO Make button style sheet
    //Creating the connections for the buttons
     connect(onePlayer, SIGNAL(clicked()), this, SLOT(OpenChessBoard())); 
     connect(twoPlayer, SIGNAL(clicked()), this, SLOT(OpenChessBoard())); 
@@ -57,7 +68,9 @@ MainMenuQT::MainMenuQT()
 }
 //TODO Making this open all ex (widget * target) 
 void MainMenuQT::OpenChessBoard(){
+  chessBoard->showFullScreen();
   chessBoard->show();
+  this->hide();
 
 }
 

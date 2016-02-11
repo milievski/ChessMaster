@@ -10,10 +10,11 @@
 #include "LeaderBoardQT.h"
 #include "EndMenuQT.h"
 #include "ChessBoardQT.h"
+
 class KeyEvent;
 class QPushButton;
-
-
+class QPixmap;
+class QPalette;
 
 class MainMenuQT: public QMainWindow
 {
@@ -27,7 +28,8 @@ class MainMenuQT: public QMainWindow
     
 
   private:
-
+    QPixmap *backroundButton;
+    QPalette *pallet;
   	QPushButton *onePlayer, *twoPlayer, *load, *replay, *options, *eexit;
   	PauseMenuQT *pauseMenu;
     EndMenuQT *endMenu;

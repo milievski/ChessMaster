@@ -10,6 +10,7 @@
 
   class QPushButton;
 class QTableWidget;
+class QPixmap;
 
 class ChessBoardQT : public QDialog
 {
