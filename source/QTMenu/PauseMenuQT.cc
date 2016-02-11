@@ -13,9 +13,11 @@ PauseMenuQT::PauseMenuQT(QWidget *parent) : QDialog(parent)
    layout -> addWidget(save,0,1,1,1);
    layout -> addWidget(Main,0,2,1,1);
    setLayout(layout);
+   //this->setStyleSheet("background:transparent;");
+	//this->setAttribute(Qt::WA_TranslucentBackground, true);
+	//this->setWindowFlags(Qt::FramelessWindowHint);
 
-    this->showFullScreen();    
-    this->hide();
+    this->setWindowState(this->windowState() ^ Qt::WindowFullScreen);
     this->setWindowOpacity(true);
    connect(exitt, SIGNAL(clicked()), this, SLOT(closeWinSlot()));
 

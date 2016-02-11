@@ -7,7 +7,7 @@
 MainMenuQT::MainMenuQT()
 {
   //Creating all the used widgets
-  pauseMenu = new PauseMenuQT(this);
+  
   //Help
   endMenu = new EndMenuQT(this);
   leaderBoardMenu = new LeaderBoardQT(this);
@@ -103,7 +103,7 @@ void MainMenuQT::OpenChessBoard(){
 //TODO what buttons should be handled at the main Menu
 void MainMenuQT::keyPressEvent(QKeyEvent *e) {
     if(e->key() == Qt::Key_Escape){
-    	
+    	pauseMenu = new PauseMenuQT(this);
     	connect(pauseMenu, SIGNAL(closeWin()), this, SLOT(close()));
     	pauseMenu->show();
     	std::cerr << "Here" << std::endl;
@@ -112,11 +112,15 @@ void MainMenuQT::keyPressEvent(QKeyEvent *e) {
 
 void MainMenuQT::recieveWindow(int &newWin)
 {
-  if (newWin == 1)
+  switch (newWin)
   {
     //this->hide();
-    
-
-    pauseMenu->show();
+    case 1:
+      pauseMenu = new PauseMenuQT(this);
+      
+      pauseMenu->show();
+    case 2:
+      this->show();
   }
+
 }

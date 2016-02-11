@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
  window.setWindowTitle("Check Mate");
   //window.resize(800,600);
 
-window.setWindowFlags(Qt::WindowMaximizeButtonHint);
+window.setWindowState(window.windowState() ^ Qt::WindowFullScreen | Qt::WindowActive);
   window.showFullScreen();
   window.show();
 
