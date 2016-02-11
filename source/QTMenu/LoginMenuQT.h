@@ -6,9 +6,16 @@
 #include <QTimer>
 #include <string>
 #include <QMouseEvent>
+#include <iostream>
+#include <string>
+#include "../Players/Player.h"
+#include "../status.h"
+#include "../Players/RegisteredPlayer.h"
 
 
   class QPushButton;
+  class QString;
+  class QLineEdit;
 class QTableWidget;
 
 class LoginMenuQT : public QDialog
@@ -23,9 +30,11 @@ signals:
 
 
 private:
+	void loadCreatePlayer(const QString &name, RegisteredPlayer* &p);
 	
 
 private slots:
+void loadPlayerSlot(const QString &name);
 
 
 
