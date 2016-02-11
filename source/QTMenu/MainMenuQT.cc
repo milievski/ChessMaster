@@ -95,7 +95,7 @@ MainMenuQT::MainMenuQT()
 void MainMenuQT::OpenChessBoard(){
   chessBoard->showFullScreen();
   chessBoard->show();
-  this->hide();
+ // this->hide();
 
 }
 

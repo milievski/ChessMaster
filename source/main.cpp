@@ -58,10 +58,10 @@ int main(int argc, char *argv[])
     QApplication app(argc,argv);
 
   MainMenuQT window;
- window.setWindowTitle("Clock Window");
+ window.setWindowTitle("Check Mate");
   //window.resize(800,600);
- window.showNormal();
-window.setWindowFlags(Qt::WindowStaysOnTopHint);
+
+window.setWindowFlags(Qt::WindowMaximizeButtonHint);
   window.showFullScreen();
   window.show();
 
