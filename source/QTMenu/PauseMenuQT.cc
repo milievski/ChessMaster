@@ -14,6 +14,9 @@ PauseMenuQT::PauseMenuQT(QWidget *parent) : QDialog(parent)
    layout -> addWidget(Main,0,2,1,1);
    setLayout(layout);
 
+    this->showFullScreen();    
+    this->hide();
+    this->setWindowOpacity(true);
    connect(exitt, SIGNAL(clicked()), this, SLOT(closeWinSlot()));
 
 }

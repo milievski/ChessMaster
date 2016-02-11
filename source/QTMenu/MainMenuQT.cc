@@ -8,7 +8,7 @@ MainMenuQT::MainMenuQT()
 {
   //Creating all the used widgets
   pauseMenu = new PauseMenuQT(this);
-  
+  //Help
   endMenu = new EndMenuQT(this);
   leaderBoardMenu = new LeaderBoardQT(this);
   loginMenu = new LoginMenuQT(this);
@@ -95,7 +95,7 @@ MainMenuQT::MainMenuQT()
 //TODO Making this open all ex (widget * target) 
 void MainMenuQT::OpenChessBoard(){
   chessBoard->showFullScreen();
-  chessBoard->show();
+
  // this->hide();
 
 }
@@ -115,6 +115,8 @@ void MainMenuQT::recieveWindow(int &newWin)
   if (newWin == 1)
   {
     //this->hide();
+    
+
     pauseMenu->show();
   }
 }
