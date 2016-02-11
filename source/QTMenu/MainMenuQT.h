@@ -23,6 +23,11 @@ class MainMenuQT: public QMainWindow
 
     MainMenuQT();
     void keyPressEvent(QKeyEvent *e);
+public slots:
+    // slot recieves an intiger that determines the next window
+    void recieveWindow(int &newWin);
+   
+
   private slots:
     void OpenChessBoard();
     

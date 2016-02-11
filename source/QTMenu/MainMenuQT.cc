@@ -14,6 +14,9 @@ MainMenuQT::MainMenuQT()
   tournamentMenu = new TournamentMenuQT(this);
   chessBoard = new ChessBoardQT(this); 
 
+    //connections for the menus
+  connect(chessBoard, SIGNAL(newWindowFunction(int &)), this ,SLOT(recieveWindow(int &)));
+
   //Creating all the buttons that will be created on this screen
   onePlayer = new QPushButton("One Player");
   twoPlayer = new QPushButton("Two Player");
@@ -104,4 +107,12 @@ void MainMenuQT::keyPressEvent(QKeyEvent *e) {
     	pauseMenu->show();
     	std::cerr << "Here" << std::endl;
     }
+}
+
+void MainMenuQT::recieveWindow(int &newWin)
+{
+  if (newWin == 1)
+  {
+    pauseMenu->show();
+  }
 }
