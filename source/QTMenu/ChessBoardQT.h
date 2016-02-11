@@ -20,13 +20,13 @@ public:
 signals:
 
 
-//public slot:
-
+private slots:
+	void keyPressEvent(QKeyEvent *e);
 
 private:
 	QPushButton *exitt, *save, *Main;
 
-private slots:
+
 
 
 
