@@ -27,8 +27,14 @@ MainMenuQT::MainMenuQT()
   QPixmap bkgnd("QTMenu/Art/woodbackground.png");
     QPalette palette;
     palette.setBrush(QPalette::Background, bkgnd);
-    this->setPalette(palette);
-    
+    QIcon ButtonIcon(bkgnd);
+   
+    onePlayer->setAutoFillBackground(true);
+    //onePlayer->setIcon(ButtonIcon);
+    onePlayer->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+    //onePlayer->setIconSize(bkgnd.rect().size());
+    //onePlayer->setPalette(palette);
+
    //TODO - I Dont know what the hell this does
    QWidget *centralWidget = new QWidget;
    setCentralWidget(centralWidget);
