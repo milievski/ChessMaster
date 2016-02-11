@@ -113,6 +113,7 @@ void MainMenuQT::recieveWindow(int &newWin)
 {
   if (newWin == 1)
   {
+    //this->hide();
     pauseMenu->show();
   }
 }

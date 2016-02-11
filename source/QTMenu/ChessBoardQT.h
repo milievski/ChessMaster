@@ -19,7 +19,7 @@ public:
 	ChessBoardQT(QWidget *parent = 0);
 signals:
 	// opens the pause menu
-	void newWindowFunction(int win);
+	void newWindowFunction(int &win);
 
 private slots:
 	void keyPressEvent(QKeyEvent *e);
