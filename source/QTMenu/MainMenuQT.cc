@@ -8,6 +8,7 @@ MainMenuQT::MainMenuQT()
 {
   //Creating all the used widgets
   pauseMenu = new PauseMenuQT(this);
+  
   endMenu = new EndMenuQT(this);
   leaderBoardMenu = new LeaderBoardQT(this);
   loginMenu = new LoginMenuQT(this);
