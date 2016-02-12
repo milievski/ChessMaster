@@ -116,8 +116,9 @@ void MainMenuQT::recieveWindow(int &newWin)
   {
     //this->hide();
     case 1:
+      //delete pauseMenu;
       pauseMenu = new PauseMenuQT(this);
-      
+      connect(pauseMenu, SIGNAL(closeWin()), this, SLOT(close()));
       pauseMenu->show();
     case 2:
       this->show();

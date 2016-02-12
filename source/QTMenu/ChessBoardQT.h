@@ -27,12 +27,14 @@ signals:
 	void newWindowFunction(int &win);
 
 protected:
+	void mouseMoveEvent(QMouseEvent *e);
 	void paintEvent(QPaintEvent *PE);
 
 private slots:
 	void keyPressEvent(QKeyEvent *e);
 
 private:
+
 	QPushButton *exitt, *save, *Main;
 	
 	 // - king = 0, Queen = 1, Bishop = 2, Knight = 3, Rook = 4, Pawn = 5 
@@ -40,6 +42,7 @@ private:
 	std::vector< QImage > WhiteSprites;
 	QImage *SpriteSheet;
 	Board *CBoard;
+	bool blacksTurn;
 
 	int BoardPosX, BoardPosY; // position of where the board is to make it easy to place pieces
 

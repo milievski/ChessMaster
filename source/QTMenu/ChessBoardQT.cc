@@ -140,3 +140,11 @@ void ChessBoardQT::setUpChessBoard()
    CBoard->setPiece(0,4, new KingPiece(0));
    CBoard->setPiece(7,4, new KingPiece(1));
 }
+
+void ChessBoardQT::mouseMoveEvent(QMouseEvent *e)
+{
+   if(e->buttons() == Qt::LeftButton)
+   {
+      std::cerr << e->x() << " , " << e->y() << std::endl;
+   }  
+}
