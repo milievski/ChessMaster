@@ -13,7 +13,7 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 	BlackSprites[0] = SpriteSheet->copy(4*size,0*size ,size ,size );
 	WhiteSprites[0] = SpriteSheet->copy(1*size,0*size ,size ,size );
 	//Queen
-	BlackSprites[1] = SpriteSheet->copy(5*size,1*size ,size ,size );
+	BlackSprites[1] = SpriteSheet->copy(4*size,1*size ,size ,size );
 	WhiteSprites[1] = SpriteSheet->copy(1*size,1*size ,size ,size );
 	//Bishop
 	BlackSprites[2] = SpriteSheet->copy(5*size,1*size ,size ,size );
@@ -28,8 +28,8 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 	BlackSprites[5] = SpriteSheet->copy(5*size,0*size ,size ,size );
 	WhiteSprites[5] = SpriteSheet->copy(2*size,0*size ,size ,size );
 
-	BoardPosX = 150;
-	BoardPosY = 150;
+	BoardPosX = 50;
+	BoardPosY = 50;
 	CBoard = new Board();
 	setUpChessBoard();
 
@@ -50,7 +50,7 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
 
    QPainter paint(this); 
    QImage BoardImage("QTMenu/Art/ChessBoardArt.jpg");
-   paint.drawImage(100,100, BoardImage);
+   paint.drawImage(BoardPosX-50,BoardPosY-50, BoardImage);
    int tempCheck = 0, colour;
    Piece *tempPiece;
    string type;
@@ -63,7 +63,7 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
    		type = tempPiece->getType();
    		colour = tempPiece->getColor();
    		
-   		if(colour = 1)//black
+   		if(colour == 0)//black
    		{
    			
    			if (type == "King")
