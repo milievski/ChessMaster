@@ -2,8 +2,14 @@
 
 ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 {
+
+   QRect rec = QApplication::desktop()->screenGeometry();
+   screenHeight = rec.height();
+   screenWidth = rec.width();
+
 	const int size = 80;
-   BoardSize = 75;
+   BoardSize = (screenHeight-100)/8;
+
 	SpriteSheet = new QImage("QTMenu/Art/PieceSpriteSheet.png");
 	for(int x = 0; x < 6;x ++) // filling the pice sprites up with images
 	{
@@ -50,8 +56,12 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
 {
 
    QPainter paint(this); 
-   QImage BoardImage("QTMenu/Art/ChessBoardArt.jpg");
-   paint.drawImage(BoardPosX-50,BoardPosY-50, BoardImage);
+   QImage BoardImage("QTMenu/Art/chessBoard.jpg");
+
+
+   BoardImage = BoardImage.scaled(screenHeight-100, screenHeight-100, Qt::KeepAspectRatio);
+   paint.drawImage(BoardPosX,BoardPosY, BoardImage);
+
    int tempCheck = 0, colour;
    Piece *tempPiece;
    string type;
@@ -118,5 +128,6 @@ void ChessBoardQT::mousePressEvent(QMouseEvent *e)
    if(e->buttons() == Qt::LeftButton)
    {
       std::cerr << e->x() << " , " << e->y() << std::endl;
+      std::cerr << "(" << screenWidth << "," << screenHeight << ")\n";
    }  
 }

@@ -48,6 +48,8 @@ private:
 	int BoardPosX, BoardPosY; // position of where the board is to make it easy to place pieces
 	int BoardSize;
 
+	int screenHeight, screenWidth;
+
 
 
 
