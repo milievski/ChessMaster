@@ -1,7 +1,7 @@
 #ifndef CHESSBOARDQT_H
 #define CHESSBOARDQT_H
 
-#include "../Board.h"
+#include "../ChessBoard.h"
 #include "../Piece/Piece.h"
 #include <string>
 #include <QWidget>
@@ -21,13 +21,14 @@ class ChessBoardQT : public QDialog
 	Q_OBJECT
 public:
 	ChessBoardQT(QWidget *parent = 0);
-	void setUpChessBoard();
+	
 signals:
 	// opens the pause menu
 	void newWindowFunction(int &win);
 
 protected:
 	void mouseMoveEvent(QMouseEvent *e);
+	void mousePressEvent(QMouseEvent *e);
 	void paintEvent(QPaintEvent *PE);
 
 private slots:
@@ -41,11 +42,11 @@ private:
 	std::vector< QImage > BlackSprites; 
 	std::vector< QImage > WhiteSprites;
 	QImage *SpriteSheet;
-	Board *CBoard;
+	ChessBoard *CBoard;
 	bool blacksTurn;
 
 	int BoardPosX, BoardPosY; // position of where the board is to make it easy to place pieces
-
+	int BoardSize;
 
 
 
