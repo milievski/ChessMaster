@@ -35,6 +35,7 @@ private slots:
 	void keyPressEvent(QKeyEvent *e);
 
 private:
+	void hitBoxDetect(int x, int y);
 
 	QPushButton *exitt, *save, *Main;
 	
@@ -47,6 +48,9 @@ private:
 
 	int BoardPosX, BoardPosY; // position of where the board is to make it easy to place pieces
 	int BoardSize;
+
+	   bool picked;
+   int pickedx, pickedy;
 
 	int screenHeight, screenWidth;
 

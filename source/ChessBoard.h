@@ -74,7 +74,7 @@ class ChessBoard
    vector<string> getGameHistory();
   private:
    Board *CBoard;
-   
+
    vector< Piece* > deadHistory;
    
 };

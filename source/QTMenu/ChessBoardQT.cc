@@ -38,7 +38,7 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 	BoardPosX = 50;
 	BoardPosY = 50;
 	CBoard = new ChessBoard();
-	CBoard->setUpChessBoard();
+
 
 	
 
@@ -54,7 +54,6 @@ void ChessBoardQT::keyPressEvent(QKeyEvent *e) {
 
 void ChessBoardQT::paintEvent(QPaintEvent *PE)
 {
-
    QPainter paint(this); 
    QImage BoardImage("QTMenu/Art/chessBoard.jpg");
 
@@ -74,12 +73,12 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
    		type = tempPiece->getType();
    		colour = tempPiece->getColor();
    		
-   		if(colour == 0)//black
+   		if(colour == 1)//black
    		{
    			
-   			if (type == "King")
-   				paint.drawImage(BoardPosX + (y * BoardSize), BoardPosX + (x*BoardSize), BlackSprites[0]);
    			if (type == "Queen")
+   				paint.drawImage(BoardPosX + (y * BoardSize), BoardPosX + (x*BoardSize), BlackSprites[0]);
+   			if (type == "King")
    				paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), BlackSprites[1]);
    			if (type == "Bishop")
    				paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), BlackSprites[2]);
@@ -93,9 +92,9 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
    		}
    		else // white
    		{
-    		if (type == "King")
+    		if (type == "Queen")
    				paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[0]);
-   			if (type == "Queen")
+   			if (type == "King")
    				paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[1]);
    			if (type == "Bishop")
    				paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[2]);
@@ -127,7 +126,50 @@ void ChessBoardQT::mousePressEvent(QMouseEvent *e)
 {
    if(e->buttons() == Qt::LeftButton)
    {
-      std::cerr << e->x() << " , " << e->y() << std::endl;
-      std::cerr << "(" << screenWidth << "," << screenHeight << ")\n";
+      hitBoxDetect(e->x(), e->y());
+      //std::cerr << e->x() << " , " << e->y() << std::endl;
+      
    }  
+}
+
+void ChessBoardQT::hitBoxDetect(int x, int y)
+{
+   int hit = BoardSize; // hit is the distance between each piece on the board
+   x += 50; // 50 is the offset of how far the board is from the top left corner
+   y += 50; // 50 is the offset of how far the board is from the top left corner
+
+   int boardx = x / hit;
+   int boardy = y / hit;
+
+      string type;
+      Piece *tempPiece;
+      tempPiece = CBoard->getPiece(boardy-1,boardx-1);
+      type = tempPiece->getType();
+      std::cerr << "\n" << type;
+
+
+      
+   if(!picked)
+   {
+      pickedx = boardx;
+      pickedy = boardy;
+   }
+   else
+   {
+
+
+      std::cerr << "\n\n\n" << CBoard->movePiece(pickedy-1, pickedx-1, boardy-1, boardx-1);
+
+ 
+
+
+
+      update();
+
+   }
+   picked = !picked;
+   
+
+
+
 }
