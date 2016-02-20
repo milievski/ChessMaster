@@ -14,7 +14,7 @@ int PawnMove::validMove(vector< vector < Piece* > > &b,int ix, int iy, int dx, i
    //White
    
    //checks all possible move that a white pawned can make
-   if(b[ix][iy]->getColor() == 0)
+   if(b[ix][iy]->getColor() == 1)
    {
     //check if the white pawn is taking a piece
       if((ix+1 == dx && iy+1 == dy)||(ix+1 == dx && iy-1 == dy))
@@ -44,7 +44,7 @@ int PawnMove::validMove(vector< vector < Piece* > > &b,int ix, int iy, int dx, i
    }
    //Black
    //checks all possible move that a black pawned can make
-   if(b[ix][iy]->getColor() == 1)
+   if(b[ix][iy]->getColor() == 0)
    {
     //check if the black pawn is taking a piece
    if((ix-1 == dx && iy-1 == dy)||(ix-1 == dx && iy+1 == dy))

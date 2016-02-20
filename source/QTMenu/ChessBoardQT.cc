@@ -132,6 +132,8 @@ void ChessBoardQT::mousePressEvent(QMouseEvent *e)
    }  
 }
 
+
+
 void ChessBoardQT::hitBoxDetect(int x, int y)
 {
    int hit = BoardSize; // hit is the distance between each piece on the board

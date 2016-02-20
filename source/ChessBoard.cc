@@ -18,35 +18,35 @@ void ChessBoard::setUpChessBoard()
    //set all pawns
    for(int i = 0; i < 8;i++)
    {
-      CBoard->setPiece(1,i,new PawnPiece(0));
-      CBoard->setPiece(6,i,new PawnPiece(1));
+      CBoard->setPiece(1,i,new PawnPiece(1));
+      CBoard->setPiece(6,i,new PawnPiece(0));
    }
 
    //setting up the four Rooks
-   CBoard->setPiece(0,0, new RookPiece(0));
-   CBoard->setPiece(0,7, new RookPiece(0));
-   CBoard->setPiece(7,0, new RookPiece(1));
-   CBoard->setPiece(7,7, new RookPiece(1));
+   CBoard->setPiece(0,0, new RookPiece(1));
+   CBoard->setPiece(0,7, new RookPiece(1));
+   CBoard->setPiece(7,0, new RookPiece(0));
+   CBoard->setPiece(7,7, new RookPiece(0));
 
    //setting up four Knights
-   CBoard->setPiece(0,1, new KnightPiece(0));
-   CBoard->setPiece(0,6, new KnightPiece(0));
-   CBoard->setPiece(7,1, new KnightPiece(1));
-   CBoard->setPiece(7,6, new KnightPiece(1));
+   CBoard->setPiece(0,1, new KnightPiece(1));
+   CBoard->setPiece(0,6, new KnightPiece(1));
+   CBoard->setPiece(7,1, new KnightPiece(0));
+   CBoard->setPiece(7,6, new KnightPiece(0));
 
    //setting up for bishop
-   CBoard->setPiece(0,2, new BishopPiece(0));
-   CBoard->setPiece(0,5, new BishopPiece(0));
-   CBoard->setPiece(7,2, new BishopPiece(1));
-   CBoard->setPiece(7,5, new BishopPiece(1));
+   CBoard->setPiece(0,2, new BishopPiece(1));
+   CBoard->setPiece(0,5, new BishopPiece(1));
+   CBoard->setPiece(7,2, new BishopPiece(0));
+   CBoard->setPiece(7,5, new BishopPiece(0));
 
    //set up queen
-   CBoard->setPiece(0,3, new QueenPiece(0));
-   CBoard->setPiece(7,3, new QueenPiece(1));
+   CBoard->setPiece(0,3, new QueenPiece(1));
+   CBoard->setPiece(7,3, new QueenPiece(0));
    
    //set up king
-   CBoard->setPiece(0,4, new KingPiece(0));
-   CBoard->setPiece(7,4, new KingPiece(1));
+   CBoard->setPiece(0,4, new KingPiece(1));
+   CBoard->setPiece(7,4, new KingPiece(0));
 }
 
 bool ChessBoard::undo(string str)
