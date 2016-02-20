@@ -43,6 +43,7 @@ private:
 	std::vector< QImage > BlackSprites; 
 	std::vector< QImage > WhiteSprites;
 	QImage *SpriteSheet;
+	QImage selecterBox;
 	ChessBoard *CBoard;
 	bool blacksTurn;
 

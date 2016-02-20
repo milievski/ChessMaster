@@ -2,14 +2,15 @@
 
 ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 {
-
+   picked = false;
    QRect rec = QApplication::desktop()->screenGeometry();
    screenHeight = rec.height();
    screenWidth = rec.width();
 
 	const int size = 80;
    BoardSize = (screenHeight-100)/8;
-
+   selecterBox = QImage("QTMenu/Art/selecterBox.png");
+   selecterBox = selecterBox.scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);
 	SpriteSheet = new QImage("QTMenu/Art/PieceSpriteSheet.png");
 	for(int x = 0; x < 6;x ++) // filling the pice sprites up with images
 	{
@@ -60,6 +61,12 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
 
    BoardImage = BoardImage.scaled(screenHeight-100, screenHeight-100, Qt::KeepAspectRatio);
    paint.drawImage(BoardPosX,BoardPosY, BoardImage);
+
+   if(picked)
+   {
+      paint.drawImage(50+(pickedx * BoardSize) - BoardSize, 50+(pickedy * BoardSize)-BoardSize, selecterBox);
+   }
+
 
    int tempCheck = 0, colour;
    Piece *tempPiece;
@@ -142,34 +149,32 @@ void ChessBoardQT::hitBoxDetect(int x, int y)
 
    int boardx = x / hit;
    int boardy = y / hit;
-
-      string type;
-      Piece *tempPiece;
-      tempPiece = CBoard->getPiece(boardy-1,boardx-1);
-      type = tempPiece->getType();
-      std::cerr << "\n" << type;
-
-
-      
    if(!picked)
    {
-      pickedx = boardx;
-      pickedy = boardy;
+      picked = false;
+      if(boardx > 0 && boardy >0 && boardx < 9 && boardy < 9)
+      {
+         std::cerr << "\n\n\n" << CBoard->getPiece(boardy-1,boardx-1)->getType();
+         if("Empty" != CBoard->getPiece(boardy-1,boardx-1)->getType())
+         {
+            pickedx = boardx;
+            pickedy = boardy;
+            update();
+            picked = true;
+         }
+      }
+
    }
    else
    {
-
-
-      std::cerr << "\n\n\n" << CBoard->movePiece(pickedy-1, pickedx-1, boardy-1, boardx-1);
-
- 
-
-
-
+      if(boardx > 0 && boardy >0 && boardx < 9 && boardy < 9)
+      {
+         CBoard->movePiece(pickedy-1, pickedx-1, boardy-1, boardx-1);
+      }
       update();
-
+      picked = !picked;
    }
-   picked = !picked;
+   
    
 
 
