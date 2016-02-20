@@ -125,3 +125,11 @@ void MainMenuQT::recieveWindow(int &newWin)
   }
 
 }
+void MainMenuQT::paintEvent(QPaintEvent *PE)
+{
+
+  QImage logo("QTMenu/Art/ChessMasterLogo.png");
+  QPainter paint(this); 
+  paint.drawImage(375,100, logo);
+
+}

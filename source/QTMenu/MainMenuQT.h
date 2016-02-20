@@ -15,6 +15,7 @@ class KeyEvent;
 class QPushButton;
 class QPixmap;
 class QPalette;
+class QImage;
 
 class MainMenuQT: public QMainWindow
 {
@@ -23,16 +24,18 @@ class MainMenuQT: public QMainWindow
 
     MainMenuQT();
     void keyPressEvent(QKeyEvent *e);
+    void paintEvent(QPaintEvent *PE);
+
 public slots:
     // slot recieves an intiger that determines the next window
     void recieveWindow(int &newWin);
-
 
   private slots:
     void OpenChessBoard();
     
 
   private:
+
     QPixmap *backroundButton;
     QPalette *pallet;
   	QPushButton *onePlayer, *twoPlayer, *load, *replay, *options, *eexit;
