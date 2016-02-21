@@ -17,17 +17,18 @@ class PauseMenuQT : public QDialog
 public:
 	PauseMenuQT(QWidget *parent = 0);
 signals:
-	void closeWin();
+	void closeWin(int &i);
 
 //public slot:
 
 
 private:
-	QPushButton *exitt, *save, *Main;
+	QPushButton *exitt, *save, *Main, *canncell;
 
 private slots:
 	void closeWinSlot();
-
+	void mainMenuSlot();
+	void canncellSlot();
 
 };
 

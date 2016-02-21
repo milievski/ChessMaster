@@ -13,10 +13,10 @@ MainMenuQT::MainMenuQT()
   leaderBoardMenu = new LeaderBoardQT(this);
   loginMenu = new LoginMenuQT(this);
   tournamentMenu = new TournamentMenuQT(this);
-  chessBoard = new ChessBoardQT(this); 
+  
 
     //connections for the menus
-  connect(chessBoard, SIGNAL(newWindowFunction(int &)), this ,SLOT(recieveWindow(int &)));
+  
 
   //Creating all the buttons that will be created on this screen
   onePlayer = new QPushButton("One Player");
@@ -51,7 +51,8 @@ MainMenuQT::MainMenuQT()
    QWidget *centralWidget = new QWidget;
    setCentralWidget(centralWidget);
 
-   //TODO Make button style sheet
+
+      //TODO Make button style sheet
    //Creating the connections for the buttons
     connect(onePlayer, SIGNAL(clicked()), this, SLOT(OpenChessBoard())); 
     connect(twoPlayer, SIGNAL(clicked()), this, SLOT(OpenChessBoard())); 
@@ -92,20 +93,24 @@ MainMenuQT::MainMenuQT()
 
 
 }
-//TODO Making this open all ex (widget * target) 
+
 void MainMenuQT::OpenChessBoard(){
+  chessBoard = new ChessBoardQT(this); 
+  connect(chessBoard, SIGNAL(newWindowFunction(int &)), this ,SLOT(recieveWindow(int &)));
   chessBoard->showFullScreen();
 
- // this->hide();
+
 
 }
+
+
 
 //TODO what buttons should be handled at the main Menu
 void MainMenuQT::keyPressEvent(QKeyEvent *e) {
     if(e->key() == Qt::Key_Escape){
     	pauseMenu = new PauseMenuQT(this);
-    	connect(pauseMenu, SIGNAL(closeWin()), this, SLOT(close()));
-    	pauseMenu->show();
+    	connect(pauseMenu, SIGNAL(closeWin(int &)), this, SLOT(recieveWindow(int &)));
+    	pauseMenu->showFullScreen();
     	std::cerr << "Here" << std::endl;
     }
 }
@@ -116,12 +121,29 @@ void MainMenuQT::recieveWindow(int &newWin)
   {
     //this->hide();
     case 1:
+    {
       //delete pauseMenu;
+    std::cerr << "HereHHH";
       pauseMenu = new PauseMenuQT(this);
-      connect(pauseMenu, SIGNAL(closeWin()), this, SLOT(close()));
+      connect(pauseMenu, SIGNAL(closeWin(int &)), this, SLOT(recieveWindow(int &)));
       pauseMenu->show();
+      break;
+    }
     case 2:
-      this->show();
+    {
+      chessBoard->close();
+      this->showFullScreen();
+      break;
+    }
+    case 3:
+    {
+
+    }
+    case 4:
+    {
+      close();
+      break;
+    }
   }
 
 }
