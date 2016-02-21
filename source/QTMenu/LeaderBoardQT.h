@@ -6,10 +6,16 @@
 #include <QTimer>
 #include <string>
 #include <QMouseEvent>
-
+#include <vector>
+#include "../Players/Player.h"
+#include "../Players/RegisteredPlayer.h"
+#include "../Database.h"
+#include "../Definitions.h"
 
   class QPushButton;
 class QTableWidget;
+class QTableWidget;
+class QStringList;
 
 class LeaderBoardQT : public QDialog
 {
@@ -20,11 +26,14 @@ signals:
 
 
 //public slot:
+protected:
+	void paintEvent(QPaintEvent *PE);
 
 
 private:
 	QPushButton *exitt, *save, *Main;
-
+	QTableWidget* gradeTable;
+    QStringList m_TableHeader;
 private slots:
 
 

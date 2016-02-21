@@ -2,6 +2,12 @@
 
 ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 {
+   //QPalette Pal(palette());
+   //Pal.setColor(QPalette::Background, Qt::black);
+   this-> setStyleSheet("background-color:#2d1606");
+
+   //this->setAutoFillBackground(true);
+   //this->setPalette(Pal);
    picked = false;
    QRect rec = QApplication::desktop()->screenGeometry();
    screenHeight = rec.height();

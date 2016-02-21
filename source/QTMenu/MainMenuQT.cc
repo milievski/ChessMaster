@@ -10,7 +10,7 @@ MainMenuQT::MainMenuQT()
   
   //Help
   endMenu = new EndMenuQT(this);
-  leaderBoardMenu = new LeaderBoardQT(this);
+  
   loginMenu = new LoginMenuQT(this);
   tournamentMenu = new TournamentMenuQT(this);
   
@@ -23,7 +23,7 @@ MainMenuQT::MainMenuQT()
   twoPlayer = new QPushButton("Two Player");
   load = new QPushButton("Load");
   replay = new QPushButton("Replay");
-  options = new QPushButton("Options");
+  options = new QPushButton("Leader Board");
   eexit = new QPushButton("Exit"); 
 
 
@@ -58,7 +58,7 @@ MainMenuQT::MainMenuQT()
     connect(twoPlayer, SIGNAL(clicked()), this, SLOT(OpenChessBoard())); 
     //connect(load, SIGNAL(clicked()), this, SLOT(OpenWindow(endMenu))); 
     //connect(leaderBoardMenu, SIGNAL(clicked()), this, SLOT(OpenWindow(leaderBoardMenu))); 
-    //connect(loginMenu, SIGNAL(clicked()), this, SLOT(OpenWindow(loginMenu))); 
+    connect(options, SIGNAL(clicked()), this, SLOT(OpenLeaderBoard())); 
     connect(eexit, SIGNAL(clicked()), this, SLOT(close())); 
 
     
@@ -102,7 +102,14 @@ void MainMenuQT::OpenChessBoard(){
 
 
 }
+void MainMenuQT::OpenLeaderBoard(){
+  leaderBoardMenu = new LeaderBoardQT(this);
+  
+  leaderBoardMenu->showFullScreen();
 
+
+
+}
 
 
 //TODO what buttons should be handled at the main Menu

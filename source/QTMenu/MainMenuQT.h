@@ -32,7 +32,7 @@ public slots:
 
   private slots:
     void OpenChessBoard();
-    
+    void OpenLeaderBoard();
 
   private:
 
