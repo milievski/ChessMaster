@@ -59,7 +59,8 @@ private:
 	int DeadBoardWhiteXIndex;
 	int DeadBoardBlackYIndex;
 	int DeadBoardWhiteYIndex;
-
+	int DeadBoardStartX;
+	int sizeBefore;
 };
 
 #endif

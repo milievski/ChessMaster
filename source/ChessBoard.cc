@@ -87,13 +87,13 @@ Piece* ChessBoard::popDeadBoard(){
 //TODO make cleaner
 int ChessBoard::movePiece(int ix,int iy, int dx, int dy){
    Piece* Movepiece = CBoard->getPiece(ix,iy);
-
    int colourOfPiece = Movepiece->getColor();
+   Piece* Takepiece = CBoard->getPiece(dx,dy);
+   std::string type = Takepiece->getType();
    int checker = CBoard->movePiece(ix,iy,dx,dy);
    if (checker == 4)
    {
-      Piece* Takepiece = CBoard->getPiece(dx,dy);
-      std::string type = Takepiece->getType();
+      
       if (type == "Queen")
          this->setDeadBoard(new QueenPiece(Takepiece->getColor()));
       if (type == "King")
@@ -112,8 +112,6 @@ int ChessBoard::movePiece(int ix,int iy, int dx, int dy){
    }
    else if (checker == 5)
    {
-      Piece* Takepiece = CBoard->getPiece(dx,dy);
-      std::string type = Takepiece->getType();
       if (type == "Queen")
          this->setDeadBoard(new QueenPiece(Takepiece->getColor()));
       if (type == "King")
@@ -152,8 +150,7 @@ int ChessBoard::movePiece(int ix,int iy, int dx, int dy){
    }
    else if (checker == 1)
    {
-      Piece* Takepiece = CBoard->getPiece(dx,dy);
-      std::string type = Takepiece->getType();
+
       if (type == "Queen")
          this->setDeadBoard(new QueenPiece(Takepiece->getColor()));
       if (type == "King")

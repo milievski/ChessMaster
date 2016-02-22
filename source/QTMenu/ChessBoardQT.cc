@@ -50,6 +50,7 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 	DeadBoardWhiteXIndex = 0;
    DeadBoardBlackYIndex = 50;
    DeadBoardWhiteYIndex = 300;
+   DeadBoardStartX = 850;
 
 }
 void ChessBoardQT::keyPressEvent(QKeyEvent *e) {
@@ -126,48 +127,64 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
    
    }
    std::vector< Piece* >  DeadBoard = CBoard->getDeadBoard();
-  // CBoard->setDeadBoard(new KingPiece(1));
-   std::cerr << DeadBoard.size();
    for(int i = 0; i < DeadBoard.size(); i++){
       type = DeadBoard[i]->getType();
-      std::cerr << type << "\n";
+ 
       colour = DeadBoard[i]->getColor();
 
       if(colour == 1)//black
          {
             
             if (type == "Queen")
-               paint.drawImage(850+ (i*(BoardSize-20)), 200 , BlackSprites[0]);
+               paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[0]);
             if (type == "King")
-               paint.drawImage(850+ (i*(BoardSize-30)), 200 , BlackSprites[1]);
+               paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[1]);
             if (type == "Bishop")
-               paint.drawImage(850+ (i*BoardSize), 200 , BlackSprites[2]);
+               paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[2]);
             if (type == "Knight")
-               paint.drawImage(850+ (i*BoardSize), 200 , BlackSprites[3]);
+               paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[3]);
             if (type == "Rook")
-               paint.drawImage(850+ (i*BoardSize), 200 , BlackSprites[4]);
+               paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[4]);
             if (type == "Pawn")
-               paint.drawImage(850+ (i*BoardSize), 200 , BlackSprites[5]);
-
+               paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[5]);
+            DeadBoardBlackXIndex += (BoardSize-30);
+            if (DeadBoardBlackXIndex/(BoardSize-30) == 10){
+               DeadBoardBlackYIndex += (BoardSize-30);
+               DeadBoardBlackXIndex = 0;
+            }
          }
          else // white
          {
          if (type == "Queen")
-               paint.drawImage(880+ (i*BoardSize), 100, WhiteSprites[0]);
+               paint.drawImage(DeadBoardStartX+ DeadBoardWhiteXIndex, DeadBoardWhiteYIndex, WhiteSprites[0]);
             if (type == "King")
-               paint.drawImage(880+ (i*BoardSize), 100, WhiteSprites[1]);
+               paint.drawImage(DeadBoardStartX+ DeadBoardWhiteXIndex, DeadBoardWhiteYIndex, WhiteSprites[1]);
             if (type == "Bishop")
-               paint.drawImage(880+ (i*BoardSize), 100, WhiteSprites[2]);
+               paint.drawImage(DeadBoardStartX+ DeadBoardWhiteXIndex, DeadBoardWhiteYIndex, WhiteSprites[2]);
             if (type == "Knight")
-               paint.drawImage(880+ (i*BoardSize), 100, WhiteSprites[3]);
+               paint.drawImage(DeadBoardStartX+ DeadBoardWhiteXIndex, DeadBoardWhiteYIndex, WhiteSprites[3]);
             if (type == "Rook")
-               paint.drawImage(880+ (i*BoardSize), 100, WhiteSprites[4]);
+               paint.drawImage(DeadBoardStartX+ DeadBoardWhiteXIndex, DeadBoardWhiteYIndex, WhiteSprites[4]);
             if (type == "Pawn")
-               paint.drawImage(880+ (i*BoardSize), 100, WhiteSprites[5]);
+               paint.drawImage(DeadBoardStartX+ DeadBoardWhiteXIndex, DeadBoardWhiteYIndex, WhiteSprites[5]);
+
+            DeadBoardWhiteXIndex += (BoardSize-30);
+            if (DeadBoardWhiteXIndex/(BoardSize-30) == 10){
+               DeadBoardWhiteYIndex += (BoardSize-30);
+               DeadBoardWhiteXIndex = 0;
+            }
          }
 
    }
-   
+   if (DeadBoardWhiteYIndex != 300){
+      DeadBoardWhiteYIndex -= (BoardSize-30);
+   }
+   DeadBoardWhiteXIndex = 0;
+
+   if (DeadBoardBlackYIndex != 50){
+      DeadBoardBlackYIndex -= (BoardSize-30);
+   }
+   DeadBoardBlackXIndex = 0;
 
 
 }
