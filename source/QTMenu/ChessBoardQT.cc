@@ -9,15 +9,17 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
    //this->setAutoFillBackground(true);
    //this->setPalette(Pal);
    picked = false;
+   pickedx = -1;
+   pickedy = -1;
    QRect rec = QApplication::desktop()->screenGeometry();
    screenHeight = rec.height();
    screenWidth = rec.width();
 
-	const int size = 80;
+   const int size = 80;
    BoardSize = (screenHeight-100)/8;
    selecterBox = QImage("QTMenu/Art/selecterBox.png");
    selecterBox = selecterBox.scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);
-	SpriteSheet = new QImage("QTMenu/Art/PieceSpriteSheet.png");
+   SpriteSheet = new QImage("QTMenu/Art/PieceSpriteSheet.png");
 	for(int x = 0; x < 6;x ++) // filling the pice sprites up with images
 	{
 		BlackSprites.push_back(QImage());
@@ -47,19 +49,19 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 	CBoard = new ChessBoard();
 
    DeadBoardBlackXIndex = 0;
-	DeadBoardWhiteXIndex = 0;
+   DeadBoardWhiteXIndex = 0;
    DeadBoardBlackYIndex = 50;
    DeadBoardWhiteYIndex = 300;
    DeadBoardStartX = 850;
 
 }
 void ChessBoardQT::keyPressEvent(QKeyEvent *e) {
-    if(e->key() == Qt::Key_Escape){
-    	int temp = 1;
-    	emit newWindowFunction(temp);
-    	update();
-    	
-    }
+  if(e->key() == Qt::Key_Escape){
+    int temp = 1;
+    emit newWindowFunction(temp);
+    update();
+
+ }
 }
 
 void ChessBoardQT::paintEvent(QPaintEvent *PE)
@@ -88,7 +90,7 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
    		tempPiece = CBoard->getPiece(x,y);
    		type = tempPiece->getType();
    		colour = tempPiece->getColor();
-   		
+         if(x != pickedy+1 || y != pickedx+1)
    		if(colour == 1)//black
    		{
    			
@@ -108,54 +110,89 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
    		}
    		else // white
    		{
-    		if (type == "Queen")
-   				paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[0]);
-   			if (type == "King")
-   				paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[1]);
-   			if (type == "Bishop")
-   				paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[2]);
-   			if (type == "Knight")
-   				paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[3]);
-   			if (type == "Rook")
-   				paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[4]);
-   			if (type == "Pawn")
-   				paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[5]);
-   		}
-   		
-
-   	}
-   
-   }
-   std::vector< Piece* >  DeadBoard = CBoard->getDeadBoard();
-   for(int i = 0; i < DeadBoard.size(); i++){
-      type = DeadBoard[i]->getType();
- 
-      colour = DeadBoard[i]->getColor();
-
-      if(colour == 1)//black
-         {
-            
             if (type == "Queen")
-               paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[0]);
-            if (type == "King")
-               paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[1]);
-            if (type == "Bishop")
-               paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[2]);
-            if (type == "Knight")
-               paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[3]);
-            if (type == "Rook")
-               paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[4]);
-            if (type == "Pawn")
-               paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[5]);
-            DeadBoardBlackXIndex += (BoardSize-30);
-            if (DeadBoardBlackXIndex/(BoardSize-30) == 10){
-               DeadBoardBlackYIndex += (BoardSize-30);
-               DeadBoardBlackXIndex = 0;
-            }
+              paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[0]);
+           if (type == "King")
+              paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[1]);
+           if (type == "Bishop")
+              paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[2]);
+           if (type == "Knight")
+              paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[3]);
+           if (type == "Rook")
+              paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[4]);
+           if (type == "Pawn")
+              paint.drawImage(BoardPosY + (y * BoardSize), BoardPosX + (x*BoardSize), WhiteSprites[5]);
+    }
+
+
+    if(picked)
+         if(pickedColor == 1)//black
+         {
+
+            if (pickedType == "Queen")
+               paint.drawImage(pickedDrawy, pickedDrawx, BlackSprites[0]);
+            if (pickedType == "King")
+               paint.drawImage(pickedDrawy, pickedDrawx, BlackSprites[1]);
+            if (pickedType == "Bishop")
+               paint.drawImage(pickedDrawy, pickedDrawx, BlackSprites[2]);
+            if (pickedType == "Knight")
+               paint.drawImage(pickedDrawy, pickedDrawx, BlackSprites[3]);
+            if (pickedType == "Rook")
+               paint.drawImage(pickedDrawy, pickedDrawx, BlackSprites[4]);
+            if (pickedType == "Pawn")
+               paint.drawImage(pickedDrawy, pickedDrawx, BlackSprites[5]);
+
          }
          else // white
          {
+            if (pickedType == "Queen")
+              paint.drawImage(pickedDrawy, pickedDrawx, WhiteSprites[0]);
+           if (pickedType == "King")
+              paint.drawImage(pickedDrawy, pickedDrawx, WhiteSprites[1]);
+           if (pickedType == "Bishop")
+              paint.drawImage(pickedDrawy, pickedDrawx, WhiteSprites[2]);
+           if (pickedType == "Knight")
+              paint.drawImage(pickedDrawy, pickedDrawx, WhiteSprites[3]);
+           if (pickedType == "Rook")
+            paint.drawImage(pickedDrawy, pickedDrawx, WhiteSprites[4]);
+         if (pickedType == "Pawn")
+            paint.drawImage(pickedDrawy, pickedDrawx, WhiteSprites[5]);
+      }
+
+
+
+   }
+
+}
+std::vector< Piece* >  DeadBoard = CBoard->getDeadBoard();
+for(int i = 0; i < DeadBoard.size(); i++){
+   type = DeadBoard[i]->getType();
+
+   colour = DeadBoard[i]->getColor();
+      if(colour == 1)//black
+      {
+
          if (type == "Queen")
+            paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[0]);
+         if (type == "King")
+            paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[1]);
+         if (type == "Bishop")
+            paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[2]);
+         if (type == "Knight")
+            paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[3]);
+         if (type == "Rook")
+            paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[4]);
+         if (type == "Pawn")
+            paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[5]);
+         DeadBoardBlackXIndex += (BoardSize-30);
+         if (DeadBoardBlackXIndex/(BoardSize-30) == 10){
+            DeadBoardBlackYIndex += (BoardSize-30);
+            DeadBoardBlackXIndex = 0;
+         }
+      }
+         else // white
+         {
+            if (type == "Queen")
                paint.drawImage(DeadBoardStartX+ DeadBoardWhiteXIndex, DeadBoardWhiteYIndex, WhiteSprites[0]);
             if (type == "King")
                paint.drawImage(DeadBoardStartX+ DeadBoardWhiteXIndex, DeadBoardWhiteYIndex, WhiteSprites[1]);
@@ -175,35 +212,51 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
             }
          }
 
-   }
-   if (DeadBoardWhiteYIndex != 300){
-      DeadBoardWhiteYIndex -= (BoardSize-30);
-   }
-   DeadBoardWhiteXIndex = 0;
+      }
+      if (DeadBoardWhiteYIndex != 300){
+         DeadBoardWhiteYIndex -= (BoardSize-30);
+      }
+      DeadBoardWhiteXIndex = 0;
 
-   if (DeadBoardBlackYIndex != 50){
-      DeadBoardBlackYIndex -= (BoardSize-30);
+      if (DeadBoardBlackYIndex != 50){
+         DeadBoardBlackYIndex -= (BoardSize-30);
+      }
+      DeadBoardBlackXIndex = 0;
+
+
    }
-   DeadBoardBlackXIndex = 0;
+/* -- the piece will follow the mouse currsor when the mouse moves and the button is pressed -- */
+   void ChessBoardQT::mouseMoveEvent(QMouseEvent *e) 
+   {
+      if(e->buttons() == Qt::LeftButton && picked)
+      {
+         pickedDrawx = e->y() - (BoardSize/2);
+         pickedDrawy = e->x() - (BoardSize/2);
+         std::cerr << "moved at (" << e->x() << "," << e->y() << ")\n";
+         update();
+      }  
+   }
 
+/* -- detects when left mouse button is pressed and will pick up the piece -- */
+   void ChessBoardQT::mousePressEvent(QMouseEvent *p)
+   {
+      if(p->buttons() == Qt::LeftButton )//&& !picked)
+{
+   hitBoxDetect(p->x(), p->y()); 
+   std::cerr << "pressed at (" << p->x() << "," << p->y() << ")\n";
 
+}  
 }
 
-void ChessBoardQT::mouseMoveEvent(QMouseEvent *e)
+
+/* -- puts the piece down when the mouse button is released-- */
+void   ChessBoardQT::mouseReleaseEvent(QMouseEvent *r)
 {
-   if(e->buttons() == Qt::LeftButton)
-   {
-      //std::cerr << e->x() << " , " << e->y() << std::endl;
-   }  
-}
-void ChessBoardQT::mousePressEvent(QMouseEvent *e)
+      if(r->buttons() == Qt::LeftButton)// && picked)
 {
-   if(e->buttons() == Qt::LeftButton)
-   {
-      hitBoxDetect(e->x(), e->y());
-      //std::cerr << e->x() << " , " << e->y() << std::endl;
-      
-   }  
+   hitBoxDetect(r->x(), r->y());
+   std::cerr << "released at (" << r->x() << "," << r->y() << ")\n";
+}  
 }
 
 
@@ -214,6 +267,8 @@ void ChessBoardQT::hitBoxDetect(int x, int y)
    x += 50; // 50 is the offset of how far the board is from the top left corner
    y += 50; // 50 is the offset of how far the board is from the top left corner
 
+   pickedDrawx = x;
+   pickedDrawy = y;
    int boardx = x / hit;
    int boardy = y / hit;
    if(!picked)
@@ -226,6 +281,8 @@ void ChessBoardQT::hitBoxDetect(int x, int y)
          {
             pickedx = boardx;
             pickedy = boardy;
+            pickedType = CBoard->getPiece(boardy-1,boardx-1)->getType();
+            pickedColor = CBoard->getPiece(boardy-1,boardx-1)->getColor();
             update();
             picked = true;
          }

@@ -27,6 +27,7 @@ signals:
 	void newWindowFunction(int &win);
 
 protected:
+	void mouseReleaseEvent(QMouseEvent *e);
 	void mouseMoveEvent(QMouseEvent *e);
 	void mousePressEvent(QMouseEvent *e);
 	void paintEvent(QPaintEvent *PE);
@@ -50,8 +51,16 @@ private:
 	int BoardPosX, BoardPosY; // position of where the board is to make it easy to place pieces
 	int BoardSize;
 
-	   bool picked;
-   int pickedx, pickedy;
+
+	// variables for picked up action
+	bool picked; //if a piece is picked up it will be true
+    int pickedx, pickedy; // comtains the coordinates of the piece that is picked up
+    int pickedDrawx, pickedDrawy;
+    QImage pickedImage;
+    string pickedType;
+    int pickedColor;
+    //end variables for picked up action
+
 
 	int screenHeight, screenWidth;
 
