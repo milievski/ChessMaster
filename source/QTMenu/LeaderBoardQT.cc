@@ -1,4 +1,5 @@
 #include "LeaderBoardQT.h"
+#include <QtGui>
 
 LeaderBoardQT::LeaderBoardQT(QWidget *parent) : QDialog(parent)
 {
@@ -44,15 +45,32 @@ LeaderBoardQT::LeaderBoardQT(QWidget *parent) : QDialog(parent)
 		
 		
 	}
+
+	//QWidget *centralWidget = new QWidget;
+   	//setCentralWidget(centralWidget);
+	exitt = new QPushButton("exit");
+	Main = new QPushButton("Main Menu");
+
+	QGridLayout *layout = new QGridLayout;
+	layout-> setRowMinimumHeight(0,300);
+   layout-> setColumnMinimumWidth(0,200);
+   layout -> addWidget(gradeTable,1,1,1,2);
+   layout -> addWidget(exitt,2,1,1,1);
+   layout -> addWidget(Main,2,2,1,1);
+   layout-> setColumnMinimumWidth(3,200);
+    layout-> setRowMinimumHeight(2,80);
+    layout -> addWidget(gradeTable,1,1,1,1);
+    layout-> setRowMinimumHeight(4,80);
+   setLayout(layout);
 	
-	
+
 
 }
 void LeaderBoardQT::paintEvent(QPaintEvent *PE)
 {
 
-
-	
-
+  QImage logo("QTMenu/Art/ChessMasterLogo.png");
+  QPainter paint(this); 
+  paint.drawImage(375,100, logo);
 
 }

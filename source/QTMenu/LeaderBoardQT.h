@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QtGui>
+#include <QMainWindow>
 #include <QTimer>
 #include <string>
 #include <QMouseEvent>
@@ -12,10 +13,15 @@
 #include "../Database.h"
 #include "../Definitions.h"
 
-  class QPushButton;
+class QPushButton;
 class QTableWidget;
 class QTableWidget;
 class QStringList;
+class KeyEvent;
+class QPushButton;
+class QPixmap;
+class QPalette;
+class QImage;
 
 class LeaderBoardQT : public QDialog
 {
@@ -31,9 +37,10 @@ protected:
 
 
 private:
-	QPushButton *exitt, *save, *Main;
+
 	QTableWidget* gradeTable;
     QStringList m_TableHeader;
+    QPushButton *exitt, *Main;
 private slots:
 
 
