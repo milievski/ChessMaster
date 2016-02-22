@@ -55,10 +55,10 @@ private:
 
 	int screenHeight, screenWidth;
 
-
-
-
-
+	int DeadBoardBlackXIndex;
+	int DeadBoardWhiteXIndex;
+	int DeadBoardBlackYIndex;
+	int DeadBoardWhiteYIndex;
 
 };
 

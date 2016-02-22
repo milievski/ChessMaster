@@ -10,7 +10,6 @@ MainMenuQT::MainMenuQT()
   
   //Help
   endMenu = new EndMenuQT(this);
-  
   loginMenu = new LoginMenuQT(this);
   tournamentMenu = new TournamentMenuQT(this);
   

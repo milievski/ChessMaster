@@ -1,4 +1,4 @@
 return integer file specification
 
 1 = pauseMenuQT
-2 = MainMenu
+2 = Open the MainMenu and close the chess game
