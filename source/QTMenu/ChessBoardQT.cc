@@ -126,7 +126,7 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
    
    }
    std::vector< Piece* >  DeadBoard = CBoard->getDeadBoard();
-   CBoard->setDeadBoard(new KingPiece(1));
+  // CBoard->setDeadBoard(new KingPiece(1));
    std::cerr << DeadBoard.size();
    for(int i = 0; i < DeadBoard.size(); i++){
       type = DeadBoard[i]->getType();

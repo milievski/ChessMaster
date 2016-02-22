@@ -84,19 +84,48 @@ Piece* ChessBoard::popDeadBoard(){
       return nullptr;
    }
 }
-
+//TODO make cleaner
 int ChessBoard::movePiece(int ix,int iy, int dx, int dy){
    Piece* Movepiece = CBoard->getPiece(ix,iy);
+
    int colourOfPiece = Movepiece->getColor();
    int checker = CBoard->movePiece(ix,iy,dx,dy);
    if (checker == 4)
    {
+      Piece* Takepiece = CBoard->getPiece(dx,dy);
+      std::string type = Takepiece->getType();
+      if (type == "Queen")
+         this->setDeadBoard(new QueenPiece(Takepiece->getColor()));
+      if (type == "King")
+         this->setDeadBoard(new KingPiece(Takepiece->getColor()));
+      if (type == "Bishop")
+         this->setDeadBoard(new BishopPiece(Takepiece->getColor()));
+      if (type == "Knight")
+         this->setDeadBoard(new KnightPiece(Takepiece->getColor()));
+      if (type == "Rook")
+         this->setDeadBoard(new RookPiece(Takepiece->getColor()));
+      if (type == "Pawn")
+         this->setDeadBoard(new PawnPiece(Takepiece->getColor()));
       CBoard->setPiece(dx,dy,new QueenPiece(colourOfPiece));
       CBoard->setNull(ix,iy);
       return 1;
    }
    else if (checker == 5)
    {
+      Piece* Takepiece = CBoard->getPiece(dx,dy);
+      std::string type = Takepiece->getType();
+      if (type == "Queen")
+         this->setDeadBoard(new QueenPiece(Takepiece->getColor()));
+      if (type == "King")
+         this->setDeadBoard(new KingPiece(Takepiece->getColor()));
+      if (type == "Bishop")
+         this->setDeadBoard(new BishopPiece(Takepiece->getColor()));
+      if (type == "Knight")
+         this->setDeadBoard(new KnightPiece(Takepiece->getColor()));
+      if (type == "Rook")
+         this->setDeadBoard(new RookPiece(Takepiece->getColor()));
+      if (type == "Pawn")
+         this->setDeadBoard(new PawnPiece(Takepiece->getColor()));
       CBoard->setPiece(dx,dy,Movepiece);
       CBoard->setNull(ix,iy);
       return 5;
@@ -123,6 +152,20 @@ int ChessBoard::movePiece(int ix,int iy, int dx, int dy){
    }
    else if (checker == 1)
    {
+      Piece* Takepiece = CBoard->getPiece(dx,dy);
+      std::string type = Takepiece->getType();
+      if (type == "Queen")
+         this->setDeadBoard(new QueenPiece(Takepiece->getColor()));
+      if (type == "King")
+         this->setDeadBoard(new KingPiece(Takepiece->getColor()));
+      if (type == "Bishop")
+         this->setDeadBoard(new BishopPiece(Takepiece->getColor()));
+      if (type == "Knight")
+         this->setDeadBoard(new KnightPiece(Takepiece->getColor()));
+      if (type == "Rook")
+         this->setDeadBoard(new RookPiece(Takepiece->getColor()));
+      if (type == "Pawn")
+         this->setDeadBoard(new PawnPiece(Takepiece->getColor()));
       CBoard->setPiece(dx,dy,Movepiece);
     
       CBoard->setNull(ix,iy);  
