@@ -10,6 +10,9 @@ source/
  - most source and header files
  - type "make" to create executable
 
+source/QTMenu
+ - contains all source and headers for all QTMenus and Windows
+
 source/piece/
  - contains source and headers for piece class
 
@@ -21,9 +24,6 @@ source/players/
 
 source/menus
  - contains source and headers for consal based menu class 
-
-source/QTMenu
- - contains all source and headers for all QTMenus
 
 doxygen/
  - directory for generating doxygen documentation

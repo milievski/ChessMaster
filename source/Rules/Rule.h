@@ -1,5 +1,5 @@
 /// \file
-///Author Marco Illievski/Brandon Robertson
+///Author Marko Illievski/Brandon Robertson
 ///
 #ifndef RULE_H
 #define RULE_H
