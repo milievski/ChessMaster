@@ -46,8 +46,7 @@ LeaderBoardQT::LeaderBoardQT(QWidget *parent) : QDialog(parent)
 		
 	}
 
-	//QWidget *centralWidget = new QWidget;
-   	//setCentralWidget(centralWidget);
+
 	exitt = new QPushButton("exit");
 	Main = new QPushButton("Main Menu");
 
