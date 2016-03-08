@@ -22,7 +22,8 @@ MainMenuQT::MainMenuQT()
   twoPlayer = new QPushButton("Two Player");
   load = new QPushButton("Load");
   replay = new QPushButton("Replay");
-  options = new QPushButton("Leader Board");
+  login = new QPushButton("Login");
+  leaderBoard = new QPushButton("Leader Board");
   eexit = new QPushButton("Exit"); 
 
 
@@ -31,10 +32,12 @@ MainMenuQT::MainMenuQT()
     twoPlayer->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
     load->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
     replay->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
-    options->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+    login->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+    leaderBoard->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
     eexit->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
     eexit->setMaximumHeight(60);
-    options->setMaximumHeight(60);
+    leaderBoard->setMaximumHeight(60);
+    login->setMaximumHeight(60);
     replay->setMaximumHeight(60);
     load->setMaximumHeight(60);
     twoPlayer->setMaximumHeight(60);
@@ -42,7 +45,7 @@ MainMenuQT::MainMenuQT()
     // onePlayer 
     // twoPlayer
     // load
-    // options
+    // leaderBoard
     // eexit
 
     
@@ -56,14 +59,14 @@ MainMenuQT::MainMenuQT()
     connect(onePlayer, SIGNAL(clicked()), this, SLOT(OpenChessBoard())); 
     connect(twoPlayer, SIGNAL(clicked()), this, SLOT(OpenChessBoard())); 
     //connect(load, SIGNAL(clicked()), this, SLOT(OpenWindow(endMenu))); 
-    //connect(leaderBoardMenu, SIGNAL(clicked()), this, SLOT(OpenWindow(leaderBoardMenu))); 
-    connect(options, SIGNAL(clicked()), this, SLOT(OpenLeaderBoard())); 
+    connect(login, SIGNAL(clicked()), this, SLOT(OpenLoginMenu())); 
+    connect(leaderBoard, SIGNAL(clicked()), this, SLOT(OpenLeaderBoard())); 
     connect(eexit, SIGNAL(clicked()), this, SLOT(close())); 
 
     
   //setLayout(layout);
    QGridLayout *gridLayout = new QGridLayout;
-    gridLayout-> setRowMinimumHeight(0,300);
+    gridLayout-> setRowMinimumHeight(0,250);
    gridLayout-> setColumnMinimumWidth(0,500);
 
    gridLayout -> addWidget(onePlayer,1,1,1,1);
@@ -77,14 +80,14 @@ MainMenuQT::MainMenuQT()
    gridLayout -> addWidget(replay,4,1,1,1);
    
 
-   gridLayout -> addWidget(options,5,1,1,1);
+   gridLayout -> addWidget(login,5,1,1,1);
    
 
-   gridLayout -> addWidget(eexit,6,1,1,1);  
-   
+   gridLayout -> addWidget(leaderBoard,6,1,1,1);  
+   gridLayout -> addWidget(eexit,7,1,1,1);
 
    gridLayout-> setColumnMinimumWidth(2,500);
-    gridLayout-> setRowMinimumHeight(7,100);
+    gridLayout-> setRowMinimumHeight(8,75);
 
    centralWidget->setLayout(gridLayout);
    
@@ -97,17 +100,15 @@ void MainMenuQT::OpenChessBoard(){
   chessBoard = new ChessBoardQT(this); 
   connect(chessBoard, SIGNAL(newWindowFunction(int &)), this ,SLOT(recieveWindow(int &)));
   chessBoard->showFullScreen();
-
-
-
 }
+
 void MainMenuQT::OpenLeaderBoard(){
   leaderBoardMenu = new LeaderBoardQT(this);
-  
   leaderBoardMenu->showFullScreen();
-
-
-
+}
+void MainMenuQT::OpenLoginMenu(){
+  loginMenu = new LoginMenuQT(this);
+  loginMenu->showFullScreen();
 }
 
 
@@ -158,6 +159,6 @@ void MainMenuQT::paintEvent(QPaintEvent *PE)
 
   QImage logo("QTMenu/Art/ChessMasterLogo.png");
   QPainter paint(this); 
-  paint.drawImage(375,100, logo);
+  paint.drawImage(375,70, logo);
 
 }

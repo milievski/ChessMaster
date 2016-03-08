@@ -33,12 +33,12 @@ public slots:
   private slots:
     void OpenChessBoard();
     void OpenLeaderBoard();
-
+    void OpenLoginMenu();
   private:
 
     QPixmap *backroundButton;
     QPalette *pallet;
-  	QPushButton *onePlayer, *twoPlayer, *load, *replay, *options, *eexit;
+  	QPushButton *onePlayer, *twoPlayer, *load, *replay, *login, *leaderBoard, *eexit;
   	PauseMenuQT *pauseMenu;
     EndMenuQT *endMenu;
     LeaderBoardQT *leaderBoardMenu;
