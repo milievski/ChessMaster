@@ -35,18 +35,18 @@ int KingInCheck::validMove(vector< vector < Piece* > > &b, int ix, int iy, int d
 
 	//checks if a pawn will be in a possition to check the king
 	//there is two possiblity for this which are the if the color of the king is white then the pawns would be in foront and if black they pawn would be behind
-	if (b[kingx][kingy]->getColor() == 0)
+	if (b[kingx][kingy]->getColor() == 1)
 	{
 		//checks if there is a black pawn that is attaking the white king at cordinats 1,1 or 1,-1 for the kings postition
 		if((b[ix][iy]->getType() == "Pawn")&&((dx == kingx+1)&&(dy == kingy+1)) )
 		{
-			if (b[ix][iy]->getColor() == 1)
+			if (b[ix][iy]->getColor() == 0)
 				//returns 5 which means that the king is in check
 				return 5;
 		}
 		else if((b[ix][iy]->getType() == "Pawn")&&((dx == kingx+1)&&(dy == kingy-1)))
 		{
-			if (b[ix][iy]->getColor() == 1)
+			if (b[ix][iy]->getColor() == 0)
 				//returns 5 which means that the king is in check
 			return 5;
 		}
@@ -54,18 +54,18 @@ int KingInCheck::validMove(vector< vector < Piece* > > &b, int ix, int iy, int d
 	}
 	//checks if a pawn will be in a possition to check the king
 	//there is two possiblity for this which are the if the color of the king is white then the pawns would be in foront and if black they pawn would be behind
-	else if (b[kingx][kingy]->getColor() == 1)
+	else if (b[kingx][kingy]->getColor() == 0)
 	{
 		//checks if there is a white pawn that is attaking the black king at cordinats 1,1 or 1,-1 for the kings postition
 		if((b[ix][iy]->getType() == "Pawn")&&((dx == kingx-1)&&(dy == kingy+1)))
 		{
-			if (b[ix][iy]->getColor() == 0)
+			if (b[ix][iy]->getColor() == 1)
 				//returns 5 which means that the king is in check
 			return 5;
 		}
 		else if((b[ix][iy]->getType() == "Pawn")&&((dx == kingx-1)&&(dy == kingy-1)) )
 		{
-			if (b[ix][iy]->getColor() == 0)
+			if (b[ix][iy]->getColor() == 1)
 				//returns 5 which means that the king is in check
 			return 5;
 		}

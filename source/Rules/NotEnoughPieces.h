@@ -11,6 +11,7 @@
 #include <vector>
 using std::vector;
 #include "Rule.h"
+#include "MyKingInCheck.h"
 
 class NotEnoughPieces : virtual Rule
 {
