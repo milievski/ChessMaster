@@ -126,6 +126,7 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
 
 
     if(picked)
+    {
          if(pickedColor == 1)//black
          {
 
@@ -158,7 +159,7 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
          if (pickedType == "Pawn")
             paint.drawImage(pickedDrawy, pickedDrawx, WhiteSprites[5]);
       }
-
+    }
 
 
    }
@@ -237,13 +238,13 @@ for(int i = 0; i < DeadBoard.size(); i++){
       }  
    }
 
-/* -- detects when left mouse button is pressed and will pick up the piece -- */
-   void ChessBoardQT::mousePressEvent(QMouseEvent *p)
+/*-- detects when left mouse button is pressed and will pick up the piece -- */
+void ChessBoardQT::mousePressEvent(QMouseEvent *p)
    {
       if(p->buttons() == Qt::LeftButton )//&& !picked)
 {
    hitBoxDetect(p->x(), p->y()); 
-   std::cerr << "pressed at (" << p->x() << "," << p->y() << ")\n";
+   //std::cerr << "presed at (" << p->x() << "," << p->y() << ")\n";
 
 }  
 }
@@ -252,7 +253,7 @@ for(int i = 0; i < DeadBoard.size(); i++){
 /* -- puts the piece down when the mouse button is released-- */
 void   ChessBoardQT::mouseReleaseEvent(QMouseEvent *r)
 {
-      if(r->buttons() == Qt::LeftButton)// && picked)
+      if(r->buttons() == Qt::RightButton)// && picked)
 {
    hitBoxDetect(r->x(), r->y());
    std::cerr << "released at (" << r->x() << "," << r->y() << ")\n";
@@ -293,7 +294,7 @@ void ChessBoardQT::hitBoxDetect(int x, int y)
    {
       if(boardx > 0 && boardy >0 && boardx < 9 && boardy < 9)
       {
-         CBoard->movePiece(pickedy-1, pickedx-1, boardy-1, boardx-1);
+         std::cout << CBoard->movePiece(pickedy-1, pickedx-1, boardy-1, boardx-1) << std::endl;
       }
       update();
       picked = !picked;

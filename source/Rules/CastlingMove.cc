@@ -14,6 +14,7 @@
  		if ((b[ix][iy+1]->getType() == "Empty") && (b[ix][iy+2]->getType() == "Empty"))
  		{
  			//returns 6 which means that there was a castle
+ 			if ((b[ix][iy+3]->getType() == "Rook")&&(b[ix][iy+3]->getColor() == b[ix][iy]->getColor()))
  			return 6;
  		}
  	}
@@ -25,6 +26,7 @@
  		if ((b[ix][iy-1]->getType() == "Empty") && (b[ix][iy-2]->getType() == "Empty") && (b[ix][iy-3]->getType() == "Empty"))
  		{
  			//returns 6 which means that there was a castle
+ 			if ((b[ix][iy-4]->getType() == "Rook") &&(b[ix][iy-4]->getColor() == b[ix][iy]->getColor()))
  			return 6;
  		}
  	}
