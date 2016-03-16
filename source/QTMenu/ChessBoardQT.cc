@@ -256,7 +256,7 @@ void   ChessBoardQT::mouseReleaseEvent(QMouseEvent *r)
       if(r->buttons() == Qt::RightButton)// && picked)
 {
    hitBoxDetect(r->x(), r->y());
-   std::cerr << "released at (" << r->x() << "," << r->y() << ")\n";
+   //std::cerr << "released at (" << r->x() << "," << r->y() << ")\n";
 }  
 }
 
@@ -294,7 +294,8 @@ void ChessBoardQT::hitBoxDetect(int x, int y)
    {
       if(boardx > 0 && boardy >0 && boardx < 9 && boardy < 9)
       {
-         std::cout << CBoard->movePiece(pickedy-1, pickedx-1, boardy-1, boardx-1) << std::endl;
+         //std::cout << CBoard->movePiece(pickedy-1, pickedx-1, boardy-1, boardx-1) << std::endl;
+        CBoard->movePiece(pickedy-1, pickedx-1, boardy-1, boardx-1);
       }
       update();
       picked = !picked;
