@@ -15,11 +15,12 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
    screenHeight = rec.height();
    screenWidth = rec.width();
 
-   const int size = 80;
+   const int size = 128;
    BoardSize = (screenHeight-100)/8;
    selecterBox = QImage("QTMenu/Art/selecterBox.png");
    selecterBox = selecterBox.scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);
-   SpriteSheet = new QImage("QTMenu/Art/PieceSpriteSheet.png");
+   SpriteSheet = new QImage("QTMenu/Art/newSpriteSheetjpg.png");
+
 	for(int x = 0; x < 6;x ++) // filling the pice sprites up with images
 	{
 		BlackSprites.push_back(QImage());
@@ -27,22 +28,34 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 	}
 	//king
 	BlackSprites[0] = SpriteSheet->copy(4*size,0*size ,size ,size );
+  BlackSprites[0] = BlackSprites[0].scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);  
 	WhiteSprites[0] = SpriteSheet->copy(1*size,0*size ,size ,size );
+  WhiteSprites[0] = WhiteSprites[0].scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);  
 	//Queen
 	BlackSprites[1] = SpriteSheet->copy(4*size,1*size ,size ,size );
+  BlackSprites[1] = BlackSprites[1].scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);  
 	WhiteSprites[1] = SpriteSheet->copy(1*size,1*size ,size ,size );
+  WhiteSprites[1] = WhiteSprites[1].scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio); 
 	//Bishop
 	BlackSprites[2] = SpriteSheet->copy(5*size,1*size ,size ,size );
+  BlackSprites[2] = BlackSprites[2].scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);
 	WhiteSprites[2] = SpriteSheet->copy(2*size,1*size ,size ,size );
+  WhiteSprites[2] = WhiteSprites[2].scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);
 	//Knight
 	BlackSprites[3] = SpriteSheet->copy(3*size,1*size ,size ,size );
+  BlackSprites[3] = BlackSprites[3].scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);
 	WhiteSprites[3] = SpriteSheet->copy(0*size,1*size ,size ,size );
+  WhiteSprites[3] = WhiteSprites[3].scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);
 	//Rook
 	BlackSprites[4] = SpriteSheet->copy(3*size,0*size ,size ,size );
+  BlackSprites[4] = BlackSprites[4].scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);
 	WhiteSprites[4] = SpriteSheet->copy(0*size,0*size ,size ,size );
+  WhiteSprites[4] = WhiteSprites[4].scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);
 	//Pawn
 	BlackSprites[5] = SpriteSheet->copy(5*size,0*size ,size ,size );
+  BlackSprites[5] = BlackSprites[5].scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);
 	WhiteSprites[5] = SpriteSheet->copy(2*size,0*size ,size ,size );
+  WhiteSprites[5] = WhiteSprites[5].scaled((screenHeight-100)/8, (screenHeight-100)/8, Qt::KeepAspectRatio);
 
 	BoardPosX = 50;
 	BoardPosY = 50;
@@ -97,7 +110,7 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
    		tempPiece = CBoard->getPiece(x,y);
    		type = tempPiece->getType();
    		colour = tempPiece->getColor();
-         if(x != pickedy+1 || y != pickedx+1)
+      if(x != pickedy+1 || y != pickedx+1)
    		if(colour == 1)//black
    		{
    			
