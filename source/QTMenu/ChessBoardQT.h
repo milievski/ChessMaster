@@ -45,6 +45,11 @@ private:
 	std::vector< QImage > WhiteSprites;
 	QImage *SpriteSheet;
 	QImage selecterBox;
+	QImage *whiteDeadBoard;
+	QImage *BlackDeadBoard;
+	QImage *whiteTimer;
+	QImage *blackTimer;
+
 	ChessBoard *CBoard;
 	bool blacksTurn;
 

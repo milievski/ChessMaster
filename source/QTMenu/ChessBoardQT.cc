@@ -9,8 +9,8 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
    //this->setAutoFillBackground(true);
    //this->setPalette(Pal);
    picked = false;
-   pickedx = -1;
-   pickedy = -1;
+   pickedx = -2;
+   pickedy = -2;
    QRect rec = QApplication::desktop()->screenGeometry();
    screenHeight = rec.height();
    screenWidth = rec.width();
@@ -52,7 +52,14 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
    DeadBoardWhiteXIndex = 0;
    DeadBoardBlackYIndex = 50;
    DeadBoardWhiteYIndex = 300;
-   DeadBoardStartX = 850;
+   DeadBoardStartX = 860;
+  //setting up boarder box for deadboard and timers...
+   whiteDeadBoard = new QImage("QTMenu/Art/BoarderBox.png");
+   BlackDeadBoard = new QImage("QTMenu/Art/BoarderBox.png");
+   whiteTimer =  new QImage("QTMenu/Art/BoarderBox.png");
+   blackTimer = new QImage("QTMenu/Art/BoarderBox.png");
+
+
 
 }
 void ChessBoardQT::keyPressEvent(QKeyEvent *e) {
@@ -166,6 +173,10 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
 
 }
 std::vector< Piece* >  DeadBoard = CBoard->getDeadBoard();
+
+ paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex+5, DeadBoardBlackYIndex , *BlackDeadBoard);
+ paint.drawImage(DeadBoardStartX+ DeadBoardWhiteXIndex+5, DeadBoardWhiteYIndex, *whiteDeadBoard);
+
 for(int i = 0; i < DeadBoard.size(); i++){
    type = DeadBoard[i]->getType();
 
@@ -186,7 +197,7 @@ for(int i = 0; i < DeadBoard.size(); i++){
          if (type == "Pawn")
             paint.drawImage(DeadBoardStartX+  DeadBoardBlackXIndex, DeadBoardBlackYIndex , BlackSprites[5]);
          DeadBoardBlackXIndex += (BoardSize-30);
-         if (DeadBoardBlackXIndex/(BoardSize-30) == 10){
+         if (DeadBoardBlackXIndex/(BoardSize-30) == 8){
             DeadBoardBlackYIndex += (BoardSize-30);
             DeadBoardBlackXIndex = 0;
          }
@@ -233,31 +244,30 @@ for(int i = 0; i < DeadBoard.size(); i++){
       {
          pickedDrawx = e->y() - (BoardSize/2);
          pickedDrawy = e->x() - (BoardSize/2);
-         std::cerr << "moved at (" << e->x() << "," << e->y() << ")\n";
+         //std::cerr << "moved at (" << e->x() << "," << e->y() << ")\n";
          update();
       }  
    }
 
 /*-- detects when left mouse button is pressed and will pick up the piece -- */
 void ChessBoardQT::mousePressEvent(QMouseEvent *p)
-   {
-      if(p->buttons() == Qt::LeftButton )//&& !picked)
 {
-   hitBoxDetect(p->x(), p->y()); 
-   //std::cerr << "presed at (" << p->x() << "," << p->y() << ")\n";
-
-}  
+  if(p->buttons() == Qt::LeftButton )//&& !picked)
+  {
+    hitBoxDetect(p->x(), p->y()); 
+    std::cerr << "presed at (" << p->x() << "," << p->y() << ")\n";
+  }  
 }
 
 
 /* -- puts the piece down when the mouse button is released-- */
 void   ChessBoardQT::mouseReleaseEvent(QMouseEvent *r)
 {
-      if(r->buttons() == Qt::RightButton)// && picked)
-{
-   hitBoxDetect(r->x(), r->y());
-   //std::cerr << "released at (" << r->x() << "," << r->y() << ")\n";
-}  
+  if(r->button() == 1)// && picked)
+  {
+    hitBoxDetect(r->x(), r->y());
+    std::cerr << "released at < " <<  r->button() << " > (" << r->x() << "," << r->y() << ")\n";
+  }  
 }
 
 

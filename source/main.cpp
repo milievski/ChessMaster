@@ -24,6 +24,7 @@ using std::string;
 
 #include <QApplication>
 #include "QTMenu/MainMenuQT.h"
+#include "userInfo.h"
 
 int colorMine = 0;
 
@@ -33,7 +34,6 @@ int colorMine = 0;
 
 int main(int argc, char *argv[])
 {
-       
     // struct termios term;
     // tcgetattr(STDIN_FILENO, &term);
     // term.c_lflag &= ~ICANON;
