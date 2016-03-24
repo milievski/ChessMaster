@@ -3,6 +3,7 @@
 
 #include "../ChessBoard.h"
 #include "../Piece/Piece.h"
+#include "QTDisplayWindow.h"
 #include <string>
 #include <QWidget>
 #include <QtGui>
@@ -75,6 +76,8 @@ private:
 	int DeadBoardWhiteYIndex;
 	int DeadBoardStartX;
 	int sizeBefore;
+
+	QTDisplayWindow *MessageWindow_W;
 };
 
 #endif

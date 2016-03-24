@@ -1,5 +1,6 @@
 #include "ChessBoardQT.h"
 
+
 ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 {
    //QPalette Pal(palette());
@@ -74,6 +75,8 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 
 
 
+
+
 }
 void ChessBoardQT::keyPressEvent(QKeyEvent *e) {
   if(e->key() == Qt::Key_Escape){
@@ -82,6 +85,7 @@ void ChessBoardQT::keyPressEvent(QKeyEvent *e) {
     update();
 
  }
+
 }
 
 void ChessBoardQT::paintEvent(QPaintEvent *PE)
@@ -270,6 +274,8 @@ void ChessBoardQT::mousePressEvent(QMouseEvent *p)
     hitBoxDetect(p->x(), p->y()); 
     std::cerr << "presed at (" << p->x() << "," << p->y() << ")\n";
   }  
+
+
 }
 
 
