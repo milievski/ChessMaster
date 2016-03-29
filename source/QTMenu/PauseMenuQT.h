@@ -10,6 +10,7 @@
 
   class QPushButton;
 class QTableWidget;
+class QFont;
 
 class PauseMenuQT : public QDialog
 {

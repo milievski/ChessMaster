@@ -15,7 +15,10 @@ MainMenuQT::MainMenuQT()
   
 
     //connections for the menus
-  
+   QFont font("League Gothic",22, true );
+  font.setBold(true);
+  font.setItalic(true);
+
 
   //Creating all the buttons that will be created on this screen
   onePlayer = new QPushButton("One Player");
@@ -42,7 +45,16 @@ MainMenuQT::MainMenuQT()
     load->setMaximumHeight(60);
     twoPlayer->setMaximumHeight(60);
     onePlayer->setMaximumHeight(60);
-    // onePlayer 
+    
+    login->setFont(font);
+    replay->setFont(font);
+    onePlayer->setFont(font); 
+    twoPlayer->setFont(font);
+    load->setFont(font);
+    leaderBoard->setFont(font);
+    eexit->setFont(font);
+
+        // onePlayer 
     // twoPlayer
     // load
     // leaderBoard

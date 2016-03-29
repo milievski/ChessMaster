@@ -5,7 +5,11 @@
 #include <iostream>
 PauseMenuQT::PauseMenuQT(QWidget *parent)  
 {
+  QFont font("League Gothic",18, true );
+  font.setBold(true);
+  font.setItalic(true);
 
+  this-> setStyleSheet("background-color:#2d1606");
   this->setWindowFlags(Qt::FramelessWindowHint | Qt::Popup);
 	this->setFixedSize(300,300);
   exitt = new QPushButton("exit");
@@ -22,6 +26,11 @@ PauseMenuQT::PauseMenuQT(QWidget *parent)
     save->setMaximumHeight(30);
     Main->setMaximumHeight(30);
     canncell->setMaximumHeight(30);
+
+  exitt->setFont(font);
+    save->setFont(font);
+    Main->setFont(font);
+    canncell->setFont(font);
 
 	QGridLayout *layout = new QGridLayout;
     layout -> setRowMinimumHeight(0,100);
