@@ -1,25 +1,27 @@
 #include "PauseMenuQT.h"
 #include <QtGui>
 #include <QDialog>
-PauseMenuQT::PauseMenuQT(QWidget *parent) : QDialog(parent)
+
+#include <iostream>
+PauseMenuQT::PauseMenuQT(QWidget *parent)  
 {
 
-	exitt = new QPushButton("exit");
+  this->setWindowFlags(Qt::FramelessWindowHint | Qt::Popup);
+	this->setFixedSize(300,300);
+  exitt = new QPushButton("exit");
 	save  = new QPushButton("save");
 	Main = new QPushButton("Main Menu");
   canncell = new QPushButton("canncell");
 
 
+
 	QGridLayout *layout = new QGridLayout;
-   layout -> addWidget(exitt,0,0,1,1);
-   layout -> addWidget(save,0,1,1,1);
-   layout -> addWidget(Main,0,2,1,1);
-   layout -> addWidget(canncell,0,3,1,1);
+    layout -> setRowMinimumHeight(0,100);
+   layout -> addWidget(exitt,1,0,1,1);
+   layout -> addWidget(save,2,0,1,1);
+   layout -> addWidget(Main,3,0,1,1);
+   layout -> addWidget(canncell,4,0,1,1);
    setLayout(layout);
-
-
-    this->setWindowState(this->windowState() ^ Qt::WindowFullScreen);
-    //this->setWindowOpacity(true);
 
 
    connect(exitt, SIGNAL(clicked()), this, SLOT(closeWinSlot()));
@@ -42,5 +44,18 @@ void PauseMenuQT::mainMenuSlot()
 }
 void PauseMenuQT::canncellSlot()
 {
-  close();
+
+  this->hide();
+  this->close();
+}
+
+void PauseMenuQT::paintEvent(QPaintEvent *PE)
+{
+
+  QImage logo("QTMenu/Art/ChessMasterLogo.png");
+  logo = logo.scaled(300, 100);
+  QPainter paint(this); 
+
+  paint.drawImage(0,0, logo);
+
 }
