@@ -116,7 +116,7 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
    		tempPiece = CBoard->getPiece(x,y);
    		type = tempPiece->getType();
    		colour = tempPiece->getColor();
-     // if(x != pickedy+1 || y != pickedx+1)
+      if(x != pickedy-1 || y != pickedx-1)
    		if(colour == 1)//black
    		{
    			
@@ -274,12 +274,11 @@ void ChessBoardQT::mousePressEvent(QMouseEvent *p)
   if(p->buttons() == Qt::LeftButton )//&& !picked)
   {
     hitBoxDetect(p->x(), p->y()); 
-             pickedDrawx = p->y() - (BoardSize/2);
-         pickedDrawy = p->x() - (BoardSize/2);
+    pickedDrawx = p->y() - (BoardSize/2);
+    pickedDrawy = p->x() - (BoardSize/2);
     std::cerr << "presed at (" << p->x() << "," << p->y() << ")\n";
+    update();
   }  
-
-
 }
 
 
@@ -290,6 +289,10 @@ void   ChessBoardQT::mouseReleaseEvent(QMouseEvent *r)
   {
     hitBoxDetect(r->x(), r->y());
     std::cerr << "released at < " <<  r->button() << " > (" << r->x() << "," << r->y() << ")\n";
+    pickedx = -2;
+    pickedy = -2;
+    picked = false;
+    update();
   }  
 }
 
