@@ -12,10 +12,10 @@ PauseMenuQT::PauseMenuQT(QWidget *parent)
   this-> setStyleSheet("background-color:#2d1606");
   this->setWindowFlags(Qt::FramelessWindowHint | Qt::Popup);
 	this->setFixedSize(300,300);
-  exitt = new QPushButton("exit");
-	save  = new QPushButton("save");
+  exitt = new QPushButton("Exit");
+	save  = new QPushButton("Save");
 	Main = new QPushButton("Main Menu");
-  canncell = new QPushButton("canncell");
+  canncell = new QPushButton("Cancel");
 
   exitt->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
   save->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
