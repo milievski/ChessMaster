@@ -13,7 +13,15 @@ PauseMenuQT::PauseMenuQT(QWidget *parent)
 	Main = new QPushButton("Main Menu");
   canncell = new QPushButton("canncell");
 
+  exitt->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+  save->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+  Main->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+  canncell->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
 
+  exitt->setMaximumHeight(30);
+    save->setMaximumHeight(30);
+    Main->setMaximumHeight(30);
+    canncell->setMaximumHeight(30);
 
 	QGridLayout *layout = new QGridLayout;
     layout -> setRowMinimumHeight(0,100);
