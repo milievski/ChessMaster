@@ -129,8 +129,7 @@ void MainMenuQT::recieveWindow(int &newWin)
     //this->hide();
     case 1:
     {
-      //delete pauseMenu;
-    std::cerr << "HereHHH";
+     
       pauseMenu = new PauseMenuQT(this);
       connect(pauseMenu, SIGNAL(closeWin(int &)), this, SLOT(recieveWindow(int &)));
       pauseMenu->show();
