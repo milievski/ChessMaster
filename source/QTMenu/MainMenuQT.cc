@@ -84,7 +84,7 @@ MainMenuQT::MainMenuQT()
    gridLayout -> addWidget(onePlayer,1,1,1,1);
    
 
-   gridLayout -> addWidget(twoPlayer,2,1,1,1);
+   gridLayout -> addWidget(twoPlayer,5,1,1,1);
    
 
    gridLayout -> addWidget(load,3,1,1,1);
@@ -92,7 +92,7 @@ MainMenuQT::MainMenuQT()
    gridLayout -> addWidget(replay,4,1,1,1);
    
 
-   gridLayout -> addWidget(login,5,1,1,1);
+   gridLayout -> addWidget(login,2,1,1,1);
    
 
    gridLayout -> addWidget(leaderBoard,6,1,1,1);  
@@ -104,7 +104,7 @@ MainMenuQT::MainMenuQT()
    centralWidget->setLayout(gridLayout);
    
 
-
+   chessBoard = 0;
 
 }
 
@@ -123,14 +123,13 @@ void MainMenuQT::OpenLoginMenu(){
   loginMenu->showFullScreen();
 }
 
-
 //TODO what buttons should be handled at the main Menu
 void MainMenuQT::keyPressEvent(QKeyEvent *e) {
     if(e->key() == Qt::Key_Escape){
     	pauseMenu = new PauseMenuQT(this);
     	connect(pauseMenu, SIGNAL(closeWin(int &)), this, SLOT(recieveWindow(int &)));
     	pauseMenu->showFullScreen();
-    	std::cerr << "Here" << std::endl;
+    	
     }
 }
 
@@ -149,8 +148,12 @@ void MainMenuQT::recieveWindow(int &newWin)
     }
     case 2:
     {
+      
+      if (chessBoard!=0){
       chessBoard->close();
-      this->showFullScreen();
+      
+     }
+     this->showFullScreen();
       break;
     }
     case 3:

@@ -237,7 +237,7 @@ for(int i = 0; i < DeadBoard.size(); i++){
                paint.drawImage(DeadBoardStartX+ DeadBoardWhiteXIndex, DeadBoardWhiteYIndex, WhiteSprites[5]);
 
             DeadBoardWhiteXIndex += (BoardSize-30);
-            if (DeadBoardWhiteXIndex/(BoardSize-30) == 10){
+            if (DeadBoardWhiteXIndex/(BoardSize-30) == 8){
                DeadBoardWhiteYIndex += (BoardSize-30);
                DeadBoardWhiteXIndex = 0;
             }

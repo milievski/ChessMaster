@@ -3,6 +3,13 @@
 
 LeaderBoardQT::LeaderBoardQT(QWidget *parent) : QDialog(parent)
 {
+	QFont font("League Gothic",22, true );
+  font.setBold(true);
+  font.setItalic(true);
+  QFont font2("League Gothic",18, true );
+  font2.setBold(false);
+  font2.setItalic(true);
+
 	Database data;
 	vector<Memento*> names;
 	names = data.getTopPlayers();
@@ -17,6 +24,7 @@ LeaderBoardQT::LeaderBoardQT(QWidget *parent) : QDialog(parent)
    gradeTable->setRowCount(SIZE_LEADER);
    gradeTable->setColumnCount(4);
    m_TableHeader<<"PLayer Name"<<"Games Won" <<"Games Lost" << "Elo";
+
    gradeTable->setHorizontalHeaderLabels(m_TableHeader);
    //gradeTable->verticalHeader()->setVisible(fal);
    gradeTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -24,22 +32,27 @@ LeaderBoardQT::LeaderBoardQT(QWidget *parent) : QDialog(parent)
    gradeTable->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
    //gradeTable->setShowGrid(false);
    gradeTable->setStyleSheet("background-color:white");
-
+   gradeTable->setFont(font2);
+   gradeTable->horizontalHeader()->setFont(font2);
 
 	for (unsigned int x = loopProtect; x < SIZE_LEADER;x++)
 	{
 
 		Playerptr->restoreMemento(names[x]);
 		QTableWidgetItem *PlayerName = new QTableWidgetItem;
+		PlayerName->setTextAlignment(Qt::AlignHCenter);
    		PlayerName->setText(QString::fromStdString(Playerptr->getName()));
 		gradeTable->setItem(x,0,PlayerName);
 		QTableWidgetItem *GamesW = new QTableWidgetItem;
+		GamesW->setTextAlignment(Qt::AlignHCenter);
    		GamesW->setText(QString::number(Playerptr->getGamesWon()));		
 		gradeTable->setItem(x,1,GamesW);
 		QTableWidgetItem *GamesL = new QTableWidgetItem;
+		GamesL->setTextAlignment(Qt::AlignHCenter);
    		GamesL->setText(QString::number(Playerptr->getGamesLost()));
 		gradeTable->setItem(x,2,GamesL);
 		QTableWidgetItem *Elo = new QTableWidgetItem;
+		Elo->setTextAlignment(Qt::AlignHCenter);
    		Elo->setText(QString::number(Playerptr->getElo()));
 		gradeTable->setItem(x,3,Elo);
 		
@@ -47,8 +60,17 @@ LeaderBoardQT::LeaderBoardQT(QWidget *parent) : QDialog(parent)
 	}
 
 
-	exitt = new QPushButton("exit");
+	exitt = new QPushButton("Exit");
 	Main = new QPushButton("Main Menu");
+
+	exitt->setMaximumHeight(60);
+    Main->setMaximumHeight(60);
+    
+    exitt->setFont(font);
+    Main->setFont(font);
+
+    exitt->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+    Main->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
 
 	QGridLayout *layout = new QGridLayout;
 	layout-> setRowMinimumHeight(0,300);
@@ -56,6 +78,8 @@ LeaderBoardQT::LeaderBoardQT(QWidget *parent) : QDialog(parent)
    layout -> addWidget(gradeTable,1,1,1,2);
    layout -> addWidget(exitt,2,1,1,1);
    layout -> addWidget(Main,2,2,1,1);
+   layout-> setColumnMinimumWidth(2,600);
+   
    layout-> setColumnMinimumWidth(3,200);
     layout-> setRowMinimumHeight(2,80);
     layout -> addWidget(gradeTable,1,1,1,1);
