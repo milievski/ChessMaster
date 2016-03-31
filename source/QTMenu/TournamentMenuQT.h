@@ -5,17 +5,21 @@
 #include <QtGui>
 #include <QTimer>
 #include <string>
+#include <vector>
 #include <QMouseEvent>
 
 
-  class QPushButton;
-class QTableWidget;
+class QPushButton;
+class QLineEdit;
+class QLabel;
+class QFont;
 
 class TournamentMenuQT : public QDialog
 {
 	Q_OBJECT
 public:
 	TournamentMenuQT(QWidget *parent = 0);
+	void generate(int PlayerNumber);
 signals:
 	
 
@@ -24,6 +28,30 @@ signals:
 
 private:
 	QPushButton *exitt, *save, *Main;
+	QLabel *Player1Label;
+   	QLabel *Player2Label;
+   	QLabel *Player3Label;
+   	QLabel *Player4Label;
+   	QLabel *Player5Label;
+   	QLabel *Player6Label;
+   	QLabel *Player7Label;
+   	QLabel *Player8Label;
+
+	QLineEdit *Player1;
+	QLineEdit *Player2;
+	QLineEdit *Player3;
+	QLineEdit *Player4;
+	QLineEdit *Player5;
+	QLineEdit *Player6;
+	QLineEdit *Player7;
+	QLineEdit *Player8;
+
+	QComboBox *numberPlayer;
+
+	QFont *font;
+	QFont *font2;
+
+	QGridLayout *gridLayout;
 
 private slots:
 	

@@ -34,6 +34,7 @@ public slots:
     void OpenChessBoard();
     void OpenLeaderBoard();
     void OpenLoginMenu();
+    void OpenTournamentMenu();
   private:
 
     QPixmap *backroundButton;
