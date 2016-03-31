@@ -169,6 +169,11 @@ void MainMenuQT::recieveWindow(int &newWin)
       close();
       break;
     }
+        case 5: // login menu
+    {
+      loginMenu->close();
+      this->showFullScreen();
+    }
   }
 
 }
