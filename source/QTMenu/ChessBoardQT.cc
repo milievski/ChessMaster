@@ -1,11 +1,24 @@
 #include "ChessBoardQT.h"
-
+#include "../Definitions.h"
 
 ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 {
    //QPalette Pal(palette());
    //Pal.setColor(QPalette::Background, Qt::black);
    this-> setStyleSheet("background-color:#2d1606");
+
+
+
+   //sets up clocks
+  Timer_c = new QTClock(false, 1000, this);
+  connect(Timer_c, SIGNAL(tick(const int &)), this, SLOT(getTime(const int &)));
+  timeBlack_l = "";
+  timeBlack_l = "";
+
+  timeBlack = 10000;
+  timeWhite = 10000;
+
+
 
    //this->setAutoFillBackground(true);
    //this->setPalette(Pal);
@@ -73,10 +86,6 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
    whiteTimer =  new QImage("QTMenu/Art/BoarderBox.png");
    blackTimer = new QImage("QTMenu/Art/BoarderBox.png");
 
-
-
-
-
 }
 void ChessBoardQT::keyPressEvent(QKeyEvent *e) {
   if(e->key() == Qt::Key_Escape){
@@ -94,8 +103,8 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
 {
    QPainter paint(this); 
    QImage BoardImage("QTMenu/Art/chessBoard.jpg");
-
-
+   QFont font("League Gothic",22, true );
+  paint.setFont(font);
    BoardImage = BoardImage.scaled(screenHeight-100, screenHeight-100, Qt::KeepAspectRatio);
    paint.drawImage(BoardPosX,BoardPosY, BoardImage);
 
@@ -254,7 +263,8 @@ for(int i = 0; i < DeadBoard.size(); i++){
       }
       DeadBoardBlackXIndex = 0;
 
-
+      paint.drawText(950,270, timeWhite_l);
+      paint.drawText(1250,270, timeBlack_l);
    }
 /* -- the piece will follow the mouse currsor when the mouse moves and the button is pressed -- */
    void ChessBoardQT::mouseMoveEvent(QMouseEvent *e) 
@@ -331,14 +341,58 @@ void ChessBoardQT::hitBoxDetect(int x, int y)
       if(boardx > 0 && boardy >0 && boardx < 9 && boardy < 9)
       {
          //std::cout << CBoard->movePiece(pickedy-1, pickedx-1, boardy-1, boardx-1) << std::endl;
-        CBoard->movePiece(pickedy-1, pickedx-1, boardy-1, boardx-1);
+        if(5 == CBoard->movePiece(pickedy-1, pickedx-1, boardy-1, boardx-1))
+        {
+          //update();
+          MessageWindow_W = new QTDisplayWindow("King is in check!!!");
+          MessageWindow_W->show();
+        }
+        //QTDisplayWindow message("King is in check!!!", this);
       }
-      update();
+      
       picked = !picked;
    }
    
    
-
+       // {
+       //  case 0: // invalid move
+       //  case 1: // valid move
+       //  case 2: // stale mate
+       //  case 3: // kind is dead!
+       //  case 5: // in check
+ 
 
 
 }
+
+//helper function for below
+QString IntToString(int changer)
+{
+  QString ret = "", tempS = "";
+  int temp;
+  while(changer != 0)
+  {
+    temp = changer%10;
+    changer /= 10;
+    tempS += (temp + 48);
+  }
+  for(int x = tempS.size()-1; x >= 0; x--)
+    ret += tempS.at(x);
+  return ret;
+}
+
+  void ChessBoardQT::getTime(const int &time)
+  {
+    std::cerr << colorMove;
+    if (colorMove == 0)
+    {
+      timeWhite--;
+      timeWhite_l = IntToString(timeWhite);
+    }
+    else
+    {
+      timeBlack--;
+      timeBlack_l = IntToString(timeBlack);
+    }
+    update();
+  }

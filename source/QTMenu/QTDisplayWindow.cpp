@@ -1,7 +1,7 @@
 #include "QTDisplayWindow.h"
 
 
-QTDisplayWindow::QTDisplayWindow(QString message, QDialog *parent) : QDialog(parent)
+QTDisplayWindow::QTDisplayWindow(QString message) 
 {
 
 	QLabel* message_l = new QLabel(message);

@@ -20,7 +20,7 @@ class QTDisplayWindow : public QDialog
 {
 	Q_OBJECT
 public:
-	QTDisplayWindow(QString	message, QDialog *parent = 0);
+	QTDisplayWindow(QString	message);
 	QTDisplayWindow();
 	~QTDisplayWindow();
 
