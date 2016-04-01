@@ -44,6 +44,7 @@ PauseMenuQT::PauseMenuQT(QWidget *parent)
    connect(exitt, SIGNAL(clicked()), this, SLOT(closeWinSlot()));
    connect(Main, SIGNAL(clicked()), this, SLOT(mainMenuSlot()));
    connect(canncell, SIGNAL(clicked()), this, SLOT(canncellSlot()));
+   connect(save, SIGNAL(clicked()), this, SLOT(saveGameSlot()));
 }
 
 void PauseMenuQT::closeWinSlot()
@@ -66,6 +67,13 @@ void PauseMenuQT::canncellSlot()
   this->close();
 }
 
+void PauseMenuQT::saveGameSlot()
+{
+  saveWin = new getStringWindowQT();
+  connect(saveWin, SIGNAL(returnString()), this, SLOT(sendSaveFlag()));
+  saveWin->show();
+}
+
 void PauseMenuQT::paintEvent(QPaintEvent *PE)
 {
 
@@ -75,4 +83,9 @@ void PauseMenuQT::paintEvent(QPaintEvent *PE)
 
   paint.drawImage(0,0, logo);
 
+}
+
+void PauseMenuQT::sendSaveFlag()
+{
+  emit saveGameSignal();
 }

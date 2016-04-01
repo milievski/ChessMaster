@@ -27,6 +27,10 @@ public:
 private slots:
 	void closeWin();
 
+signals:
+	void SendSaveSignal();
+	
+
 private:
 	QPushButton *ok_b;
 

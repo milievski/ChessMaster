@@ -16,6 +16,8 @@ const string DATABASE_LOCATION = "./database_files/";
 
 extern int colorMove;
 
+extern string saveGameLabel;
+
 #endif
 
 

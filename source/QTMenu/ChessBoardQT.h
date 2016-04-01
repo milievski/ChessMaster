@@ -11,7 +11,9 @@
 #include <string>
 #include <QMouseEvent>
 #include <QImage>
+#include "PauseMenuQT.h"
 #include "QTClock.h"
+#include "../Database.h"
 
   class QPushButton;
 class QTableWidget;
@@ -27,7 +29,9 @@ signals:
 	// opens the pause menu
 	void newWindowFunction(int &win);
 
+
 public slots:
+	void saveGameSlot();
 	void getTime(const int &time);
 
 
@@ -90,6 +94,8 @@ private:
 	QString timeBlack_l, timeWhite_l;
 	QTClock *Timer_c;
 	int timeBlack, timeWhite;
+
+	PauseMenuQT *pauseMenu_m;
 };
 
 #endif

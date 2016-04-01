@@ -99,7 +99,9 @@ ChessBoardQT::ChessBoardQT(ChessBoard *oldGame, QWidget *parent) : QDialog(paren
 
 }
 void ChessBoardQT::keyPressEvent(QKeyEvent *e) {
-  if(e->key() == Qt::Key_Escape){
+  if(e->key() == Qt::Key_Escape)
+  {
+
     int temp = 1;
     this->setFocus();
     emit newWindowFunction(temp);
@@ -412,3 +414,15 @@ QString IntToString(int changer)
     }
     update();
   }
+
+
+void ChessBoardQT::saveGameSlot()
+{
+  std::cerr << "this is where it would save the game, this string is very unique... for debuging =D";
+  Database data;
+  data.saveGame(CBoard->getGameHistory(), saveGameLabel);
+
+
+  //vector<string> ChessBoard::getGameHistory()
+  //void saveGame(vector<string> gameHistory, string gameName);
+}

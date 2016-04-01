@@ -29,7 +29,7 @@ private slots:
 	void closeWin();
 
 signals:
-	void returnString(QString saveLabel);
+	void returnString();
 
 private:
 	QPushButton *ok_b;

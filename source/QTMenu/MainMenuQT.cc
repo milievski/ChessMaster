@@ -136,9 +136,9 @@ void MainMenuQT::OpenloadMenu(){
 //TODO what buttons should be handled at the main Menu
 void MainMenuQT::keyPressEvent(QKeyEvent *e) {
     if(e->key() == Qt::Key_Escape){
-    	pauseMenu = new PauseMenuQT(this);
-    	connect(pauseMenu, SIGNAL(closeWin(int &)), this, SLOT(recieveWindow(int &)));
-    	pauseMenu->showFullScreen();
+    	//pauseMenu = new PauseMenuQT(this);
+    	//connect(pauseMenu, SIGNAL(closeWin(int &)), this, SLOT(recieveWindow(int &)));
+    	//pauseMenu->showFullScreen();
     	
     }
 }
@@ -153,6 +153,8 @@ void MainMenuQT::recieveWindow(int &newWin)
      
       pauseMenu = new PauseMenuQT(this);
       connect(pauseMenu, SIGNAL(closeWin(int &)), this, SLOT(recieveWindow(int &)));
+      if(chessBoard_qt != 0)
+        connect(pauseMenu, SIGNAL(saveGameSignal()), chessBoard_qt, SLOT(saveGameSlot()));
       pauseMenu->show();
       break;
     }

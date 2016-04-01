@@ -6,9 +6,11 @@
 #include <QTimer>
 #include <string>
 #include <QMouseEvent>
+#include "getStringWindowQT.h"
+#include "../Definitions.h"
 
 
-  class QPushButton;
+class QPushButton;
 class QTableWidget;
 class QFont;
 
@@ -20,14 +22,17 @@ public:
 	void paintEvent(QPaintEvent *PE);
 signals:
 	void closeWin(int &i);
+	void saveGameSignal();
 
 //public slot:
 
 
 private:
 	QPushButton *exitt, *save, *Main, *canncell;
-
+	getStringWindowQT *saveWin;
 private slots:
+	void sendSaveFlag();
+	void saveGameSlot();
 	void closeWinSlot();
 	void mainMenuSlot();
 	void canncellSlot();
