@@ -1,5 +1,5 @@
 #include "TournamentMenuQT.h"
-
+#include <iostream>
 TournamentMenuQT::TournamentMenuQT(QWidget *parent )
 {
   font = new QFont("League Gothic",22, true );
@@ -44,17 +44,33 @@ TournamentMenuQT::TournamentMenuQT(QWidget *parent )
   Player7Label -> setFont(*font2); 
   Player8Label = new QLabel("Player 8");
   Player8Label -> setFont(*font2); 
-
+  PlayerNumberLabel = new QLabel("Please select the number of players: ");
+  PlayerNumberLabel-> setFont(*font2); 
   gridLayout = new QGridLayout();
 
- 
+   numberPlayer = new QComboBox;
+   numberPlayer->addItem("2");
+   numberPlayer->addItem("4");
+   numberPlayer->addItem("8");
+   numberPlayer -> setFont(*font2); 
 
+   Generate = new QPushButton("Generate");
+  Generate->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+ 	Generate->setMaximumHeight(30);
+  Generate->setFont(*font2);
+
+   gridLayout = new QGridLayout;
+   gridLayout-> setRowMinimumHeight(0,150);
+   gridLayout-> setColumnMinimumWidth(0,300);
+   gridLayout -> addWidget(PlayerNumberLabel,1,1,1,1);
+
+   gridLayout -> addWidget(numberPlayer,1,2,1,1);
+	gridLayout -> addWidget(Generate,1,3,1,1);
+   gridLayout-> setColumnMinimumWidth(4,300);
+   setLayout(gridLayout);
+   connect(Generate, SIGNAL(clicked()), this, SLOT(generate())); 
 
 }
-void TournamentMenuQT::generate(int PlayerNumber){
-	
-	for (int i = 0; i < PlayerNumber;i++){
-		
-	}
-
+void TournamentMenuQT::generate(){
+	PlayerNumberLabel->hide();
 }

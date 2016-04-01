@@ -23,11 +23,12 @@ public:
 signals:
 	
 
-//public slot:
-
+public slots:
+	void generate();
 
 private:
 	QPushButton *exitt, *save, *Main;
+	QPushButton *Generate;
 	QLabel *Player1Label;
    	QLabel *Player2Label;
    	QLabel *Player3Label;
@@ -36,6 +37,7 @@ private:
    	QLabel *Player6Label;
    	QLabel *Player7Label;
    	QLabel *Player8Label;
+   	QLabel *PlayerNumberLabel;
 
 	QLineEdit *Player1;
 	QLineEdit *Player2;

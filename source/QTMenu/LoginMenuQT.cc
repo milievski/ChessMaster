@@ -34,22 +34,22 @@ LoginMenuQT::LoginMenuQT(QWidget *parent)
    gridLayout-> setRowMinimumHeight(0,250);
    gridLayout-> setColumnMinimumWidth(0,500);
 
-   gridLayout -> addWidget(player1_l,0,0,1,2);
-   gridLayout -> addWidget(player2_l,0,2,1,2);
+   gridLayout -> addWidget(player1_l,1,1,1,2);
+   gridLayout -> addWidget(player2_l,1,2,1,2);
 
-   gridLayout -> addWidget(player1_LE,1,0,1,2);
-   gridLayout -> addWidget(player2_LE,1,2,1,2);
+   gridLayout -> addWidget(player1_LE,2,1,1,2);
+   gridLayout -> addWidget(player2_LE,2,3,1,2);
    
-   gridLayout -> addWidget(loginP1_b,2,0,1,1);
-   gridLayout -> addWidget(logoutP1_b,2,1,1,1);
+   gridLayout -> addWidget(loginP1_b,3,2,1,1);
+   gridLayout -> addWidget(logoutP1_b,3,1,1,1);
 
-   gridLayout -> addWidget(loginP2_b,2,2,1,1);
-   gridLayout -> addWidget(logoutP2_b,2,3,1,1);
+   gridLayout -> addWidget(loginP2_b,3,3,1,1);
+   gridLayout -> addWidget(logoutP2_b,3,4,1,1);
 
-   gridLayout -> addWidget(back_b,3,0,1,4);
+   gridLayout -> addWidget(back_b,4,1,1,4);
    
-   gridLayout-> setColumnMinimumWidth(2,500);
-    gridLayout-> setRowMinimumHeight(8,75);
+   gridLayout-> setColumnMinimumWidth(5,500);
+    gridLayout-> setRowMinimumHeight(5,75);
    setLayout(gridLayout);
    
 }
