@@ -83,8 +83,14 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
   //setting up boarder box for deadboard and timers...
    whiteDeadBoard = new QImage("QTMenu/Art/BoarderBox.png");
    BlackDeadBoard = new QImage("QTMenu/Art/BoarderBox.png");
+   TimeBackground = new QImage("QTMenu/Art/timeBackground.png");
    whiteTimer =  new QImage("QTMenu/Art/BoarderBox.png");
    blackTimer = new QImage("QTMenu/Art/BoarderBox.png");
+   blacksTurn_i = new QImage("QTMenu/Art/blackPlayersTurn.png");
+   whitesTurn_i = new QImage("QTMenu/Art/whitePlayersTurn.png");
+   turnIndicator_i = new QImage("QTMenu/Art/playersTurnSelector.png");
+   chatBox_i = new QImage("QTMenu/Art/textBoxBox.png");
+
 
 }
 void ChessBoardQT::keyPressEvent(QKeyEvent *e) {
@@ -96,7 +102,6 @@ void ChessBoardQT::keyPressEvent(QKeyEvent *e) {
     std::cerr << "ECS\n"; 
 
  }
-
 }
 
 void ChessBoardQT::paintEvent(QPaintEvent *PE)
@@ -107,6 +112,16 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
   paint.setFont(font);
    BoardImage = BoardImage.scaled(screenHeight-100, screenHeight-100, Qt::KeepAspectRatio);
    paint.drawImage(BoardPosX,BoardPosY, BoardImage);
+   paint.drawImage(865,230, *TimeBackground); //placement of the time background
+   paint.drawImage(1470,50, *blacksTurn_i);
+   paint.drawImage(1470,300, *whitesTurn_i);
+   paint.drawImage(865,490, *chatBox_i);
+
+   if(colorMove == 0)
+      paint.drawImage(1470,300, *turnIndicator_i);
+    else
+      paint.drawImage(1470,50, *turnIndicator_i);
+
 
    if(picked)
    {

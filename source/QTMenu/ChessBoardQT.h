@@ -54,6 +54,10 @@ private:
 	QImage *BlackDeadBoard;
 	QImage *whiteTimer;
 	QImage *blackTimer;
+	QImage *TimeBackground;
+	QImage *blacksTurn_i, *whitesTurn_i;
+	QImage *turnIndicator_i;
+	QImage *chatBox_i;
 
 	ChessBoard *CBoard;
 	bool blacksTurn;
