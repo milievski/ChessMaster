@@ -21,7 +21,7 @@ class ChessBoardQT : public QDialog
 {
 	Q_OBJECT
 public:
-	ChessBoardQT(QWidget *parent = 0);
+	ChessBoardQT(ChessBoard *oldGame = 0, QWidget *parent = 0);
 	
 signals:
 	// opens the pause menu

@@ -2,6 +2,8 @@
 #define DEFINITIONS_H
 
 #include <string>
+
+
 using std::string;
 
 const string SAVED_GAMES_LOCATION = "saved_games/";

@@ -1,8 +1,13 @@
 #include "ChessBoardQT.h"
 #include "../Definitions.h"
 
-ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
+ChessBoardQT::ChessBoardQT(ChessBoard *oldGame, QWidget *parent) : QDialog(parent)
 {
+ 
+  if(oldGame == 0)
+    CBoard = new ChessBoard();
+  else
+    CBoard = oldGame;
    //QPalette Pal(palette());
    //Pal.setColor(QPalette::Background, Qt::black);
    this-> setStyleSheet("background-color:#2d1606");
@@ -73,7 +78,7 @@ ChessBoardQT::ChessBoardQT(QWidget *parent) : QDialog(parent)
 
 	BoardPosX = 50;
 	BoardPosY = 50;
-	CBoard = new ChessBoard();
+	
 
    DeadBoardBlackXIndex = 0;
    DeadBoardWhiteXIndex = 0;

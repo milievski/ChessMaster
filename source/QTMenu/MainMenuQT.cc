@@ -104,14 +104,14 @@ MainMenuQT::MainMenuQT()
    centralWidget->setLayout(gridLayout);
    
 
-   chessBoard = 0;
+   chessBoard_qt = 0;
 
 }
 
 void MainMenuQT::OpenChessBoard(){
-  chessBoard = new ChessBoardQT(this); 
-  connect(chessBoard, SIGNAL(newWindowFunction(int &)), this ,SLOT(recieveWindow(int &)));
-  chessBoard->showFullScreen();
+  chessBoard_qt = new ChessBoardQT(0,this); 
+  connect(chessBoard_qt, SIGNAL(newWindowFunction(int &)), this ,SLOT(recieveWindow(int &)));
+  chessBoard_qt->showFullScreen();
 }
 
 void MainMenuQT::OpenLeaderBoard(){
@@ -159,8 +159,8 @@ void MainMenuQT::recieveWindow(int &newWin)
     case 2:
     {
       
-      if (chessBoard!=0){
-      chessBoard->close();
+      if (chessBoard_qt!=0){
+      chessBoard_qt->close();
       
      }
      this->showFullScreen();
@@ -185,6 +185,20 @@ void MainMenuQT::recieveWindow(int &newWin)
     {
       leaderBoardMenu->close();
       this->showFullScreen();
+    }
+    case 7: // login menu
+    {
+      loadMenu->close();
+      this->showFullScreen();
+    }
+    case 10: // load old game
+    {
+      //get the board
+      ChessBoard *oldGame = loadMenu->getBoard();
+      loadMenu->close();
+      chessBoard_qt = new ChessBoardQT(oldGame,this); 
+      connect(chessBoard_qt, SIGNAL(newWindowFunction(int &)), this ,SLOT(recieveWindow(int &)));
+      chessBoard_qt->showFullScreen();
     }
   }
 

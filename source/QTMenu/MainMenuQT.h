@@ -11,6 +11,7 @@
 #include "EndMenuQT.h"
 #include "ChessBoardQT.h"
 #include "loadMenuQT.h"
+#include "../ChessBoard.h"
 
 class KeyEvent;
 class QPushButton;
@@ -47,7 +48,7 @@ public slots:
     LeaderBoardQT *leaderBoardMenu;
     LoginMenuQT *loginMenu;
     TournamentMenuQT *tournamentMenu;
-    ChessBoardQT *chessBoard;
+    ChessBoardQT *chessBoard_qt;
     loadMenuQT *loadMenu;
 
      
