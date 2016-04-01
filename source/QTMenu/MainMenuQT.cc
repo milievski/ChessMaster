@@ -116,6 +116,7 @@ void MainMenuQT::OpenChessBoard(){
 
 void MainMenuQT::OpenLeaderBoard(){
   leaderBoardMenu = new LeaderBoardQT(this);
+  connect(leaderBoardMenu, SIGNAL(newWindowFunction(int &)), this, SLOT(recieveWindow( int &)));
   leaderBoardMenu->showFullScreen();
 }
 void MainMenuQT::OpenLoginMenu(){
@@ -162,16 +163,22 @@ void MainMenuQT::recieveWindow(int &newWin)
     }
     case 3:
     {
-
+      close();
+      break;
     }
     case 4:
     {
       close();
       break;
     }
-        case 5: // login menu
+    case 5: // login menu
     {
       loginMenu->close();
+      this->showFullScreen();
+    }
+    case 6: // login menu
+    {
+      leaderBoardMenu->close();
       this->showFullScreen();
     }
   }

@@ -82,7 +82,7 @@ private:
 	int sizeBefore;
 
 	QTDisplayWindow *MessageWindow_W;
-
+	
 	QString timeBlack_l, timeWhite_l;
 	QTClock *Timer_c;
 	int timeBlack, timeWhite;

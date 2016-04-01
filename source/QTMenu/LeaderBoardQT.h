@@ -29,9 +29,13 @@ class LeaderBoardQT : public QDialog
 public:
 	LeaderBoardQT(QWidget *parent = 0);
 signals:
+	void newWindowFunction(int &i);
 
 
-//public slot:
+public slots:
+void mainMenu();
+void CloseWin();
+
 protected:
 	void paintEvent(QPaintEvent *PE);
 

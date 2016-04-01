@@ -353,15 +353,11 @@ void ChessBoardQT::hitBoxDetect(int x, int y)
       picked = !picked;
    }
    
-   
-       // {
        //  case 0: // invalid move
        //  case 1: // valid move
        //  case 2: // stale mate
        //  case 3: // kind is dead!
        //  case 5: // in check
- 
-
 
 }
 

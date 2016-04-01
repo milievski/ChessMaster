@@ -61,7 +61,9 @@ LeaderBoardQT::LeaderBoardQT(QWidget *parent) : QDialog(parent)
 
 
 	exitt = new QPushButton("Exit");
+  connect(exitt, SIGNAL(clicked()), this, SLOT(CloseWin()));
 	Main = new QPushButton("Main Menu");
+  connect(Main, SIGNAL(clicked()), this, SLOT(mainMenu()));
 
 	exitt->setMaximumHeight(60);
     Main->setMaximumHeight(60);
@@ -96,4 +98,16 @@ void LeaderBoardQT::paintEvent(QPaintEvent *PE)
   QPainter paint(this); 
   paint.drawImage(375,100, logo);
 
+}
+
+void LeaderBoardQT::CloseWin()
+{
+  int temp = 3;
+  emit newWindowFunction(temp);
+}
+
+void LeaderBoardQT::mainMenu()
+{
+  int temp = 6;
+  emit newWindowFunction(temp);
 }
