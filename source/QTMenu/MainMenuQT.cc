@@ -70,7 +70,7 @@ MainMenuQT::MainMenuQT()
    //Creating the connections for the buttons
     connect(onePlayer, SIGNAL(clicked()), this, SLOT(OpenChessBoard())); 
     connect(twoPlayer, SIGNAL(clicked()), this, SLOT(OpenTournamentMenu())); 
-    //connect(load, SIGNAL(clicked()), this, SLOT(OpenWindow(endMenu))); 
+    connect(load, SIGNAL(clicked()), this, SLOT(OpenloadMenu())); 
     connect(login, SIGNAL(clicked()), this, SLOT(OpenLoginMenu())); 
     connect(leaderBoard, SIGNAL(clicked()), this, SLOT(OpenLeaderBoard())); 
     connect(eexit, SIGNAL(clicked()), this, SLOT(close())); 
@@ -126,6 +126,11 @@ void MainMenuQT::OpenLoginMenu(){
 void MainMenuQT::OpenTournamentMenu(){
   tournamentMenu = new TournamentMenuQT(this);
   tournamentMenu->showFullScreen();
+}
+void MainMenuQT::OpenloadMenu(){
+  loadMenu = new loadMenuQT(this);
+  connect(loadMenu, SIGNAL(newWindowFunction(int &)), this, SLOT(recieveWindow( int &)));
+  loadMenu->showFullScreen();
 }
 
 //TODO what buttons should be handled at the main Menu

@@ -10,6 +10,7 @@
 #include "LeaderBoardQT.h"
 #include "EndMenuQT.h"
 #include "ChessBoardQT.h"
+#include "loadMenuQT.h"
 
 class KeyEvent;
 class QPushButton;
@@ -35,6 +36,7 @@ public slots:
     void OpenLeaderBoard();
     void OpenLoginMenu();
     void OpenTournamentMenu();
+    void OpenloadMenu();
   private:
 
     QPixmap *backroundButton;
@@ -46,6 +48,7 @@ public slots:
     LoginMenuQT *loginMenu;
     TournamentMenuQT *tournamentMenu;
     ChessBoardQT *chessBoard;
+    loadMenuQT *loadMenu;
 
      
 };
