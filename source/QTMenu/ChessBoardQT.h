@@ -45,6 +45,7 @@ private slots:
 	void keyPressEvent(QKeyEvent *e);
 
 private:
+	QString IntToString(int min, int sec);
 	void hitBoxDetect(int x, int y);
 
 	QPushButton *exitt, *save, *Main;
@@ -93,7 +94,9 @@ private:
 	
 	QString timeBlack_l, timeWhite_l;
 	QTClock *Timer_c;
-	int timeBlack, timeWhite;
+	int timeBlackm, timeWhitem;
+	int timeBlacks, timeWhites;
+	bool initTime;
 
 	PauseMenuQT *pauseMenu_m;
 };
