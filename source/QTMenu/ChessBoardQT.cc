@@ -10,7 +10,7 @@ ChessBoardQT::ChessBoardQT(ChessBoard *oldGame, QWidget *parent) : QDialog(paren
     CBoard = oldGame;
    //QPalette Pal(palette());
    //Pal.setColor(QPalette::Background, Qt::black);
-   this-> setStyleSheet("background-color:#2d1606");
+   this-> setStyleSheet("background-color:#2C1913");
 
 
 

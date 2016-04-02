@@ -29,7 +29,8 @@ MainMenuQT::MainMenuQT()
   leaderBoard = new QPushButton("Leader Board");
   eexit = new QPushButton("Exit"); 
 
-  setStyleSheet("border-image:url(QTMenu/Art/backgroundPic.png);");
+  
+  //setStyleSheet("border-image:url(QTMenu/Art/backgroundPic.png);");
   //button set up
     onePlayer->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
     twoPlayer->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
