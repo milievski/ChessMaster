@@ -18,6 +18,10 @@ extern int colorMove;
 
 extern string saveGameLabel;
 
+extern string RegisteredPlayer1;
+
+extern string RegisteredPlayer2;
+
 #endif
 
 

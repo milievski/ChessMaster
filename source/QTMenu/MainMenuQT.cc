@@ -29,7 +29,7 @@ MainMenuQT::MainMenuQT()
   leaderBoard = new QPushButton("Leader Board");
   eexit = new QPushButton("Exit"); 
 
-
+  setStyleSheet("border-image:url(QTMenu/Art/backgroundPic.png);");
   //button set up
     onePlayer->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
     twoPlayer->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
@@ -121,6 +121,7 @@ void MainMenuQT::OpenLeaderBoard(){
 }
 void MainMenuQT::OpenLoginMenu(){
   loginMenu = new LoginMenuQT(this);
+  connect(loginMenu, SIGNAL(newWindowFunction(int &)), this , SLOT(recieveWindow(int &)));
   loginMenu->showFullScreen();
 }
 void MainMenuQT::OpenTournamentMenu(){
@@ -182,16 +183,19 @@ void MainMenuQT::recieveWindow(int &newWin)
     {
       loginMenu->close();
       this->showFullScreen();
+      break;
     }
     case 6: // login menu
     {
       leaderBoardMenu->close();
       this->showFullScreen();
+      break;
     }
     case 7: // login menu
     {
       loadMenu->close();
       this->showFullScreen();
+      break;
     }
     case 10: // load old game
     {
@@ -201,6 +205,7 @@ void MainMenuQT::recieveWindow(int &newWin)
       chessBoard_qt = new ChessBoardQT(oldGame,this); 
       connect(chessBoard_qt, SIGNAL(newWindowFunction(int &)), this ,SLOT(recieveWindow(int &)));
       chessBoard_qt->showFullScreen();
+      break;
     }
   }
 

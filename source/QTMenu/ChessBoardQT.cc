@@ -95,7 +95,7 @@ ChessBoardQT::ChessBoardQT(ChessBoard *oldGame, QWidget *parent) : QDialog(paren
    whitesTurn_i = new QImage("QTMenu/Art/whitePlayersTurn.png");
    turnIndicator_i = new QImage("QTMenu/Art/playersTurnSelector.png");
    chatBox_i = new QImage("QTMenu/Art/textBoxBox.png");
-
+this-> setStyleSheet("background-color:#2d1606");
 
 }
 void ChessBoardQT::keyPressEvent(QKeyEvent *e) {
