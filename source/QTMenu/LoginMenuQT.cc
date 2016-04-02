@@ -2,11 +2,21 @@
 
 LoginMenuQT::LoginMenuQT(QWidget *parent)
 {
+   QFont font("League Gothic",22, true );
+   font.setBold(true);
+   font.setItalic(true);
+
    loginP1_b = new QPushButton("Login Player 1");
    loginP2_b = new QPushButton("Login Player 2");
+
+   loginP1_b->setFont(font);
+   loginP2_b->setFont(font);
    logoutP1_b = new QPushButton("Logout Player 1");
    logoutP2_b = new QPushButton("Logout Player 2");
-   back_b = new QPushButton("back");
+   logoutP1_b->setFont(font);
+   logoutP2_b->setFont(font);
+   back_b = new QPushButton("Main Menu");
+   back_b->setFont(font);
    player1_LE = new QLineEdit();
    player2_LE = new QLineEdit();
 
@@ -32,7 +42,7 @@ LoginMenuQT::LoginMenuQT(QWidget *parent)
 
    QGridLayout *gridLayout = new QGridLayout;
    gridLayout-> setRowMinimumHeight(0,250);
-   gridLayout-> setColumnMinimumWidth(0,500);
+   gridLayout-> setColumnMinimumWidth(0,250);
 
    gridLayout -> addWidget(player1_l,1,1,1,2);
    gridLayout -> addWidget(player2_l,1,2,1,2);
@@ -48,8 +58,8 @@ LoginMenuQT::LoginMenuQT(QWidget *parent)
 
    gridLayout -> addWidget(back_b,4,1,1,4);
    
-   gridLayout-> setColumnMinimumWidth(5,500);
-    gridLayout-> setRowMinimumHeight(5,75);
+   gridLayout-> setColumnMinimumWidth(5,250);
+    gridLayout-> setRowMinimumHeight(5,300);
    setLayout(gridLayout);
    
 }
