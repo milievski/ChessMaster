@@ -15,11 +15,13 @@ ChessBoardQT::ChessBoardQT(ChessBoard *oldGame, QWidget *parent) : QDialog(paren
 
 
    //sets up clocks
+   initTime = true;
   Timer_c = new QTClock(false, 1000, this);
   connect(Timer_c, SIGNAL(tick(const int &)), this, SLOT(getTime(const int &)));
   timeBlack_l = "";
   timeBlack_l = "";
 
+ 
   timeBlacks = 0;
   timeWhites = 0;
 
@@ -402,7 +404,14 @@ QString ChessBoardQT::IntToString(int min, int sec)
 
   void ChessBoardQT::getTime(const int &time)
   {
-     
+    if (initTime){
+      initTime = false;
+      timeWhite_l = IntToString(timeWhitem,timeWhites);
+      timeBlack_l = IntToString(timeBlackm,timeBlacks);
+      update();
+      return;
+    }
+
     if (colorMove%2 == 0)
     {
       if (timeWhites == 0){

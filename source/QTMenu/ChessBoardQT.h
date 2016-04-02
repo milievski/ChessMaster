@@ -96,6 +96,7 @@ private:
 	QTClock *Timer_c;
 	int timeBlackm, timeWhitem;
 	int timeBlacks, timeWhites;
+	bool initTime;
 
 	PauseMenuQT *pauseMenu_m;
 };
