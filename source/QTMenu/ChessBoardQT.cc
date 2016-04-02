@@ -20,9 +20,11 @@ ChessBoardQT::ChessBoardQT(ChessBoard *oldGame, QWidget *parent) : QDialog(paren
   timeBlack_l = "";
   timeBlack_l = "";
 
-  timeBlack = 10000;
-  timeWhite = 10000;
+  timeBlacks = 0;
+  timeWhites = 0;
 
+  timeBlackm = 30;
+  timeWhitem = 30;
 
 
    //this->setAutoFillBackground(true);
@@ -115,7 +117,8 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
 {
    QPainter paint(this); 
    QImage BoardImage("QTMenu/Art/chessBoard.jpg");
-   QFont font("League Gothic",22, true );
+   QFont font("League Gothic",28, true );
+     font.setBold(true);
   paint.setFont(font);
    BoardImage = BoardImage.scaled(screenHeight-100, screenHeight-100, Qt::KeepAspectRatio);
    paint.drawImage(BoardPosX,BoardPosY, BoardImage);
@@ -124,7 +127,7 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
    paint.drawImage(1470,300, *whitesTurn_i);
    paint.drawImage(865,490, *chatBox_i);
 
-   if(colorMove == 0)
+   if(colorMove%2 == 0)
       paint.drawImage(1470,300, *turnIndicator_i);
     else
       paint.drawImage(1470,50, *turnIndicator_i);
@@ -285,8 +288,8 @@ for(int i = 0; i < DeadBoard.size(); i++){
       }
       DeadBoardBlackXIndex = 0;
 
-      paint.drawText(950,270, timeWhite_l);
-      paint.drawText(1250,270, timeBlack_l);
+      paint.drawText(950,280, timeWhite_l);
+      paint.drawText(1250,280, timeBlack_l);
    }
 /* -- the piece will follow the mouse currsor when the mouse moves and the button is pressed -- */
    void ChessBoardQT::mouseMoveEvent(QMouseEvent *e) 
@@ -295,7 +298,6 @@ for(int i = 0; i < DeadBoard.size(); i++){
       {
          pickedDrawx = e->y() - (BoardSize/2);
          pickedDrawy = e->x() - (BoardSize/2);
-         //std::cerr << "moved at (" << e->x() << "," << e->y() << ")\n";
          update();
       }  
    }
@@ -384,35 +386,55 @@ void ChessBoardQT::hitBoxDetect(int x, int y)
 }
 
 //helper function for below
-QString IntToString(int changer)
+QString ChessBoardQT::IntToString(int min, int sec)
 {
-  QString ret = "", tempS = "";
-  int temp;
-  while(changer != 0)
-  {
-    temp = changer%10;
-    changer /= 10;
-    tempS += (temp + 48);
+   QString ret = "";
+
+  if (min / 10 != 0){
+    ret+= (min/10)+48;
   }
-  for(int x = tempS.size()-1; x >= 0; x--)
-    ret += tempS.at(x);
+  ret+=(min%10)+48;
+  ret+=":";
+  ret+=(sec/10)+48;
+  ret+=(sec%10)+48;
   return ret;
 }
 
   void ChessBoardQT::getTime(const int &time)
   {
-    std::cerr << colorMove;
-    if (colorMove == 0)
+     
+    if (colorMove%2 == 0)
     {
-      timeWhite--;
-      timeWhite_l = IntToString(timeWhite);
+      if (timeWhites == 0){
+        timeWhitem--;
+        timeWhites = 59;
+        if (timeWhitem == -1)
+          {//TODO End game here
+          }
+
+      }
+      else{
+        timeWhites--;
+      }
+      timeWhite_l = IntToString(timeWhitem,timeWhites);
     }
     else
     {
-      timeBlack--;
-      timeBlack_l = IntToString(timeBlack);
+      if (timeBlacks == 0){
+        timeBlackm--;
+        timeBlacks = 59;
+        if (timeBlackm == -1)
+          {//TODO End game here
+          }
+
+      }
+      else{
+        timeBlacks--;
+      }
+      timeBlack_l = IntToString(timeBlackm,timeBlacks);
     }
     update();
+  
   }
 
 
