@@ -15,14 +15,14 @@
 class QPushButton;
 class QTableWidget;
 class QPixmap;
+class QLabel;
 
 class QTDisplayWindow : public QDialog
 {
 	Q_OBJECT
 public:
 	QTDisplayWindow(QString	message);
-	QTDisplayWindow();
-	~QTDisplayWindow();
+
 
 private slots:
 	void closeWin();
@@ -33,5 +33,6 @@ signals:
 
 private:
 	QPushButton *ok_b;
-
+	QLabel *message_l;
+	int seconds;
 };

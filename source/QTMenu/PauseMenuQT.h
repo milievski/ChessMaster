@@ -19,6 +19,7 @@ class PauseMenuQT : public QDialog
 	Q_OBJECT
 public:
 	PauseMenuQT(QWidget *parent = 0);
+	
 	void paintEvent(QPaintEvent *PE);
 signals:
 	void closeWin(int &i);
