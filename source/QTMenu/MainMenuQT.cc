@@ -198,6 +198,11 @@ void MainMenuQT::recieveWindow(int &newWin)
       this->showFullScreen();
       break;
     }
+    case 8: // end game
+    {
+      
+      break;
+    }
     case 10: // load old game
     {
       //get the board

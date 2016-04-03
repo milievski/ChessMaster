@@ -20,6 +20,12 @@ LoginMenuQT::LoginMenuQT(QWidget *parent)
    player1_LE = new QLineEdit();
    player2_LE = new QLineEdit();
 
+   connect(loginP1_b, SIGNAL(clicked()), this, SLOT(loginPlayr1()));
+   connect(loginP2_b, SIGNAL(clicked()), this, SLOT(loginPlayr2()));
+   connect(logoutP1_b, SIGNAL(clicked()), this, SLOT(logoutPlayr1()));
+   connect(logoutP2_b, SIGNAL(clicked()), this, SLOT(logoutPlayr2()));
+
+
    player1_l = new QLabel("player1");
    player2_l = new QLabel("player2");
    player1_l -> setMaximumHeight(60);
@@ -61,6 +67,8 @@ LoginMenuQT::LoginMenuQT(QWidget *parent)
    gridLayout-> setColumnMinimumWidth(5,250);
     gridLayout-> setRowMinimumHeight(5,300);
    setLayout(gridLayout);
+
+
    
 }
 
@@ -87,7 +95,7 @@ void LoginMenuQT::loadCreatePlayer(const QString &name, RegisteredPlayer* &p)
 
 void LoginMenuQT::loginPlayr1() // slot
 {
-   // login player 1
+   RegisteredPlayer1 = player1_LE->text().toStdString();
 }
 
 void LoginMenuQT::loginPlayr2() // slot
