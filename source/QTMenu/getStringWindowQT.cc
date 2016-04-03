@@ -43,7 +43,7 @@ getStringWindowQT::~getStringWindowQT()
 void getStringWindowQT::closeWin()
 {
 	saveGameLabel = saveLine_le->text().toStdString();
-	std::cerr << "new save game label = " << saveGameLabel << "\n";
+	////std::cout << "new save game label = " << saveGameLabel << "\n";
 	emit returnString();
 	
 	close();

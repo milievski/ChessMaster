@@ -110,7 +110,7 @@ void ChessBoardQT::keyPressEvent(QKeyEvent *e) {
     this->setFocus();
     emit newWindowFunction(temp);
     update();
-    std::cerr << "ECS\n"; 
+    ////std::cout << "ECS\n"; 
 
   }
 }
@@ -312,7 +312,7 @@ void ChessBoardQT::paintEvent(QPaintEvent *PE)
   hitBoxDetect(p->x(), p->y()); 
   pickedDrawx = p->y() - (BoardSize/2);
   pickedDrawy = p->x() - (BoardSize/2);
-  std::cerr << "presed at (" << p->x() << "," << p->y() << ")\n";
+  ////std::cout << "presed at (" << p->x() << "," << p->y() << ")\n";
   update();
 }  
 }
@@ -324,7 +324,7 @@ void   ChessBoardQT::mouseReleaseEvent(QMouseEvent *r)
   if(r->button() == 1)// && picked)
 {
   hitBoxDetect(r->x(), r->y());
-  std::cerr << "released at < " <<  r->button() << " > (" << r->x() << "," << r->y() << ")\n";
+  ////std::cout << "released at < " <<  r->button() << " > (" << r->x() << "," << r->y() << ")\n";
   pickedx = -2;
   pickedy = -2;
   picked = false;
@@ -333,6 +333,25 @@ void   ChessBoardQT::mouseReleaseEvent(QMouseEvent *r)
 }
 
 
+void ChessBoardQT::loadCreatePlayer(const string &name, RegisteredPlayer* &p)
+{
+
+   Database data;
+   //DOES PLAYEREXIST IS ALWAYS RETURNING TRUE, KILLS FUNCTIONALITY HERE
+   if(data.doesPlayerExist(name))
+   {
+     
+      p->restoreMemento(data.loadPlayer(name));
+   }
+   else
+   {
+      //SAVED PLAYERS IS NOT CREATING ANY FILES EITHER
+      p = new RegisteredPlayer(name);    
+      // data.savePlayer(p->generateMemento(), name);
+      // p->restoreMemento(data.loadPlayer(name));
+   }
+   
+}
 
 void ChessBoardQT::hitBoxDetect(int x, int y)
 {
@@ -349,7 +368,7 @@ void ChessBoardQT::hitBoxDetect(int x, int y)
     picked = false;
     if(boardx > 0 && boardy >0 && boardx < 9 && boardy < 9)
     {
-         //std::cerr << "\n\n\n" << CBoard->getPiece(boardy-1,boardx-1)->getType();
+         //////std::cout << "\n\n\n" << CBoard->getPiece(boardy-1,boardx-1)->getType();
      if("Empty" != CBoard->getPiece(boardy-1,boardx-1)->getType())
      {
       pickedx = boardx;
@@ -377,8 +396,12 @@ else
     {
           //add to stats
       Database data;
-      RegisteredPlayer* p1 = new RegisteredPlayer(RegisteredPlayer1);
-      RegisteredPlayer* p2 = new RegisteredPlayer(RegisteredPlayer2);
+      RegisteredPlayer* p1;
+      RegisteredPlayer* p2;
+      loadCreatePlayer(RegisteredPlayer1, p1);
+      loadCreatePlayer(RegisteredPlayer2, p2);
+
+
 
       if(colorMove%2 == 0 )
       {
@@ -412,7 +435,7 @@ else
     }
 
     
-    int temp = 1;
+    int temp = 8;
     emit newWindowFunction(temp);
     close();
 
@@ -495,7 +518,7 @@ void ChessBoardQT::getTime(const int &time)
 
     void ChessBoardQT::saveGameSlot()
     {
-      std::cerr << "this is where it would save the game, this string is very unique... for debuging =D";
+      ////std::cout << "this is where it would save the game, this string is very unique... for debuging =D";
       Database data;
       data.saveGame(CBoard->getGameHistory(), saveGameLabel);
 

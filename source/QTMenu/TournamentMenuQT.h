@@ -1,3 +1,10 @@
+/*
+	Authors: Michael Wilson, Marko Ilievski
+	class: Human Computer Interaction
+	file: 
+	prof: Wendy Osborn
+*/
+
 #ifndef TOURNAMENTMENUQT_H
 #define TOURNAMENTMENUQT_H
 
@@ -18,12 +25,24 @@ class TournamentMenuQT : public QDialog
 {
 	Q_OBJECT
 public:
+	/*
+		TournamentMenuQT(QWidget *parent = 0);
+		constructs the windows buttons and style sheets
+	*/
 	TournamentMenuQT(QWidget *parent = 0);
+	/*
+		void generate(int PlayerNumber);
+		
+	*/
 	void generate(int PlayerNumber);
 signals:
 	
 
 public slots:
+	/*
+		void generate();
+
+	*/
 	void generate();
 
 private:

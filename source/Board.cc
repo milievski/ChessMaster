@@ -113,7 +113,7 @@ void Board::MoveHistory(int cur1, int cur2, int des1, int des2, bool onOrOff)
          }
          
          history.pop_back();
-         std::cerr << "";
+         //std::cout << "";
    }
 }
 

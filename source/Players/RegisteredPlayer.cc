@@ -72,6 +72,7 @@ void RegisteredPlayer::restoreMemento(Memento* memento)
 {
 
 //restore player variables from parameter memento variables   
+  
 elo = (*memento).eloState;
 gamesWon = (*memento).gamesWonState;
 gamesLost = (*memento).gamesLostState;

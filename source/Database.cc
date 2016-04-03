@@ -367,8 +367,11 @@ using std::ios;
 	{
 
 	//restore memento object from file and return pointer
-	 Memento *a = new Memento(1, 1, 1, 1, "test");
+		
+	 Memento *a;
+
 	 a->readMemento(playerName);
+	 //std::cout << "askljdfhlakjshdflkjahslkdjhflkajshdlkfjhaslkjdfhlkajshdlkjfhalkjsdhflkjahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh";
 	 return a;
 
 	}

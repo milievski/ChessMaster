@@ -24,9 +24,9 @@ QTClock::QTClock(bool timeTracker, int miliseconds, QWidget *parent): QWidget(pa
 }
 QTClock::~QTClock()
 {
-	std::cerr << "QTClock.h : deleted timer"<< std::endl;
+	////std::cout << "QTClock.h : deleted timer"<< std::endl;
 	delete timer;
-	std::cerr << "QTClock.h : deleted timer - success "<< std::endl;
+	////std::cout << "QTClock.h : deleted timer - success "<< std::endl;
 }
 void QTClock::ClockLoop()
 {

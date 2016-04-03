@@ -155,7 +155,7 @@ void loadMenuQT::getDoubleClicked(int x, int y)
   QTableWidgetItem *temp = gradeTable->item(x,y);
   QString ret = temp->text();
   Replayer(ret);
-  std::cerr << x << " , " << y << " = " << ret.toStdString() << std::endl;
+  ////std::cout << x << " , " << y << " = " << ret.toStdString() << std::endl;
   int temper = 10;
   emit newWindowFunction(temper);
 }

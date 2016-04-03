@@ -9,9 +9,9 @@ MainMenuQT::MainMenuQT()
   //Creating all the used widgets
   
   //Help
-  endMenu = new EndMenuQT(this);
-  loginMenu = new LoginMenuQT(this);
-  tournamentMenu = new TournamentMenuQT(this);
+  // endMenu = new EndMenuQT(this);
+  // loginMenu = new LoginMenuQT(this);
+  // tournamentMenu = new TournamentMenuQT(this);
   
 
     //connections for the menus
@@ -175,7 +175,7 @@ void MainMenuQT::recieveWindow(int &newWin)
       close();
       break;
     }
-    case 4:
+    case 4:// 4 closes the program
     {
       close();
       break;
@@ -200,8 +200,15 @@ void MainMenuQT::recieveWindow(int &newWin)
     }
     case 8: // end game
     {
-      
+      endMenu = new EndMenuQT(this);
+      connect(endMenu, SIGNAL(recieveWindow(int &)), this, SLOT(recieveWindow(int &)));
+      endMenu->showFullScreen();
       break;
+    }
+    case 9: // open leaderBoard from end menu
+    {
+        OpenLeaderBoard();
+        break;
     }
     case 10: // load old game
     {

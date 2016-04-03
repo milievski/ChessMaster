@@ -102,13 +102,13 @@ using std::ios;
 
   playerFile.open(fileLoc);
 
-  //file error check  
+  // //file error check  
   if(!(playerFile.is_open())) 
   {
     throw database_load_error("memento failed to load");
   }
 
-
+  
  //read attributes from file  
  playerFile >> eloState;
  playerFile >> gamesWonState;

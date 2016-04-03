@@ -1,9 +1,10 @@
 /*
-	- Michael Wilson
-	- QTClock.h
-	- AI 
-	- prof: Yllias Chali
+	Authors: Michael Wilson, Marko Ilievski
+	class: Human Computer Interaction
+	file: 
+	prof: Wendy Osborn
 */
+	
 #pragma once
 #include <string>
 #include <QWidget>
@@ -20,24 +21,50 @@ class QTClock: public QWidget
 {
 	Q_OBJECT// makes this item a QOBJECT
 public:
-	//constructor that starts the timer
+
+	/*
+		QTClock(bool timeTracker = false, int miliseconds = 1000, QWidget *parent = 0);
+		constructor that sets up the clock
+		timetracker determines if the time should be tracked
+		miliseconds is the refresh rate on the clock
+	*/
 	QTClock(bool timeTracker = false, int miliseconds = 1000, QWidget *parent = 0);
-	//destructor
+	/*
+		~QTClock();
+		destructor
+	*/
 	~QTClock();
 	public slots:
-	// slot the starts a single loop of 1 second
+	/*
+		void SingleClockLoop();
+		connects the clock to a slot so we can loop the timer
+	*/
 	void SingleClockLoop();
-	// sends the info by emitting tick
+	/*
+		void singleSendInfo();
+		this emits the clock info to the window that is connected to it
+
+	*/
 	void singleSendInfo();
-	//reset will reset the clock
+	/*
+		void reset();
+		resets the timer tracker "count" (how long the clock has been on for)
+	*/
 	void reset();
 
 	private slots:
-	//ClockLoop is a slot to emit tick to the program
+	/*
+		void ClockLoop();
+		connected to the timer and creates a loop
+	*/
 	void ClockLoop();
 
 	signals:
-	// tick is a signal that gets sent every milisecond that is specified in the constructor
+	/*
+		void tick(const int &info);
+		tick is the signal that gets emitted with the "count" (how many seconds has past since the timer started)
+
+	*/
 	void tick(const int &info);
 
 private:

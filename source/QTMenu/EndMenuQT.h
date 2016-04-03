@@ -1,3 +1,10 @@
+/*
+	Authors: Michael Wilson, Marko Ilievski
+	class: Human Computer Interaction
+	file: 
+	prof: Wendy Osborn
+*/
+
 #ifndef ENDMENUQT_H
 #define ENDMENUQT_H
 
@@ -15,18 +22,47 @@ class EndMenuQT : public QDialog
 {
 	Q_OBJECT
 public:
+	/*
+		EndMenuQT(QWidget *parent = 0);
+		constructor for endmenu, sets up all buttons and style sheets
+	*/
 	EndMenuQT(QWidget *parent = 0);
 signals:
+  	/*
+		void recieveWindow(int &newWin);
+		signal that tells the main window what whindow should be showed
+	*/
+    void recieveWindow(int &newWin);
 
 
-//public slot:
+public slots:
+	/*
+		void leaderBoardSlot();
+		leaderBoardSlot the gets connected to the leaderboard button
+		emits the recievewindow signal to the main window
+
+	*/
+	void leaderBoardSlot();
+	/*
+		void mainMenuSlot();
+		this is a slot that is connected to the mainmenu button
+		it emits and signal that tells the main QT window that it needs to show the main window
+	*/
+	void mainMenuSlot();
+	/*
+		void exitSlot();
+		exit slots is connected to the exit button
+		this will tell the main QT window that we want to shut down the entire program
+
+	*/
+	void exitSlot();
 
 
 private:
-	QPushButton *exitt, *save, *Main;
-
-private slots:
-
+	/*
+		buttons, enough said
+	*/
+	QPushButton *exitt, *leaderBoard, *Main;
 
 
 };
