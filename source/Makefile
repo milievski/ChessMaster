@@ -190,7 +190,7 @@ DIST          = /usr/lib64/qt4/mkspecs/common/g++-multilib.conf \
 		source.pro
 QMAKE_TARGET  = source
 DESTDIR       = 
-TARGET        = source
+TARGET        = chessMaster
 
 first: all
 ####### Implicit rules

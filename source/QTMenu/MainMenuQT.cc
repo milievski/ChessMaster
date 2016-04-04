@@ -24,7 +24,7 @@ MainMenuQT::MainMenuQT()
   onePlayer = new QPushButton("One Player");
   twoPlayer = new QPushButton("Two Player");
   load = new QPushButton("Load");
-  replay = new QPushButton("Replay");
+  replay = new QPushButton("Tournament Menu");
   login = new QPushButton("Login");
   leaderBoard = new QPushButton("Leader Board");
   eexit = new QPushButton("Exit"); 
@@ -70,7 +70,8 @@ MainMenuQT::MainMenuQT()
       //TODO Make button style sheet
    //Creating the connections for the buttons
     connect(onePlayer, SIGNAL(clicked()), this, SLOT(OpenChessBoard())); 
-    connect(twoPlayer, SIGNAL(clicked()), this, SLOT(OpenTournamentMenu())); 
+    connect(twoPlayer, SIGNAL(clicked()), this, SLOT(OpenChessBoard())); 
+    connect(replay, SIGNAL(clicked()), this, SLOT(OpenTournamentMenu())); 
     connect(load, SIGNAL(clicked()), this, SLOT(OpenloadMenu())); 
     connect(login, SIGNAL(clicked()), this, SLOT(OpenLoginMenu())); 
     connect(leaderBoard, SIGNAL(clicked()), this, SLOT(OpenLeaderBoard())); 
@@ -85,15 +86,15 @@ MainMenuQT::MainMenuQT()
    gridLayout -> addWidget(onePlayer,1,1,1,1);
    
 
-   gridLayout -> addWidget(twoPlayer,5,1,1,1);
+   gridLayout -> addWidget(twoPlayer,2,1,1,1);
    
 
    gridLayout -> addWidget(load,3,1,1,1);
    
-   gridLayout -> addWidget(replay,4,1,1,1);
+   gridLayout -> addWidget(replay,5,1,1,1);
    
 
-   gridLayout -> addWidget(login,2,1,1,1);
+   gridLayout -> addWidget(login,4,1,1,1);
    
 
    gridLayout -> addWidget(leaderBoard,6,1,1,1);  
