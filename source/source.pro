@@ -3,7 +3,8 @@
 ######################################################################
 QMAKE_CXXFLAGS+= -std=c++0x
 QMAKE_LFLAGS += -std=c++0x
-CXX += g++11
+QMAKE_CXX = g++11
+QMAKE_LINK = g++11
 TEMPLATE = app
 TARGET = 
 DEPENDPATH += . Menu Piece Players QTMenu Rules
