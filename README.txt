@@ -1,7 +1,13 @@
-**CheckMate**
+********************************************************************************
+*******************************READ ME******************************************
+************************CPSC 3770 - Checkmate***********************************
+********************************************************************************
 
-Directory Structure
-===================
+## CPSC 3770 - Checkmate
+
+
+### Directory Structure
+
 
 source/
  - most source and header files
@@ -40,10 +46,3 @@ testDir/
  - unit test source 
    test_results/
    	- the results from the tests
-
-
-Version Information
-===================
-
-
-TO BE UPDATED:
