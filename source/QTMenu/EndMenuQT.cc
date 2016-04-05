@@ -1,6 +1,6 @@
 #include "EndMenuQT.h"
 
-EndMenuQT::EndMenuQT(QWidget *parent) : QDialog(parent)
+EndMenuQT::EndMenuQT(QWidget *parent) 
 {
 
 	exitt = new QPushButton("exit");

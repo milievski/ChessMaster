@@ -23,14 +23,14 @@ MainMenuQT::MainMenuQT()
   //Creating all the buttons that will be created on this screen
   onePlayer = new QPushButton("One Player");
   twoPlayer = new QPushButton("Two Player");
-  load = new QPushButton("Load");
+  load = new QPushButton("Load Game");
   replay = new QPushButton("Tournament Menu");
   login = new QPushButton("Login");
   leaderBoard = new QPushButton("Leader Board");
   eexit = new QPushButton("Exit"); 
 
   
-  //setStyleSheet("border-image:url(QTMenu/Art/backgroundPic.png);");
+
   //button set up
     onePlayer->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
     twoPlayer->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
@@ -226,9 +226,10 @@ void MainMenuQT::recieveWindow(int &newWin)
 }
 void MainMenuQT::paintEvent(QPaintEvent *PE)
 {
-
+  QImage backgroundMain{"QTMenu/Art/backgroundMain.png"};
   QImage logo("QTMenu/Art/ChessMasterLogo.png");
   QPainter paint(this); 
+  paint.drawImage(0,0,backgroundMain);
   paint.drawImage(375,70, logo);
 
 }

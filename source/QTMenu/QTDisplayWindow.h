@@ -23,6 +23,7 @@ class QPushButton;
 class QTableWidget;
 class QPixmap;
 class QLabel;
+class QTimer;
 
 class QTDisplayWindow : public QDialog
 {
@@ -54,4 +55,5 @@ private:
 	QPushButton *ok_b;
 	QLabel *message_l;
 	int seconds;
+	QTimer *timers;
 };

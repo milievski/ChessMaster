@@ -24,13 +24,13 @@ QTClock::QTClock(bool timeTracker, int miliseconds, QWidget *parent): QWidget(pa
 }
 QTClock::~QTClock()
 {
-	////std::cout << "QTClock.h : deleted timer"<< std::endl;
+	
 	delete timer;
-	////std::cout << "QTClock.h : deleted timer - success "<< std::endl;
+	
 }
 void QTClock::ClockLoop()
 {
-	// counts and sets timer to one second intervals
+	
 	timer->start(iterationTime);
 	if (keepTrack)
 		count++;

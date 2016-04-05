@@ -30,6 +30,7 @@ public:
 		constructs the windows buttons and style sheets
 	*/
 	TournamentMenuQT(QWidget *parent = 0);
+	void paintEvent(QPaintEvent *PE);
 	/*
 		void generate(int PlayerNumber);
 		

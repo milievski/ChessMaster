@@ -26,8 +26,8 @@ int  NotEnoughPieces::validMove(vector< vector < Piece* > > &b, int ix, int iy, 
 
 	}
 	if (whitePieces == 1 && blackPieces == 1){
-		return 2;
+		return 3;
 	}
 	else
-	 	return r.validMove(b,ix,iy,dx,dy);
+	 	return 1;
 }

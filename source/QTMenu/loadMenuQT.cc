@@ -82,8 +82,10 @@ void loadMenuQT::paintEvent(QPaintEvent *PE)
 {
 
   QImage logo("QTMenu/Art/ChessMasterLogo.png");
+  QImage backgroundMain{"QTMenu/Art/backgroundMain.png"};
   QPainter paint(this); 
   paint.drawImage(375,100, logo);
+  paint.drawImage(0,0,backgroundMain);
 
 }
 
