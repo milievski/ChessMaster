@@ -9,7 +9,7 @@
 #define TOURNAMENTMENUQT_H
 
 #include <QWidget>
-#include <QtGui>
+#include <QtGui> 
 #include <QTimer>
 #include <string>
 #include <vector>
@@ -20,6 +20,7 @@ class QPushButton;
 class QLineEdit;
 class QLabel;
 class QFont;
+
 
 class TournamentMenuQT : public QDialog
 {
@@ -35,20 +36,35 @@ public:
 		void generate(int PlayerNumber);
 		
 	*/
-	void generate(int PlayerNumber);
+	void generate2P();
+	void generate4P();
+	void generate8P();
 signals:
 	
-
+	void newWindowFunction(int &win);
 public slots:
-	/*
-		void generate();
+	
+	void changePlayers(int n);
+	void generate();
+		/*
+		void mainMenu();
+		this slot is connected to the main menu button,
+		it will emit the newWindowFunction with the main menu integer
 
 	*/
-	void generate();
+		void mainMenu();
+	/*
+		void CloseWin();
+		this is a slot that closes the entire program
+		it emits the newWindowFunction signal to tell the main window that the program needs to shut down
+
+	*/
+		void CloseWin();
 
 private:
+	
 	QPushButton *exitt, *save, *Main;
-	QPushButton *Generate;
+	QPushButton *Generate, *Menu, *Exit;
 	QLabel *Player1Label;
    	QLabel *Player2Label;
    	QLabel *Player3Label;

@@ -128,6 +128,7 @@ void MainMenuQT::OpenLoginMenu(){
 }
 void MainMenuQT::OpenTournamentMenu(){
   tournamentMenu = new TournamentMenuQT(this);
+  connect(tournamentMenu, SIGNAL(newWindowFunction(int &)), this , SLOT(recieveWindow(int &)));
   tournamentMenu->showFullScreen();
 }
 void MainMenuQT::OpenloadMenu(){
@@ -148,6 +149,7 @@ void MainMenuQT::keyPressEvent(QKeyEvent *e) {
 
 void MainMenuQT::recieveWindow(int &newWin)
 {
+
   switch (newWin)
   {
     //this->hide();
@@ -173,6 +175,7 @@ void MainMenuQT::recieveWindow(int &newWin)
     }
     case 3:
     {
+      
       close();
       break;
     }
@@ -219,6 +222,13 @@ void MainMenuQT::recieveWindow(int &newWin)
       chessBoard_qt = new ChessBoardQT(oldGame,this); 
       connect(chessBoard_qt, SIGNAL(newWindowFunction(int &)), this ,SLOT(recieveWindow(int &)));
       chessBoard_qt->showFullScreen();
+      break;
+    }
+    case 11: // login menu
+    {
+      
+      tournamentMenu->close();
+      this->showFullScreen();
       break;
     }
   }

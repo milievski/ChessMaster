@@ -18,13 +18,14 @@
 #include "../Players/Player.h"
 #include "../status.h"
 #include "../Players/RegisteredPlayer.h"
-
+#include "QTDisplayWindow.h"
 
 class QPushButton;
 class QString;
 class QLineEdit;
 class QTableWidget;
 class QLabel;
+class QTDisplayWindow;
 
 class LoginMenuQT : public QDialog
 {
@@ -36,6 +37,7 @@ public:
 
 	*/
 	LoginMenuQT(QWidget *parent = 0);
+	void paintEvent(QPaintEvent *PE);
 
 
 signals:
@@ -86,7 +88,7 @@ private:
 		if the player does not exsist it creates a new one
 	*/
 	void loadCreatePlayer(const QString &name, RegisteredPlayer* &p);
-
+	QTDisplayWindow *MessageWindow_W;
 	QPushButton *loginP1_b, *loginP2_b, *logoutP1_b, *logoutP2_b, *back_b;
 	QLineEdit *player1_LE, *player2_LE;
 	QLabel *player1_l, *player2_l;

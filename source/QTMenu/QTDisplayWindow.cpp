@@ -20,7 +20,7 @@ QTDisplayWindow::QTDisplayWindow(QString message)
 	ok_b = new QPushButton("ok");
 
 	QGridLayout *layout = new QGridLayout;
-  layout-> setColumnMinimumWidth(0,95);
+  //layout-> setColumnMinimumWidth(0,95);
 	layout -> addWidget(message_l,1,1,1,4);
 
     setLayout(layout);
