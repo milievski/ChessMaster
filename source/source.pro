@@ -6,7 +6,7 @@ QMAKE_LFLAGS += -std=c++0x
 QMAKE_CXX = g++11
 QMAKE_LINK = g++11
 TEMPLATE = app
-TARGET = 
+TARGET = chessMaster
 DEPENDPATH += . Menu Piece Players QTMenu Rules
 INCLUDEPATH += . Piece Rules Menu Players QTMenu
 
