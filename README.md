@@ -1,8 +1,11 @@
 # CPSC 3770 - Checkmate
 
+### Discription
 
-## Directory Structure
+### Rules
 
+
+### Directory Structure
 
 ##### source/
  - most source and header files
