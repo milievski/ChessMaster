@@ -22,6 +22,10 @@ extern string RegisteredPlayer1;
 
 extern string RegisteredPlayer2;
 
+extern string RegisteredPlayerr1;
+
+extern string RegisteredPlayerr2;
+
 #endif
 
 

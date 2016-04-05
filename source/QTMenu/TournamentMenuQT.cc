@@ -2,6 +2,7 @@
 #include <iostream>
 TournamentMenuQT::TournamentMenuQT(QWidget *parent )
 {
+  draw = false;
   font = new QFont("League Gothic",22, true );
   font->setBold(true);
   font->setItalic(true);
@@ -128,7 +129,6 @@ void TournamentMenuQT::changePlayers(int n){
   }
 }
 void TournamentMenuQT::generate2P(){
-	
   Player1Label->show();
   Player2Label->show();
   Player3Label->hide();
@@ -146,6 +146,7 @@ void TournamentMenuQT::generate2P(){
   Player6->hide();
   Player7->hide();
   Player8->hide();
+
 }
 void TournamentMenuQT::generate4P(){
   
@@ -189,6 +190,30 @@ void TournamentMenuQT::generate8P(){
 }
 void TournamentMenuQT::generate(){
 
+  
+  numberPlayer->hide();
+  PlayerNumberLabel->hide();
+  Player1Label->hide();
+  Player2Label->hide();
+  Player3Label->hide();
+  Player4Label->hide();
+  Player5Label->hide();
+  Player6Label->hide();
+  Player7Label->hide();
+  Player8Label->hide();
+
+  Player1->hide();
+  Player2->hide();
+  Player3->hide();
+  Player4->hide();
+  Player5->hide();
+  Player6->hide();
+  Player7->hide();
+  Player8->hide();
+  Generate->hide();
+  gridLayout-> setRowMinimumHeight(0,800);
+  draw = true;
+  update();
 }
 void TournamentMenuQT::CloseWin()
 {
@@ -210,7 +235,13 @@ void TournamentMenuQT::paintEvent(QPaintEvent *PE)
   QImage logo("QTMenu/Art/ChessMasterLogo.png");
   QImage backgroundMain{"QTMenu/Art/backgroundMain.png"};
   QPainter paint(this); 
-  paint.drawImage(375,100, logo);
+  
   paint.drawImage(0,0,backgroundMain);
+  if (draw){
+    QImage UC("QTMenu/Art/underConstruction.png");
+    paint.drawImage(375,100, logo);
+    UC = UC.scaled(800, 800, Qt::KeepAspectRatio);
+    paint.drawImage(435,210, UC);
+  }
 
 }

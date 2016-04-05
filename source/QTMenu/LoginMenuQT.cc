@@ -70,8 +70,8 @@ LoginMenuQT::LoginMenuQT(QWidget *parent)
     gridLayout-> setRowMinimumHeight(5,200);
    setLayout(gridLayout);
 
-   player1_l->setText( "PLayer 1: "+ QString::fromStdString(RegisteredPlayer1 ));
-   player2_l->setText( "PLayer 2: "+ QString::fromStdString(RegisteredPlayer2 ));
+   player1_l->setText( "PLayer 1: "+ QString::fromStdString(RegisteredPlayerr1 ));
+   player2_l->setText( "PLayer 2: "+ QString::fromStdString(RegisteredPlayerr2 ));
 }
 
 
@@ -97,7 +97,7 @@ void LoginMenuQT::loadCreatePlayer(const QString &name, RegisteredPlayer* &p)
 
 void LoginMenuQT::loginPlayr1() // slot
 {
-   RegisteredPlayer1 = player1_LE->text().toStdString();
+   RegisteredPlayerr1 = player1_LE->text().toStdString();
    player1_l->setText( "PLayer 1: "+ player1_LE->text() );
    MessageWindow_W = new QTDisplayWindow("Logged in as: "+player1_LE->text());
    MessageWindow_W->show();
@@ -105,7 +105,7 @@ void LoginMenuQT::loginPlayr1() // slot
 
 void LoginMenuQT::loginPlayr2() // slot
 {
-   RegisteredPlayer2 = player2_LE->text().toStdString();
+   RegisteredPlayerr2 = player2_LE->text().toStdString();
    player2_l->setText( "PLayer 2: "+ player2_LE->text() );
    MessageWindow_W = new QTDisplayWindow("Logged in as: "+player2_LE->text());
    MessageWindow_W->show();
@@ -113,7 +113,7 @@ void LoginMenuQT::loginPlayr2() // slot
 
 void LoginMenuQT::logoutPlayr1() // slot
 {
-   RegisteredPlayer1 = "";
+   RegisteredPlayerr1 = "";
    player1_LE->clear();
    player1_l->setText( "PLayer 1: ");
    MessageWindow_W = new QTDisplayWindow("         Logged out ");
@@ -122,7 +122,7 @@ void LoginMenuQT::logoutPlayr1() // slot
 
 void LoginMenuQT::logoutPlayr2() // slot
 {
-   RegisteredPlayer2 = "";
+   RegisteredPlayerr2 = "";
    player2_LE->clear();
    player2_l->setText( "PLayer 2: ");
    MessageWindow_W = new QTDisplayWindow("         Logged out ");

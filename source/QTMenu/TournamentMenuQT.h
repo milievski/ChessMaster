@@ -90,7 +90,7 @@ private:
 	QFont *font2;
 
 	QGridLayout *gridLayout;
-
+	bool draw;
 private slots:
 	
 
