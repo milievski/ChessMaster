@@ -392,7 +392,7 @@ else
       MessageWindow_W = new QTDisplayWindow("       King is in check!");
       MessageWindow_W->show();
     }
-    if (moveRet == 3 || moveRet ==2)
+    if (moveRet == 3 )
     {
           //add to stats
       Database data;
@@ -441,7 +441,12 @@ else
 
 
 
-        //QTDisplayWindow message("King is in check!!!", this);
+       
+  }
+  if (moveRet == 2 ){
+    int temp = 12;
+    emit newWindowFunction(temp);
+    close();
   }
 }
 picked = !picked;

@@ -175,7 +175,7 @@ void MainMenuQT::recieveWindow(int &newWin)
     }
     case 3:
     {
-      
+
       close();
       break;
     }
@@ -204,7 +204,7 @@ void MainMenuQT::recieveWindow(int &newWin)
     }
     case 8: // end game
     {
-      endMenu = new EndMenuQT(this);
+      endMenu = new EndMenuQT(0);
       connect(endMenu, SIGNAL(recieveWindow(int &)), this, SLOT(recieveWindow(int &)));
       endMenu->showFullScreen();
       break;
@@ -224,11 +224,19 @@ void MainMenuQT::recieveWindow(int &newWin)
       chessBoard_qt->showFullScreen();
       break;
     }
-    case 11: // login menu
+    case 11: 
     {
       
       tournamentMenu->close();
       this->showFullScreen();
+      break;
+    }
+    case 12: 
+    {
+      
+      endMenu = new EndMenuQT(2);
+      connect(endMenu, SIGNAL(recieveWindow(int &)), this, SLOT(recieveWindow(int &)));
+      endMenu->showFullScreen();
       break;
     }
   }

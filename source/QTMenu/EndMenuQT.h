@@ -17,7 +17,7 @@
 
   class QPushButton;
 class QTableWidget;
-
+class QLabel;
 class EndMenuQT : public QDialog
 {
 	Q_OBJECT
@@ -26,7 +26,8 @@ public:
 		EndMenuQT(QWidget *parent = 0);
 		constructor for endmenu, sets up all buttons and style sheets
 	*/
-	EndMenuQT(QWidget *parent = 0);
+	EndMenuQT(int r);
+	void paintEvent(QPaintEvent *PE);
 signals:
   	/*
 		void recieveWindow(int &newWin);
@@ -63,6 +64,7 @@ private:
 		buttons, enough said
 	*/
 	QPushButton *exitt, *leaderBoard, *Main;
+	QLabel *Message;
 
 
 };
