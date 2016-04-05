@@ -96,8 +96,9 @@ void LeaderBoardQT::paintEvent(QPaintEvent *PE)
   QImage backgroundMain{"QTMenu/Art/backgroundMain.png"};
   QImage logo("QTMenu/Art/ChessMasterLogo.png");
   QPainter paint(this); 
+  
+  paint.drawImage(0,0,backgroundMain);
   paint.drawImage(375,100, logo);
-  paintEvent.drawImage(0,0,backgroundMain);
 }
 
 void LeaderBoardQT::CloseWin()
