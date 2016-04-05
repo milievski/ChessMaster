@@ -4,41 +4,41 @@
 ## Directory Structure
 
 
-### source/
+##### source/
  - most source and header files
  - type "make" to create executable
 
-### source/QTMenu 
+##### source/QTMenu -(Most of the Implementation for this project)- 
  - contains all source and headers for all QTMenus and Windows
  - contains all the art that was created by us
 
-### source/piece/
+##### source/piece/
  - contains source and headers for piece class
 
-### source/rules/
+##### source/rules/
  - contains source and headers for rules class
 
-### source/players/
+##### source/players/
  - contains source and headers for players class 
 
-### source/menus
+##### source/menus
  - contains source and headers for consal based menu class 
 
 ### doxygen/
  - directory for generating doxygen documentation
  
-### design/
+##### design/
  - the object-oriented design, may not be updated during devlopment
  - coding conventions document
  - Workload Delegation document
 
-### tests/
+##### tests/
  - directory for cppunit tests and manual test documentation 
  
-### proposal/
+##### proposal/
  - original submitted script 
 
-### testDir/
+##### testDir/
  - unit test source 
    test_results/
    	- the results from the tests
