@@ -4,9 +4,12 @@
 getStringWindowQT::getStringWindowQT(QString message) 
 {
 
+
+
 	QLabel* message_l = new QLabel(message);
-	ok_b = new QPushButton("save");
+
 	saveLine_le = new QLineEdit();
+
 
 	QGridLayout *layout = new QGridLayout;
 	layout -> addWidget(message_l,0,0,1,4);
@@ -20,9 +23,17 @@ getStringWindowQT::getStringWindowQT(QString message)
 }
 getStringWindowQT::getStringWindowQT()
 {
+		   QFont font("League Gothic",22, true );
+   font.setBold(true);
+   font.setItalic(true);
 	QLabel* message_l = new QLabel("save name:");
 	ok_b = new QPushButton("save");
 	saveLine_le = new QLineEdit();
+	
+	ok_b->setStyleSheet("border-image:url(QTMenu/Art/woodbackground.png);");
+		ok_b = new QPushButton("save");
+	ok_b->setFont(font);
+	message_l->setFont(font);
 
 	QGridLayout *layout = new QGridLayout;
 	layout -> addWidget(message_l,0,0,1,4);
@@ -47,4 +58,14 @@ void getStringWindowQT::closeWin()
 	emit returnString();
 	
 	close();
+}
+void getStringWindowQT::paintEvent(QPaintEvent *PE)
+{
+
+  QImage logo("QTMenu/Art/ChessMasterLogo.png");
+  QImage backgroundMain{"QTMenu/Art/backgroundMain.png"};
+  QPainter paint(this); 
+  
+  paint.drawImage(0,0,backgroundMain);
+  paint.drawImage(375,100, logo);
 }

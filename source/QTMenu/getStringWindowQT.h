@@ -45,6 +45,8 @@ public:
 	*/	
 	~getStringWindowQT();
 
+	void paintEvent(QPaintEvent *PE);
+
 private slots:
 	/*
 		void closeWin();
