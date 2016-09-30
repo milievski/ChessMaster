@@ -1,5 +1,5 @@
 # CPSC 3770 - Checkmate
-Hello
+
 ###To run this game please change your screen resolution to 1600 by 900 all other resolution will not work at this time
 
 ## Discription
